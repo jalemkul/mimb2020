@@ -1,0 +1,2626 @@
+read rtf card append
+* Topology for nano-ligand
+*
+36 1
+!POLYACRYLICACID
+RESI AACR             0.000 ! param penalty=   1.500 ; charge penalty=   1.739
+GROUP            ! CHARGE
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !      H13      H21
+ATOM  H13 HGA3    0.090   !       |        |
+GROUP                     ! H12 - C1 - - - C2 - H22
+ATOM   C2 CG321   -0.220   !       |        |
+ATOM  H21 HGA2    0.090   !      H11       C3 = O1
+ATOM  H22 HGA2    0.090   !                |
+ATOM   C3 CG2O2    0.790   !                O2
+ATOM   O1 OG2D1   -0.550   !                 \
+ATOM   O2 OG311   -0.620   !                  H3
+ATOM   H3 HGP1    0.420   !
+BOND C1   C2   C2   C3   C3   O1   C3   O2
+BOND C1  H11   C1  H12   C1  H13   C2  H21
+BOND C2  H22   O2   H3
+IMPR C3     C2     O1     O2
+DOUBLE C3 O1
+IC H11    C2    *C1    H12        1.1110  110.10  120.00  110.10   1.1110
+IC H11    C2    *C1    H13        1.1110  110.10 -120.00  110.10   1.1110
+IC H13    C1    C2     C3         1.1110  110.10  180.00  108.00   1.5220
+IC C3     C1    *C2    H21        1.5220  108.00 -120.00  110.10   1.1110
+IC C3     C1    *C2    H22        1.5220  108.00  120.00  110.10   1.1110
+IC C1     C2    C3     O2         1.5280  108.00   90.00  110.50   1.4000
+IC O2     C2    *C3    O1         1.4000  110.50  180.00  125.00   1.2200
+IC C2     C3    O2     H3         1.5220  110.50  180.00  115.00   0.9600
+
+RESI  AACIS -1.000000
+GROUP
+ATOM C1   CG331  -0.270 !
+ATOM H11  HGA3    0.090 !
+ATOM H12  HGA3    0.090 !                 O2
+ATOM H13  HGA3    0.090 !                 |
+GROUP                   !        H13      C3=O1
+ATOM C2   CG321  -0.280 !        |        |
+ATOM H21  HGA2    0.090 !  H12 - C1 - - - C2 - H22
+ATOM H22  HGA2    0.090 !         |       |
+ATOM C3   CG2O3   0.620 !         H11     H21
+ATOM O1   OG2D2  -0.760 !
+ATOM O2   OG2D2  -0.760 !
+BOND C2   C1  C3   C2  C3   O2
+BOND C1   H11 C1   H12  C1   H13  C2   H21
+BOND C2   H22
+DOUBLE C3 O1
+IMPR C3   O1   O2 C2
+IC    H11    C2     *C1    H12    1.1110  110.10  120.00  110.10   1.1110
+IC    H11    C2     *C1    H13    1.1110  110.10 -120.00  110.10   1.1110
+IC    H11    C1     C2     C3     1.1110  110.10  180.00  108.00   1.5220
+IC    C3     C1     *C2    H21    1.5220  108.00  120.00  110.10   1.1110
+IC    C3     C1     *C2    H22    1.5220  108.00 -120.00  110.10   1.1110
+IC    C1     C2     C3     O1     1.5280  108.00   90.00  116.00   1.2600
+IC    O1     C2     *C3    O2     1.2600  116.00  180.00  116.00   1.2600
+PATCH FIRST NONE LAST NONE
+
+RESI  AACIR -1.000000
+GROUP
+ATOM C1   CG331  -0.270 !
+ATOM H11  HGA3    0.090 !
+ATOM H12  HGA3    0.090 !       H13      H21
+ATOM H13  HGA3    0.090 !        |        |
+GROUP                   !  H12 - C1 - - - C2 - H22
+ATOM C2   CG321  -0.280 !         |       |
+ATOM H21  HGA2    0.090 !       H11       C3 = O1
+ATOM H22  HGA2    0.090 !                 |
+ATOM C3   CG2O3   0.620 !                 O2
+ATOM O1   OG2D2  -0.760 !
+ATOM O2   OG2D2  -0.760 !
+BOND C2   C1  C3   C2  C3   O2
+BOND C1   H11 C1   H12  C1   H13  C2   H21
+BOND C2   H22
+DOUBLE C3 O1
+IMPR C3   O1   O2  C2
+IC    H11    C2     *C1    H12    1.1110  110.10  120.00  110.10   1.1110
+IC    H11    C2     *C1    H13    1.1110  110.10 -120.00  110.10   1.1110
+IC    H13    C1     C2     C3     1.1110  110.10  180.00  108.00   1.5220
+IC    C3     C1     *C2    H21    1.5220  108.00 -120.00  110.10   1.1110
+IC    C3     C1     *C2    H22    1.5220  108.00  120.00  110.10   1.1110
+IC    C1     C2     C3     O1     1.5280  108.00   90.00  116.00   1.2600
+IC    O1     C2     *C3    O2     1.2600  116.00  180.00  116.00   1.2600
+PATCH FIRST NONE LAST NONE
+
+
+
+RESI TMAET            1.00 ! C5H14N tetramethylammonium ethyl analog
+GROUP
+ATOM C1   CG331    -0.27 !
+ATOM H11  HGA3      0.09 !
+ATOM H12  HGA3      0.09 !
+ATOM H13  HGA3      0.09 !                 |
+GROUP                    !             H41-C4 -
+ATOM C2   CG324    -0.10 !                 |
+ATOM H21  HGP5      0.25 !           -C3---N---C5-     (+)
+ATOM H22  HGP5      0.25 !            |    |   |
+ATOM N1    NG3P0    -0.60!                 C2
+ATOM C3   CG334    -0.35 !                 |
+ATOM H31  HGP5      0.25 !                -C1-
+ATOM H32  HGP5      0.25 !                 |
+ATOM H33  HGP5      0.25 !
+ATOM C4   CG334    -0.35 !
+ATOM H41  HGP5      0.25 !
+ATOM H42  HGP5      0.25 !
+ATOM H43  HGP5      0.25 !
+ATOM C5   CG334    -0.35 !
+ATOM H51  HGP5      0.25 !
+ATOM H52  HGP5      0.25 !
+ATOM H53  HGP5      0.25 !
+BOND N1 C2 N1 C5 N1 C3 N1 C4
+BOND C2 H21 C2 H22 C1 C2
+BOND C5 H51 C5 H52 C5 H53
+BOND C3 H31 C3 H32 C3 H33
+BOND C4 H41 C4 H42 C4 H43
+BOND C1 H11 C1 H12 C1 H13
+! ab-initio HF/6-31G* structure
+IC C4    N1     C2    C1     1.4967  107.80  180.00  115.98   1.5217
+IC C1    C2    N1     C5     1.5217  115.98  -61.05  111.12   1.4950
+IC C1    C2    N1     C3     1.5217  115.98   61.05  111.12   1.4950
+IC C4    N1     C2    H21    1.4967  107.80   57.27  105.76   1.0809
+IC C4    N1     C2    H22    1.4967  107.80  -57.27  105.76   1.0809
+IC C2    N1     C5    H51    1.5176  111.12 -174.50  108.75   1.0795
+IC C2    N1     C5    H52    1.5176  111.12   65.81  109.69   1.0773
+IC C2    N1     C5    H53    1.5176  111.12  -54.79  109.07   1.0797
+IC C2    N1     C3    H31    1.5176  111.12  174.50  108.75   1.0795
+IC C2    N1     C3    H32    1.5176  111.12  -65.81  109.69   1.0773
+IC C2    N1     C3    H33    1.5176  111.12   54.79  109.07   1.0797
+IC C2    N1     C4    H41    1.5176  107.80  180.00  109.11   1.0793
+IC C2    N1     C4    H42    1.5176  107.80   60.03  109.12   1.0793
+IC C2    N1     C4    H43    1.5176  107.80  -60.03  109.12   1.0793
+IC N1     C2    C1    H12    1.5176  115.98  180.00  107.05   1.0836
+IC N1     C2    C1    H11    1.5176  115.98   62.29  112.91   1.0820
+IC N1     C2    C1    H13    1.5176  115.98  -62.29  112.91   1.0820
+
+RESI EAMTI            1.000 ! param penalty=  11.500 ; charge penalty=  11.215
+GROUP                     !
+ATOM   C1 CG331   -0.270  !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !
+GROUP
+ATOM   C2 CG324   0.130   !
+ATOM  H21 HGA2    0.090   !
+ATOM  H23 HGA2    0.090   !
+ATOM   N1 NG3P3   -0.30   !
+ATOM  HN1 HGP2    0.330   !
+ATOM  HN2 HGP2    0.330   !
+ATOM  HN3 HGP2    0.330
+BOND N1   HN3  N1  HN1  N1   HN2  N1  C2   C2  H21  C2  H23
+BOND C2  C1   C1  H11  C1  H12  C1  H13
+IC   C1     C2     N1     HN3     1.5280  110.00  180.00  109.50   1.0400
+IC   HN3    C2     *N1    HN1     1.0400  109.50  120.00  109.50   1.0400
+IC   HN3    C2     *N1    HN2     1.0400  109.50 -120.00  109.50   1.0400
+IC    HN1     C2     *N1    HN2        1.0140  112.10  120.00  112.10   1.0140
+IC    HN2     N1     C2     C1         1.0140  112.10  180.00  112.20   1.5280
+IC    C1      N1     *C2    H21        1.5280  112.20  120.00  109.50   1.1110
+IC    H21     N1     *C2    H23        1.1110  109.50  120.00  109.50   1.1110
+IC    N1      C2     C1     H12        1.4740  112.20  180.00  110.10   1.1110
+IC    H12     C2     *C1    H13        1.1110  110.10  120.00  110.10   1.1110
+IC    H12     C2     *C1    H11        1.1110  110.10 -120.00  110.10   1.1110
+IC    H11     C2     *C1    H13       1.1110  110.10 -120.00  110.10   1.1110
+
+
+RESI EAMT            0.000 ! param penalty=  11.500 ; charge penalty=  11.215
+GROUP                     !
+ATOM   C1 CG331   -0.270  !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !
+GROUP
+ATOM   C2 CG321    0.100   !
+ATOM  H21 HGA2    0.090   !
+ATOM  H23 HGA2    0.090   !
+ATOM   N1 NG321   -0.860   !
+ATOM  HN1 HGPAM2    0.290   !
+ATOM  HN2 HGPAM2    0.290   !
+BOND N1  HN1  N1   HN2  N1  C2   C2  H21  C2  H23
+BOND C2  C1   C1  H11  C1  H12  C1  H13
+IC    HN1     C2     *N1    HN2        1.0140  112.10  180.00  112.10   1.0140
+IC    HN2     N1     C2     C1         1.0140  112.10  180.00  112.20   1.5280
+IC    C1      N1     *C2    H21        1.5280  112.20  120.00  109.50   1.1110
+IC    H21     N1     *C2    H23        1.1110  109.50  120.00  109.50   1.1110
+IC    N1      C2     C1     H12        1.4740  112.20  180.00  110.10   1.1110
+IC    H12     C2     *C1    H13        1.1110  110.10  120.00  110.10   1.1110
+IC    H12     C2     *C1    H11        1.1110  110.10 -120.00  110.10   1.1110
+IC    H11     C2     *C1    H13       1.1110  110.10 -120.00  110.10   1.1110
+
+RESI THDLK          0.00 ! CH4S methanethiol, DZUNG NGUYEN
+GROUP
+ATOM S1  SG311     -0.23 !   H3     H4
+ATOM HS1 HGP3      0.16 !
+ATOM C1  CG321     -0.11 !     /    \
+ATOM H11 HGA2       0.09 !     \
+ATOM H12 HGA2       0.09 ! H2--CM--S
+ATOM C2  CG331     -0.27 !     /    \
+ATOM H21 HGA3       0.09 !   H1
+ATOM H22 HGA3       0.09 !     \
+ATOM H23 HGA3       0.09 ! H2--CM--S
+BOND HS1 S1  S1  C1  C1 H11  C1 H12
+BOND C1  C2  C2 H21  C2  H22   C2   H23
+IC    HS1     S1      C1    C2      1.3250   95.00  180.00  114.50   1.5280
+IC    C2      S1     *C1    H11     1.5280  114.50  120.00  111.30   1.1110
+IC    H11     S1     *C1    H12     1.1110  111.30  120.00  111.30   1.1110
+IC    S1      C1      C2    H22     1.8180  112.20  180.00  110.10   1.1110
+IC    H22     C1     *C2    H23     1.1110  110.10  120.00  110.10   1.1110
+IC    H22     C1     *C2    H21     1.1110  110.10 -120.00  110.10   1.1110
+IC    H21     C1     *C2    H23     1.1110  110.10 -120.00  110.10   1.1110
+PATC FIRS NONE LAST NONE
+
+RESI THSLK          0.00 ! CH4S methanethiol, DZUNG NGUYEN
+GROUP
+ATOM H11 HGA3       0.09 !   H1
+ATOM H12 HGA3       0.09 !     \
+ATOM H13 HGA3       0.09 ! H2--CM--S
+ATOM C1 CG331      -0.20 !     /    \
+ATOM S1  SG311     -0.23 !   H3     H4
+ATOM HS1 HGP3       0.16
+BOND C1 H11  C1 H12  C1 H13
+BOND C1 S1  S1 HS1
+IC   H11   S1    *C1   H12    1.1110  110.10  120.00  110.10   1.1110
+IC   H11   S1    *C1   H13    1.1110  110.10 -120.00  110.10   1.1110
+IC   H12   C1    S1    HS1   1.1110  111.30  180.00   95.00   1.3250
+IC   S1   H11    *C1   H12    1.8160  111.30  120.00  108.40   1.1110
+IC   H12   H11    *C1   H13    1.1110  108.40 -120.00  108.40   1.1110
+IC   H11   C1    S1    HS1   1.1110  111.30   60.00   95.00   1.3250
+PATC FIRS NONE LAST NONE
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!ACRYLAMIDE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+!POLY(ACRYLAMIDE)
+RESI AAMDS           0.000 !
+GROUP                      !
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !           HN1 - N1 - HN2
+GROUP                      !                 |
+ATOM   C2 CG321   -0.180   !          H13    C3 = O1
+ATOM  H21 HGA2    0.090   !          |      |
+ATOM  H22 HGA2    0.090   !    H12 - C1 - - C2 - H22
+GROUP                                 |      |
+ATOM   C3 CG2O1    0.550   !         H11    H21
+ATOM   O1 OG2D1   -0.550   !
+GROUP
+ATOM   N1 NG2S2   -0.620   !
+ATOM  HN1 HGP1    0.310   !
+ATOM  HN2 HGP1    0.310   !
+BOND C1   C2   C2   C3   C3   N1   C3   O1
+BOND C1   H11  C1   H12  C1   H13  C2   H21
+BOND C2   H22  N1   HN1  N1   HN2
+IMPR C3   C2   N1   O1
+DOUBLE C3 O1
+IC   H11  C2   *C1   H12   1.1110  110.10  120.00  110.10   1.1110
+IC   H11  C2   *C1   H13   1.1110  110.10 -120.00  110.10   1.1110
+IC   H11  C1   C2    C3    1.1110  110.10  180.00  108.00   1.4900
+IC   C3   C1   *C2   H21   1.4900  108.00  120.00  110.10   1.1110
+IC   C3   C1   *C2   H22   1.4900  108.00 -120.00  110.10   1.1110
+IC   C1   C2   C3    N1    1.5280  108.00  -90.00  116.50   1.3600
+IC   N1   C2   *C3   O1    1.3600  116.50  180.00  121.00   1.2300
+IC   C2   C3   N1    HN1   1.4900  116.50  180.00  120.00   1.0000
+IC   HN1  C3   *N1   HN2   1.0000  120.00  180.00  120.00   1.0000
+
+RESI AAMDR           0.000 !
+GROUP                      !
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !            H13    H21
+ATOM  H12 HGA3    0.090   !            |      |
+ATOM  H13 HGA3    0.090   !      H12 - C1 - - C2 - H22
+GROUP                      !            |      |
+ATOM   C2 CG321   -0.180   !            H11    C3 = O1
+ATOM  H21 HGA2    0.090   !                   |
+ATOM  H22 HGA2    0.090   !             H31 - N1 - H32
+GROUP
+ATOM   C3 CG2O1    0.550   !
+ATOM   O1 OG2D1   -0.550   !
+GROUP
+ATOM   N1 NG2S2   -0.620   !
+ATOM  HN1 HGP1    0.310   !
+ATOM  HN2 HGP1    0.310   !
+BOND C1   C2   C2   C3   C3   N1   C3   O1
+BOND C1   H11  C1   H12  C1   H13  C2   H21
+BOND C2   H22  N1   HN1  N1   HN2
+IMPR C3   C2   N1   O1
+DOUBLE C3 O1
+IC   H11   C2  *C1   H12   1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2  *C1   H13   1.1110  110.10 -120.00  110.10   1.1110
+IC   H13   C1  C2    C3    1.1110  110.10  180.00  108.00   1.4900
+IC   C3    C1  *C2   H21   1.4900  108.00 -120.00  110.10   1.1110
+IC   C3    C1  *C2   H22   1.4900  108.00  120.00  110.10   1.1110
+IC   C1    C2  C3    N1    1.5280  108.00   90.00  116.50   1.3600
+IC   N1    C2  *C3   O1    1.3600  116.50  180.00  121.00   1.2300
+IC   C2    C3  N1    HN1   1.4900  116.50  180.00  120.00   1.0000
+IC   HN1   C3  *N1   HN2   1.0000  120.00  180.00  120.00   1.0000
+
+!POLYACRYLICACID
+RESI AACS             0.000 ! param penalty=   1.500 ; charge penalty=   1.739
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !    0.275
+ATOM  H11 HGA3    0.090   !    0.000                     H3
+ATOM  H12 HGA3    0.090   !    0.000                    /
+ATOM  H13 HGA3    0.090   !    0.000                   O2
+GROUP                     !                            |
+ATOM   C2 CG321   -0.220   !    0.275         H13       C3=O1
+ATOM  H21 HGA2    0.090   !    0.000          |        |
+ATOM  H22 HGA2    0.090   !    0.000    H12 - C1 - - - C2 - H22
+ATOM   C3 CG2O2    0.790   !    1.739          |        |
+ATOM   O1 OG2D1   -0.550   !    0.000         H11      H21
+ATOM   O2 OG311   -0.620   !    1.739
+ATOM   H3 HGP1    0.420   !    0.000
+BOND C1   C2   C2   C3   C3   O1   C3   O2
+BOND C1  H11   C1  H12   C1  H13   C2  H21
+BOND C2  H22   O2   H3
+IMPR C3     C2     O1     O2
+DOUBLE C3 O1
+IC H11    C2    *C1    H12        1.1110  110.10  120.00  110.10   1.1110
+IC H11    C2    *C1    H13        1.1110  110.10 -120.00  110.10   1.1110
+IC H11    C1    C2     C3         1.1110  110.10  180.00  108.00   1.5220
+IC C3     C1    *C2    H21        1.5220  108.00  120.00  110.10   1.1110
+IC C3     C1    *C2    H22        1.5220  108.00 -120.00  110.10   1.1110
+IC C1     C2    C3     O2         1.5280  108.00  -90.00  110.50   1.4000
+IC O2     C2    *C3    O1         1.4000  110.50  180.00  125.00   1.2200
+IC C2     C3    O2     H3         1.5220  110.50  180.00  115.00   0.9600
+
+RESI ETHY              0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !    0.000           H13   H23
+ATOM  H11 HGA3    0.090   !    0.000            |     |
+ATOM  H12 HGA3    0.090   !    0.000      H12 - C1 - C2 - H22
+ATOM  H13 HGA3    0.090   !    0.000            |     |
+GROUP                     !                    H11   H21
+ATOM   C2 CG331   -0.270   !    0.000
+ATOM  H22 HGA3    0.090   !    0.000
+ATOM  H21 HGA3    0.090   !    0.000
+ATOM  H23 HGA3    0.090   !    0.000
+BOND C1   C2   C1   H11   C1   H12   C1   H13   C2   H21   C2   H22   C2   H23
+IC H11    C2   *C1   H12        1.1110  110.10  120.00  110.10   1.1110
+IC H11    C2   *C1   H13        1.1110  110.10 -120.00  110.10   1.1110
+IC H11    C1    C2   H23        1.1110  110.10  180.00  110.10   1.1110
+IC C2     H12   *C1   H13       1.5280  110.10 -120.00  110.10   1.1110
+IC H12    C1   C2    H22        1.1110  110.10  180.00  110.10   1.1110
+IC H22    C1   *C2   H23        1.1110  110.10  120.00  110.10   1.1110
+IC H22    C1   *C2   H21        1.1110  110.10 -120.00  110.10   1.1110
+PATC first none last none
+
+RESI PROS             0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !    0.000
+ATOM  H11 HGA3    0.090   !    0.000
+ATOM  H12 HGA3    0.090   !    0.000                  H23
+ATOM  H13 HGA3    0.090   !    0.000                   |
+GROUP                     !                  H13   H31-C3-H33
+ATOM   C2 CG321   -0.180   !    0.000          |        |
+ATOM  H21 HGA2    0.090   !    0.000    H12 - C1 - - - C2 - H22
+ATOM  H22 HGA2    0.090   !    0.000          |        |
+GROUP                     !                  H11      H21
+ATOM   C3 CG331   -0.270   !    0.000
+ATOM  H31 HGA3    0.090   !    0.000
+ATOM  H32 HGA3    0.090   !    0.000
+ATOM  H33 HGA3    0.090   !    0.000
+BOND C1   C2   C2   C3   C1  H11   C1  H12
+BOND C1  H13   C2  H21   C2  H22   C3  H31
+BOND C3  H32   C3  H33
+PATC first none last none
+IC H11    C2   *C1   H12        1.1110  110.10  120.00  110.10   1.1110
+IC H11    C2   *C1   H13        1.1110  110.10 -120.00  110.10   1.1110
+IC H11    C1   C2    C3         1.1110  110.10  180.00  114.00   1.5280
+IC C3     C1   *C2   H21        1.5280  114.00 -120.00  110.10   1.1110
+IC C3     C1   *C2   H22        1.5280  114.00  120.00  110.10   1.1110
+IC C1     C2   C3    H31        1.5280  114.00  180.00  110.10   1.1110
+IC H31    C2   *C3   H32        1.1110  110.10  120.00  110.10   1.1110
+IC H31    C2   *C3   H33        1.1110  110.10 -120.00  110.10   1.1110
+
+!POLYPROPYLENE
+RESI PROR             0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !    0.000
+ATOM  H11 HGA3    0.090   !    0.000
+ATOM  H12 HGA3    0.090   !    0.000
+ATOM  H13 HGA3    0.090   !    0.000        H13      H21
+GROUP                     !                  |        |
+ATOM   C2 CG321   -0.180   !    0.000   H12 - C1 - - - C2 - H22
+ATOM  H21 HGA2    0.090   !    0.000         |        |
+ATOM  H22 HGA2    0.090   !    0.000        H11 H31 - C3 - H33
+GROUP                     !                           |
+ATOM   C3 CG331   -0.270   !    0.000                 H32
+ATOM  H31 HGA3    0.090   !    0.000
+ATOM  H32 HGA3    0.090   !    0.000
+ATOM  H33 HGA3    0.090   !    0.000
+BOND C1   C2   C2   C3   C1  H11   C1  H12
+BOND C1  H13   C2  H21   C2  H22   C3  H31
+BOND C3  H32   C3  H33
+PATC first none last none
+IC H11    C2   *C1   H12        1.1110  110.10  120.00  110.10   1.1110
+IC H11    C2   *C1   H13        1.1110  110.10 -120.00  110.10   1.1110
+IC H13    C1   C2    C3         1.1110  110.10  180.00  114.00   1.5280
+IC C3     C1   *C2   H21        1.5280  114.00 -120.00  110.10   1.1110
+IC C3     C1   *C2   H22        1.5280  114.00  120.00  110.10   1.1110
+IC C1     C2   C3    H31        1.5280  114.00  180.00  110.10   1.1110
+IC H31    C2   *C3   H32        1.1110  110.10  120.00  110.10   1.1110
+IC H31    C2   *C3   H33        1.1110  110.10 -120.00  110.10   1.1110
+
+
+
+!POLY(1-BUTENE)
+RESI 1BUTS             0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !    0.000
+ATOM  H11 HGA3    0.090   !    0.000
+ATOM  H12 HGA3    0.090   !    0.000
+ATOM  H13 HGA3    0.090   !    0.000
+GROUP                     !                           H43
+ATOM   C2 CG321   -0.180   !    0.000                   |
+ATOM  H21 HGA2    0.090   !    0.000               H41-C4-H42
+ATOM  H22 HGA2    0.090   !    0.000                   |
+GROUP                     !                  H13   H31-C3-H32
+ATOM   C3 CG321   -0.180   !    0.000          |        |
+ATOM  H31 HGA2    0.090   !    0.000    H12 - C1 - - - C2 - H22
+ATOM  H32 HGA2    0.090   !    0.000          |        |
+GROUP                     !                  H11      H21
+ATOM   C4 CG331   -0.270   !    0.000
+ATOM  H41 HGA3    0.090   !    0.000
+ATOM  H42 HGA3    0.090   !    0.000
+ATOM  H43 HGA3    0.090   !    0.000
+BOND C1   C2   C2   C3   C3   C4   C1  H11
+BOND C1  H12   C1  H13   C2  H21   C2  H22
+BOND C3  H31   C3  H32   C4  H41   C4  H42
+BOND C4  H43
+IC   H11   C2   *C1  H12        1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2   *C1  H13        1.1110  110.10 -120.00  110.10   1.1110
+IC   H11   C1   C2   C3         1.1110  110.10  180.00  115.00   1.5300
+IC   C3    C1   *C2  H21        1.5300  115.00  120.00  110.10   1.1110
+IC   C3    C1   *C2  H22        1.5300  115.00 -120.00  110.10   1.1110
+IC   C1    C2   C3   C4         1.5280  115.00  -60.00  115.00   1.5280
+IC   C4    C2   *C3  H31        1.5280  115.00  120.00  110.10   1.1110
+IC   C4    C2   *C3  H32        1.5280  115.00 -120.00  110.10   1.1110
+IC   C2    C3   C4   H41        1.5300  115.00  180.00  110.10   1.1110
+IC   H41   C3   *C4  H42        1.1110  110.10  120.00  110.10   1.1110
+IC   H41   C3   *C4  H43        1.1110  110.10 -120.00  110.10   1.1110
+IC   H21   C2    C1  H13        1.1110  110.10  180.00  110.10   1.1110
+PATC first none last none
+
+
+!POLY(1-BUTENE)
+RESI 1BUTR             0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !    0.000
+ATOM  H11 HGA3    0.090   !    0.000          H13      H21
+ATOM  H12 HGA3    0.090   !    0.000           |        |
+ATOM  H13 HGA3    0.090   !    0.000     H12 - C1 - - - C2 - H22
+GROUP                     !                    |        |
+ATOM   C2 CG321   -0.180   !    0.000          H11   H31-C3-H32
+ATOM  H21 HGA2    0.090   !    0.000                    |
+ATOM  H22 HGA2    0.090   !    0.000                H41-C4-H42
+GROUP                     !                             |
+ATOM   C3 CG321   -0.180   !    0.000                   H43
+ATOM  H31 HGA2    0.090   !    0.000
+ATOM  H32 HGA2    0.090   !    0.000
+GROUP                     !
+ATOM   C4 CG331   -0.270   !    0.000
+ATOM  H41 HGA3    0.090   !    0.000
+ATOM  H42 HGA3    0.090   !    0.000
+ATOM  H43 HGA3    0.090   !    0.000
+BOND C1   C2   C2   C3   C3   C4   C1  H11
+BOND C1  H12   C1  H13   C2  H21   C2  H22
+BOND C3  H31   C3  H32   C4  H41   C4  H42
+BOND C4  H43
+IC   H11   C2   *C1  H12        1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2   *C1  H13        1.1110  110.10 -120.00  110.10   1.1110
+IC   H13   C1   C2   C3         1.1110  110.10  180.00  115.00   1.5300
+IC   C3    C1   *C2  H22        1.5300  115.00  120.00  110.10   1.1110
+IC   C3    C1   *C2  H21        1.5300  115.00 -120.00  110.10   1.1110
+IC   C1    C2   C3   C4         1.5280  115.00   60.00  115.00   1.5280
+IC   C4    C2   *C3  H31        1.5280  115.00  120.00  110.10   1.1110
+IC   C4    C2   *C3  H32        1.5280  115.00 -120.00  110.10   1.1110
+IC   C2    C3   C4   H41        1.5300  115.00  180.00  110.10   1.1110
+IC   H41   C3   *C4  H42        1.1110  110.10  120.00  110.10   1.1110
+IC   H41   C3   *C4  H43        1.1110  110.10 -120.00  110.10   1.1110
+IC   H21   C2    C1  H11        1.1110  110.10  180.00  110.10   1.1110
+PATC first none last none
+
+
+RESI PIBUT           0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !
+GROUP                     !               H32
+ATOM   C2 CG311   -0.090   !                |
+ATOM  H21 HGA1    0.090   !      H13   H31-C3-H33
+GROUP                     !       |        |
+ATOM   C3 CG331   -0.270   ! H12 - C1 - - - C2 - H21
+ATOM  H31 HGA3    0.090   !       |        |
+ATOM  H32 HGA3    0.090   !      H11   H41-C4-H43
+ATOM  H33 HGA3    0.090   !                |
+GROUP                     !               H42
+ATOM   C4 CG331   -0.270   !
+ATOM  H41 HGA3    0.090   !
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+BOND C1   C2   C2   C3   C2   C4   C1  H11
+BOND C1  H12   C1  H13   C2  H21   C3  H31
+BOND C3  H32   C3  H33   C4  H41   C4  H42
+BOND C4  H43
+IC H11    C2     *C1    H12        1.1110  110.10  120.00  110.10   1.1110
+IC H11    C2     *C1    H13        1.1110  110.10 -120.00  110.10   1.1110
+IC H11    C1     C2     C3         1.1110  110.10  180.00  114.00   1.5380
+IC C3     C1     *C2    C4         1.5380  114.00  120.00  114.00   1.5380
+IC C3     C1     *C2    H21        1.5380  114.00 -120.00  110.10   1.1110
+IC C1     C2     C3     H31        1.5380  114.00  180.00  110.10   1.1110
+IC H31    C2     *C3    H32        1.1110  110.10  120.00  110.10   1.1110
+IC H31    C2     *C3    H33        1.1110  110.10 -120.00  110.10   1.1110
+IC C1     C2     C4     H41        1.5380  114.00  180.00  110.10   1.1110
+IC H41    C2     *C4    H42        1.1110  110.10  120.00  110.10   1.1110
+IC H41    C2     *C4    H43        1.1110  110.10 -120.00  110.10   1.1110
+PATC first none last none
+
+RESI AMIDU              0.000 !
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   N1 NG2S2   -0.620   !    0.000
+ATOM  H11 HGP1    0.310   !    0.000             O1  HE3
+ATOM  H12 HGP1    0.310   !    0.000             ||   |
+ATOM   C1 CG2O1    0.550   !    0.000  H12 - N1 - C1 - CE - HE2
+ATOM   O1 OG2D1   -0.550   !    0.000        |         |
+GROUP                     !                 H11       HE1
+ATOM   CE CG331   -0.270   !    0.000
+ATOM  HE1 HGA3    0.090   !    0.000
+ATOM  HE2 HGA3    0.090   !    0.000
+ATOM  HE3 HGA3    0.090   !    0.000
+BOND N1   C1   C1   CE   C1   O1   N1  H11
+BOND N1  H12   CE  HE1   CE  HE2   CE  HE3
+IMPR C1   CE    N1     O1
+DOUBLE C1 O1
+IC   H11    C1    *N1    H12        0.0000    0.00  180.00    0.00   0.0000
+IC   H11    N1    C1     O1         0.0000    0.00  180.00    0.00   0.0000
+IC   O1     N1    *C1    CE         0.0000    0.00  180.00    0.00   0.0000
+IC   N1     C1    CE     HE2        0.0000    0.00  180.00    0.00   0.0000
+IC   N1     C1    CE     HE1        0.0000    0.00   60.00    0.00   0.0000
+IC   N1     C1    CE     HE3        0.0000    0.00  -60.00    0.00   0.0000
+IC   HE2    C1    *CE    HE3        0.0000    0.00  120.00    0.00   0.0000
+IC   HE2    C1    *CE    HE1        0.0000    0.00 -120.00    0.00   0.0000
+IC   HE1      C1      *CE      HE3        1.1110  110.10 -120.00  110.10   1.1110
+
+
+RESI 13BDT          0.00 !
+GROUP
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !            H13
+GROUP                   !            /
+ATOM   C2 CG2D1   -0.150   !     H12 - C1          H31
+ATOM  H21 HGA4    0.150   !          /   \       /
+GROUP                   !       H11    C2 =  C3    H43
+ATOM   C3 CG2D1   -0.150   !              /       \  /
+ATOM  H31 HGA4    0.150   !            H21        C4 - H42
+GROUP                   !                       /
+ATOM   C4 CG331   -0.270   !                    H41
+ATOM  H41 HGA3    0.090   !
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+BOND C1 H11  C1 H12  C1 H13 C1 C2  C2  H21
+DOUBLE C2 C3
+BOND C3 H31 C3 C4 C4 H41  C4 H42  C4 H43
+IC   H11   C2   *C1   H12   1.1110  111.50  120.00  111.50   1.1110
+IC   H11   C2   *C1   H13   1.1110  111.50 -120.00  111.50   1.1110
+IC   H12   C1   C2    C3    1.1110  111.50  180.00  123.50   1.3400
+IC   C3     C1    *C2   H21    1.3400  123.50  180.00  117.00   1.1000
+IC   C1     C2    C3    C4     1.5040  123.50  180.00  123.50   1.5040
+IC   C4     C2    *C3   H31    1.5040  123.50  180.00  119.50   1.1000
+IC   C2     C3     C4   H41    1.3400  123.50   60.00  111.50   1.1110
+IC   H43    C3    *C4   H41    1.1110  111.50 -120.00  111.50   1.1110
+IC   H43    C3    *C4   H42    1.1110  111.50  120.00  111.50   1.1110
+
+
+RESI 13BDC          0.00 !
+GROUP
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !            H13     H41
+GROUP                    !            /         \
+ATOM   C2 CG2D1   -0.150   !     H12 - C1          C4 - H42
+ATOM  H21 HGA4    0.150   !          /   \       / \
+GROUP                   !         H11    C2 =  C3   H43
+ATOM   C3 CG2D1   -0.150   !              /       \
+ATOM  H31 HGA4    0.150   !            H21       H31
+GROUP                   !
+ATOM   C4 CG331   -0.270   !
+ATOM  H41 HGA3    0.090   !
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+BOND C1 H11  C1 H12  C1 H13 C1 C2  C2  H21
+DOUBLE C2 C3
+BOND C3 H31 C3 C4 C4 H41  C4 H42  C4 H43
+IC   H11   C2   *C1   H12   1.1110  111.50  120.00  111.50   1.1110
+IC   H11   C2   *C1   H13   1.1110  111.50 -120.00  111.50   1.1110
+IC   H12   C1   C2    C3    1.1110  111.50  180.00  123.50   1.3400
+IC   H11    C1    C2    C3     1.1110  111.50   60.00  123.50   1.3400
+IC   C3     C1    *C2   H21    1.3400  123.50  180.00  117.00   1.1000
+IC   C1     C2     C3   C4     1.5040  123.50    0.00  123.50   1.5040
+IC   C4     C2    *C3   H31    1.5040  123.50  180.00  119.50   1.1000
+IC   C2     C3     C4   H43    1.3400  123.50   60.00  111.50   1.1110
+IC   H43    C3    *C4   H41    1.1110  111.50 -120.00  111.50   1.1110
+IC   H43    C3    *C4   H42    1.1110  111.50  120.00  111.50   1.1110
+
+!POLYISOPRENE
+RESI 14IPT          0.00 !
+GROUP
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !              H13
+ATOM  H13 HGA3    0.090   !             /
+GROUP                   !    H12 -  C1         H31
+ATOM   C2 CG2D1    0.000   !         /   \       /
+GROUP                   !       H11    C2 =  C3    H43
+ATOM   C3 CG2D1   -0.150   !              /       \  /
+ATOM  H31 HGA4    0.150   !      H51 - C5        C4 - H42
+GROUP                   !           /  \       /
+ATOM   C4 CG331   -0.270   !         H52  H53    H41
+ATOM  H41 HGA3    0.090   !
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+GROUP
+ATOM   C5 CG331   -0.270   !
+ATOM  H51 HGA3    0.090   !
+ATOM  H52 HGA3    0.090   !
+ATOM  H53 HGA3    0.090   !
+BOND C1 H11  C1 H12  C1 H13 C1 C2
+DOUBLE C2 C3
+BOND C3 H31  C3  C4  C4  H41  C4 H42  C4 H43
+BOND C2  C5  C5 H51  C5  H52  C5 H53
+IC   H11   C2   *C1   H12   1.1110  111.50  120.00  111.50   1.1110
+IC   H11   C2   *C1   H13   1.1110  111.50 -120.00  111.50   1.1110
+IC   H12   C1   C2    C3    1.1110  111.50  180.00  123.50   1.3400
+IC   C3    C1   *C2   C5    1.3400  123.50  180.00  123.50   1.5040
+IC   C1    C2   C3    C4    1.5040  123.50  180.00  123.50   1.5040
+IC   C4    C2   *C3   H31   1.5040  123.50  180.00  119.50   1.1000
+IC   C2    C3   C4    H41   1.3400  123.50   60.00  111.50   1.1110
+IC   H41   C3   *C4   H42   1.1110  111.50  120.00  111.50   1.1110
+IC   H41   C3   *C4   H43   1.1110  111.50 -120.00  111.50   1.1110
+IC   C1    C2   C5    H51   1.5040  123.50  180.00  111.50   1.1110
+IC   H51   C2   *C5   H52   1.1110  111.50  120.00  111.50   1.1110
+IC   H51   C2   *C5   H53   1.1110  111.50 -120.00  111.50   1.1110
+
+
+RESI 14IPC       0.00 !
+GROUP
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !              H13  H41
+ATOM  H13 HGA3    0.090   !             /       \
+GROUP                      !    H12 -  C1         C4 - H42
+ATOM   C2 CG2D1    0.000   !         /   \       /  \
+GROUP                      !       H11    C2 =  C3   H43
+ATOM   C3 CG2D1   -0.150   !              /       \
+ATOM  H31 HGA4    0.150   !      H51 - C5         H31
+GROUP                     !           /  \
+ATOM   C4 CG331   -0.270   !         H52  H53
+ATOM  H41 HGA3    0.090   !
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+GROUP
+ATOM   C5 CG331   -0.270   !
+ATOM  H51 HGA3    0.090   !
+ATOM  H52 HGA3    0.090   !
+ATOM  H53 HGA3    0.090   !
+BOND C1 H11  C1 H12  C1 H13 C1 C2
+DOUBLE C2 C3
+BOND C3 H31  C3  C4  C4  H41  C4 H42  C4 H43
+BOND C2  C5  C5 H51  C5  H52  C5 H53
+IC   H11   C2   *C1   H12   1.1110  111.50  120.00  111.50   1.1110
+IC   H11   C2   *C1   H13   1.1110  111.50 -120.00  111.50   1.1110
+IC   H12   C1   C2    C3    1.1110  111.50  180.00  123.50   1.3400
+IC   C3    C1   *C2   C5    1.3400  123.50  180.00  123.50   1.5040
+IC   C1    C2   C3    C4    1.5040  123.50    0.00  123.50   1.5040
+IC   C4    C2   *C3   H31   1.5040  123.50  180.00  119.50   1.1000
+IC   C2    C3   C4    H41   1.3400  123.50   60.00  111.50   1.1110
+IC   H41   C3   *C4   H43   1.1110  111.50 -120.00  111.50   1.1110
+IC   H41   C3   *C4   H42   1.1110  111.50  120.00  111.50   1.1110
+IC   C1    C2   C5    H51   1.5040  123.50  180.00  111.50   1.1110
+IC   H51   C2   *C5   H52   1.1110  111.50  120.00  111.50   1.1110
+IC   H51   C2   *C5   H53   1.1110  111.50 -120.00  111.50   1.1110
+
+
+RESI ETHOX            0.00 !
+GROUP
+ATOM   O1 OG311   -0.650   !
+ATOM  HO1 HGP1    0.420   !
+ATOM   C1 CG321    0.050   !                 H13    H23
+ATOM  H11 HGA2    0.090   !                  |      |
+ATOM  H13 HGA2    0.090   !       HO1 - O1 - C1 - - C2 - H22
+GROUP                                        |      |
+ATOM   C2 CG331   -0.270   !                 H11    H21
+ATOM  H21 HGA3    0.090   !
+ATOM  H22 HGA3    0.090   !
+ATOM  H23 HGA3    0.090   !
+BOND HO1  O1   O1   C1   C1   C2   C1 H11  C1  H13
+BOND C2  H21  C2  H22  C2  H23
+IC   HO1      O1      C1       C2         0.9600  106.00  180.00  110.10   1.5280
+IC   C2       O1      *C1      H11        1.5280  110.10  120.00  108.89   1.1110
+IC   C2       O1      *C1      H13        1.5280  110.10 -120.00  108.89   1.1110
+IC   O1       C1      C2       H22        1.4200  110.10  180.00  110.10   1.1110
+IC   H22      C1      *C2      H23        1.1110  110.10  120.00  110.10   1.1110
+IC   H22      C1      *C2      H21        1.1110  110.10 -120.00  110.10   1.1110
+IC   H21      C1      *C2      H23        1.1110  110.10 -120.00  110.10   1.1110
+
+RESI PROXS            0.00 !
+GROUP
+ATOM   O1 OG311   -0.650   !                        H32
+ATOM  HO1 HGP1    0.420   !                         |
+ATOM   C1 CG321    0.050   !                 H13 H31-C3-H33
+ATOM  H11 HGA2    0.090   !                  |      |
+ATOM  H13 HGA2    0.090   !       HO1 - O1 - C1 - - C2 - H22
+GROUP                                        |      |
+ATOM   C2 CG321   -0.180   !                 H11    H21
+ATOM  H21 HGA2    0.090   !
+ATOM  H22 HGA2    0.090   !
+GROUP
+ATOM   C3 CG331   -0.270   !
+ATOM  H31 HGA3    0.090   !
+ATOM  H32 HGA3    0.090   !
+ATOM  H33 HGA3    0.090   !
+BOND HO1  O1   O1   C1   C1   C2   C2  C3
+BOND C3  H31   C3  H32   C3  H33  C1 H11
+BOND C1  H13   C2  H21  C2  H22
+IC   HO1    O1     C1     C2         0.9600  106.00  180.00  110.10   1.5300
+IC   C2     O1     *C1    H11        1.5300  110.10  120.00  108.89   1.1110
+IC   C2     O1     *C1    H13        1.5300  110.10 -120.00  108.89   1.1110
+IC   O1     C1     C2     C3         1.4200  110.10  -60.00  115.00   1.5280
+IC   C3     C1     *C2    H21        1.5280  115.00  120.00  110.10   1.1110
+IC   C3     C1     *C2    H22        1.5280  115.00 -120.00  110.10   1.1110
+IC   C1     C2     C3     H31        1.5300  115.00  180.00  110.10   1.1110
+IC   H31    C2     *C3    H32        1.1110  110.10  120.00  110.10   1.1110
+IC   H31    C2     *C3    H33        1.1110  110.10 -120.00  110.10   1.1110
+
+!POLYPROPYLENEOXIDE
+RESI PROXR            0.00 !
+GROUP
+ATOM   O1 OG311   -0.650   !
+ATOM  HO1 HGP1    0.420   !
+ATOM   C1 CG321    0.050   !                 H13    H21
+ATOM  H11 HGA2    0.090   !                  |      |
+ATOM  H13 HGA2    0.090   !       HO1 - O1 - C1 - - C2 - H22
+GROUP                                        |      |
+ATOM   C2 CG321   -0.180   !                 H11 H31-C3-H33
+ATOM  H21 HGA2    0.090   !                         |
+ATOM  H22 HGA2    0.090   !                        H32
+GROUP
+ATOM   C3 CG331   -0.270   !
+ATOM  H31 HGA3    0.090   !
+ATOM  H32 HGA3    0.090   !
+ATOM  H33 HGA3    0.090   !
+BOND HO1  O1   O1   C1   C1   C2   C2  C3
+BOND C3  H31   C3  H32   C3  H33  C1 H11
+BOND C1  H13   C2  H21  C2  H22
+IC   HO1    O1     C1     C2         0.9600  106.00  180.00  110.10   1.5300
+IC   C2     O1     *C1    H11        1.5300  110.10  120.00  108.89   1.1110
+IC   C2     O1     *C1    H13        1.5300  110.10 -120.00  108.89   1.1110
+IC   O1     C1     C2     C3         1.4200  110.10   60.00  115.00   1.5280
+IC   C3     C1     *C2    H22        1.5280  115.00  120.00  110.10   1.1110
+IC   C3     C1     *C2    H21        1.5280  115.00 -120.00  110.10   1.1110
+IC   C1     C2     C3     H31        1.5300  115.00  180.00  110.10   1.1110
+IC   H31    C2     *C3    H32        1.1110  110.10  120.00  110.10   1.1110
+IC   H31    C2     *C3    H33        1.1110  110.10 -120.00  110.10   1.1110
+
+RESI EIMIN            0.000 ! param penalty=  11.500 ; charge penalty=  11.215
+GROUP                     !
+ATOM   N1 NG321   -0.860   !
+ATOM  HN1 HGPAM2    0.290   !
+ATOM  HN2 HGPAM2    0.290   !
+ATOM   C1 CG321    0.100   !              H13    H23
+ATOM  H11 HGA2    0.090   !               |      |
+ATOM  H13 HGA2    0.090   !    HN2 - N1 - C1 - - C2 - H22
+GROUP                     !          |    |      |
+ATOM   C2 CG331   -0.270   !          HN1 H11     H21
+ATOM  H21 HGA3    0.090   !
+ATOM  H22 HGA3    0.090   !
+ATOM  H23 HGA3    0.090   !
+BOND N1  HN1  N1   HN2  N1  C1   C1  H11  C1  H13
+BOND C1  C2   C2  H21  C2  H22  C2  H23
+IC    HN1     C1     *N1    HN2        1.0140  112.10  180.00  112.10   1.0140
+IC    HN2     N1     C1     C2         1.0140  112.10  180.00  112.20   1.5280
+IC    C2      N1     *C1    H11        1.5280  112.20  120.00  109.50   1.1110
+IC    H11     N1     *C1    H13        1.1110  109.50  120.00  109.50   1.1110
+IC    N1      C1     C2     H22        1.4740  112.20  180.00  110.10   1.1110
+IC    H22     C1     *C2    H23        1.1110  110.10  120.00  110.10   1.1110
+IC    H22     C1     *C2    H21        1.1110  110.10 -120.00  110.10   1.1110
+IC    H21     C1     *C2    H23       1.1110  110.10 -120.00  110.10   1.1110
+
+RESI ETKTS          0.00 !
+GROUP
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !                H42
+GROUP                                     |
+ATOM   C2 CG321   -0.140   !             H41-C4-H43 O1
+ATOM  H21 HGA2    0.090   !                  \   //
+ATOM  H22 HGA2    0.090   !            H13     C3
+ATOM   O1 OG2D3   -0.480   !             |      |
+ATOM   C3 CG2O5    0.400   !       H12 - C1 - - C2 - H22
+ATOM   C4 CG331   -0.230   !             |      |
+ATOM  H41 HGA3    0.090   !            H11     H21
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+BOND    C1 C2   C2 C3    C3 C4  C3 O1
+BOND    C1 H11  C1 H12   C1 H13 C2 H21
+BOND    C2 H22  C4 H41  C4 H42   C4 H43
+DOUBLE C3 O1
+IC   H11   C2    *C1    H12        1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2    *C1    H13        1.1110  110.10 -120.00  110.10   1.1110
+IC   H11   C1    C2     C3         1.1110  110.10  180.00  111.50   1.5000
+IC   C3    C1    *C2    H21        1.5000  111.50  120.00  110.10   1.1110
+IC   C3    C1    *C2    H22        1.5000  111.50 -120.00  110.10   1.1110
+IC   C1    C2    C3     O1         1.5280  111.50   90.00  122.20   1.2300
+IC   O1    C2    *C3    C4         1.2300  122.20  180.00  115.60   1.5000
+IC   C2    C3    C4     H41        1.5000  115.60  180.00  109.50   1.1110
+IC   H41   C3    *C4    H42        1.1110  109.50  120.00  109.50   1.1110
+IC   H41   C3    *C4    H43        1.1110  109.50 -120.00  109.50   1.1110
+
+RESI ETKTR          0.00 !
+GROUP
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !             H13    H21
+ATOM  H13 HGA3    0.090   !              |      |
+GROUP                            H12 - C1 - - C2 - H22
+ATOM   C2 CG321   -0.140   !              |      |
+ATOM  H21 HGA2    0.090   !             H11     C3
+ATOM  H22 HGA2    0.090   !                   //   \
+ATOM   O1 OG2D3   -0.480   !                  O1 H41-C4-H43
+ATOM   C3 CG2O5    0.400   !                         |
+ATOM   C4 CG331   -0.230   !                         H41
+ATOM  H41 HGA3    0.090   !
+ATOM  H42 HGA3    0.090   !
+ATOM  H43 HGA3    0.090   !
+BOND    C1 C2   C2 C3    C3 C4  C3 O1
+BOND    C1 H11  C1 H12   C1 H13 C2 H21
+BOND    C2 H22  C4 H41  C4 H42   C4 H43
+DOUBLE C3 O1
+IC   H11   C2    *C1    H12        1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2    *C1    H13        1.1110  110.10 -120.00  110.10   1.1110
+IC   H13   C1    C2     C3         1.1110  110.10  180.00  111.50   1.5000
+IC   C3    C1    *C2    H21        1.5000  111.50 -120.00  110.10   1.1110
+IC   C3    C1    *C2    H22        1.5000  111.50  120.00  110.10   1.1110
+IC   C1    C2    C3     O1         1.5280  111.50  -90.00  122.20   1.2300
+IC   O1    C2    *C3    C4         1.2300  122.20  180.00  115.60   1.5000
+IC   C2    C3    C4     H41        1.5000  115.60  180.00  109.50   1.1110
+IC   H41   C3    *C4    H42        1.1110  109.50  120.00  109.50   1.1110
+IC   H41   C3    *C4    H43        1.1110  109.50 -120.00  109.50   1.1110
+
+
+RESI ACNS            0.000 ! param penalty=  34.000 ; charge penalty=  33.019
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !   12.422
+ATOM  H11 HGA3    0.090   !    1.700                   N1
+ATOM  H12 HGA3    0.090   !    1.700                  |||
+ATOM  H13 HGA3    0.090   !    1.700         H13       C3
+GROUP                     !                   |        |
+ATOM   C2 CG321   -0.080   !   33.019    H12 - C1 - - - C2 - H22
+ATOM  H21 HGA2    0.090   !    0.450          |        |
+ATOM  H22 HGA2    0.090   !    0.450         H11      H21
+ATOM   C3 CG1N1    0.360   !   32.914
+ATOM   N1 NG1T1   -0.460   !    0.319
+BOND C1   C2   C2   C3   C3   N1  C1   H11
+BOND C1  H12   C1  H13   C2  H21  C2   H22
+TRIPLE C3 N1
+IC H11   C2    *C1    H12     1.1110  110.10  120.00  110.10   1.1110
+IC H11   C2    *C1    H13     1.1110  110.10 -120.00  110.10   1.1110
+IC H11   C1    C2     C3      1.1110  110.10  180.00  120.00   1.4700
+IC C3    C1    *C2    H21     1.4700  120.00  120.00  110.10   1.1110
+IC C3    C1    *C2    H22     1.4700  120.00 -120.00  110.10   1.1110
+IC C1    C2    C3     N1      1.5280  120.00  180.00  180.00   1.1800
+
+!POLYACRYLONITRILE
+RESI ACNR            0.000 ! param penalty=  34.000 ; charge penalty=  33.019
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !   12.422
+ATOM  H11 HGA3    0.090   !    1.700        H13      H21
+ATOM  H12 HGA3    0.090   !    1.700         |        |
+ATOM  H13 HGA3    0.090   !    1.700   H12 - C1 - - - C2 - H22
+GROUP                     !                  |        |
+ATOM   C2 CG321   -0.080   !   33.019        H11       C3
+ATOM  H22 HGA2    0.090   !    0.450                 |||
+ATOM  H21 HGA2    0.090   !    0.450                  N1
+ATOM   C3 CG1N1    0.360   !   32.914
+ATOM   N1 NG1T1   -0.460   !    0.319
+BOND C1   C2   C2   C3   C3   N1  C1   H11
+BOND C1  H12   C1  H13   C2  H22  C2   H21
+TRIPLE C3 N1
+IC H11   C2    *C1    H12     1.1110  110.10  120.00  110.10   1.1110
+IC H11   C2    *C1    H13     1.1110  110.10 -120.00  110.10   1.1110
+IC H13   C1    C2     C3      1.1110  110.10  180.00  120.00   1.4700
+IC C3    C1    *C2    H22     1.4700  120.00  120.00  110.10   1.1110
+IC C3    C1    *C2    H21     1.4700  120.00 -120.00  110.10   1.1110
+IC C1    C2    C3     N1      1.5280  120.00  180.00  180.00   1.1800
+
+RESI STYRS             0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !                 H51       H61
+ATOM  H12 HGA3    0.090   !                   \       /
+ATOM  H13 HGA3    0.090   !                   C5- -C6
+GROUP                     !                  /       \
+ATOM   C2 CG321   -0.180   !           H41 - C4       C7 - H71
+ATOM  H21 HGA2    0.090   !                  \       /
+ATOM  H22 HGA2    0.090   !                   C3- -C8
+GROUP                     !         H13      /       \
+ATOM   C3 CG2R61    0.000   !          |      /         H81
+ATOM   C4 CG2R61   -0.115   !     H12- C1 - - C2 - H22
+ATOM  H41 HGR61    0.115   !          |      |
+GROUP                     !         H11    H21
+ATOM   C5 CG2R61   -0.115   !
+ATOM  H51 HGR61    0.115   !
+GROUP                     !
+ATOM   C6 CG2R61   -0.115   !
+ATOM  H61 HGR61    0.115   !
+GROUP                     !
+ATOM   C7 CG2R61   -0.115   !
+ATOM  H71 HGR61    0.115   !
+GROUP                     !
+ATOM   C8 CG2R61   -0.115   !
+ATOM  H81 HGR61    0.115   !
+BOND C1   C2   C2   C3   C3   C4   C3   C8
+BOND C4   C5   C5   C6   C6   C7   C7   C8
+BOND C1   H11   C1   H12   C1   H13   C2   H21
+BOND C2   H22   C4   H41   C5   H51   C6   H61
+BOND C7   H71   C8   H81
+IC  H11   C2    *C1   H12        1.1110  110.10  120.00  110.10   1.1110
+IC  H11   C2    *C1   H13        1.1110  110.10 -120.00  110.10   1.1110
+IC  H11   C1    C2    C3         1.1110  110.10  180.00  107.50   1.4900
+IC  C3    C1    *C2   H21        1.4900  107.50  120.00  110.10   1.1110
+IC  C3    C1    *C2   H22        1.4900  107.50 -120.00  110.10   1.1110
+IC  C1    C2    C3    C8         1.5280  107.50  -90.00  120.00   1.3750
+IC  C8    C2    *C3   C4         1.3750  120.00  180.00  120.00   1.3750
+IC  C2    C3    C4    C5         1.4900  120.00  180.00  120.00   1.3750
+IC  C5    C3    *C4   H41        1.3750  120.00  180.00  120.00   1.0800
+IC  C3    C4    C5    C6         1.3750  120.00    0.00  120.00   1.3750
+IC  C6    C4    *C5   H51        1.3750  120.00  180.00  120.00   1.0800
+IC  C4    C5    C6    C7         1.3750  120.00    0.00  120.00   1.3750
+IC  C7    C5    *C6   H61        1.3750  120.00  180.00  120.00   1.0800
+IC  C8    C6    *C7   H71        1.3750  120.00  180.00  120.00   1.0800
+IC  C7    C3    *C8   H81        1.3750  120.00  180.00  120.00   1.0800
+
+
+RESI STYRR             0.000 ! param penalty=   0.000 ; charge penalty=   0.000
+GROUP            ! CHARGE   CH_PENALTY
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !
+ATOM  H12 HGA3    0.090   !
+ATOM  H13 HGA3    0.090   !          H13   H21
+GROUP                     !          |     |
+ATOM   C2 CG321   -0.180   !    H12 - C1- - C2 - H22
+ATOM  H21 HGA2    0.090   !          |      \       H81
+ATOM  H22 HGA2    0.090   !        H11       \      /
+GROUP                     !                  C3- -C8
+ATOM   C3 CG2R61    0.000   !                 /       \
+ATOM   C4 CG2R61   -0.115   !          H41 - C4       C7 - H71
+ATOM  H41 HGR61    0.115   !                 \       /
+GROUP                     !                  C5- -C6
+ATOM   C5 CG2R61   -0.115   !                 /      \
+ATOM  H51 HGR61    0.115   !               H51      H61
+GROUP                     !
+ATOM   C6 CG2R61   -0.115   !
+ATOM  H61 HGR61    0.115   !
+GROUP                     !
+ATOM   C7 CG2R61   -0.115   !
+ATOM  H71 HGR61    0.115   !
+GROUP                     !
+ATOM   C8 CG2R61   -0.115   !
+ATOM  H81 HGR61    0.115   !
+BOND C1   C2   C2   C3   C3   C4   C3   C8
+BOND C4   C5   C5   C6   C6   C7   C7   C8
+BOND C1   H11   C1   H12   C1   H13   C2   H21
+BOND C2   H22   C4   H41   C5   H51   C6   H61
+BOND C7   H71   C8   H81
+IC  H11   C2    *C1   H12        1.1110  110.10  120.00  110.10   1.1110
+IC  H11   C2    *C1   H13        1.1110  110.10 -120.00  110.10   1.1110
+IC  H13   C1    C2    C3         1.1110  110.10  180.00  107.50   1.4900
+IC  C3    C1    *C2   H21        1.4900  107.50 -120.00  110.10   1.1110
+IC  C3    C1    *C2   H22        1.4900  107.50  120.00  110.10   1.1110
+IC  C1    C2    C3    C8         1.5280  107.50   90.00  120.00   1.3750
+IC  C8    C2    *C3   C4         1.3750  120.00  180.00  120.00   1.3750
+IC  C2    C3    C4    C5         1.4900  120.00  180.00  120.00   1.3750
+IC  C5    C3    *C4   H41        1.3750  120.00  180.00  120.00   1.0800
+IC  C3    C4    C5    C6         1.3750  120.00    0.00  120.00   1.3750
+IC  C6    C4    *C5   H51        1.3750  120.00  180.00  120.00   1.0800
+IC  C4    C5    C6    C7         1.3750  120.00    0.00  120.00   1.3750
+IC  C7    C5    *C6   H61        1.3750  120.00  180.00  120.00   1.0800
+IC  C8    C6    *C7   H71        1.3750  120.00  180.00  120.00   1.0800
+IC  C7    C3    *C8   H81        1.3750  120.00  180.00  120.00   1.0800
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!VINYLALCOHOL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!POLYVINYLALCOHOL
+RESI VIALS            0.000 !    VINYL ALCOHOL
+GROUP                      !
+ATOM   C1 CG331   -0.270   !
+ATOM  H11 HGA3    0.090   !                 H31
+ATOM  H12 HGA3    0.090   !                /
+ATOM  H13 HGA3    0.090   !       H31     O1
+GROUP                      !        |      |
+ATOM   C2 CG321    0.050   !  H12 - C1 - - C2 - H22
+ATOM  H21 HGA2    0.090   !        |      |
+ATOM  H22 HGA2    0.090   !       H11    H21
+ATOM   O1 OG311   -0.650   !
+ATOM  H31 HGP1    0.420   !
+BOND C1   C2   C2   O1   C1  H11  C1  H12
+BOND C1  H13   C2  H21   C2  H22  O1  H31
+IC   C1    C2     O1    H31    1.5280  110.10  180.00  106.00   0.9600
+IC   H11   C1     C2    O1     1.1110  110.10  180.00  110.10   1.4200
+IC   H11   C2     *C1   H12    1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2     *C1   H13    1.1110  110.10 -120.00  110.10   1.1110
+IC   O1    C1     *C2   H21    1.4200  110.10  120.00  110.10   1.1110
+IC   O1    C1     *C2   H22    1.4200  110.10 -120.00  110.10   1.1110
+
+
+RESI VIALR            0.000 !    VINYL ALCOHOL
+GROUP                      !
+ATOM   C1 CG331   -0.270   !        H31    H21
+ATOM  H11 HGA3    0.090   !         |      |
+ATOM  H12 HGA3    0.090   !   H12 - C1 - - C2 - H22
+ATOM  H13 HGA3    0.090   !         |      |
+GROUP                      !        H11     O1
+ATOM   C2 CG321    0.050   !                 \
+ATOM  H21 HGA2    0.090   !                  H31
+ATOM  H22 HGA2    0.090   !
+ATOM   O1 OG311   -0.650   !
+ATOM  H31 HGP1    0.420   !
+BOND C1   C2   C2   O1   C1  H11  C1  H12
+BOND C1  H13   C2  H21   C2  H22  O1  H31
+IC   C1    C2     O1    H31    1.5280  110.10  180.00  106.00   0.9600
+IC   H13   C1     C2    O1     1.1110  110.10  180.00  110.10   1.4200
+IC   H11   C2     *C1   H12    1.1110  110.10  120.00  110.10   1.1110
+IC   H11   C2     *C1   H13    1.1110  110.10 -120.00  110.10   1.1110
+IC   O1    C1     *C2   H21    1.4200  110.10 -120.00  110.10   1.1110
+IC   O1    C1     *C2   H22    1.4200  110.10  120.00  110.10   1.1110
+
+
+END
+
+read param card flex append
+* synthetic polymer parameter
+*
+BONDS
+CG1N1  CG321      400.00    1.4700 !
+CG301  NG2S1      320.00    1.4300 !
+CG2O2  CG2R61  254.00     1.4800 ! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+CG1N1  CG311      400.00    1.4700 !
+CG2O2  CG301   200.00     1.5220 ! from CG2O2 CG311, penalty= 8
+CG331  HGA3    322.00     1.1110 ! PROT alkane update, adm jr., 3/2/92
+CG2O2  OG2D1   750.00     1.2200 ! PROT adm jr. 5/02/91, acetic acid pure solvent; LIPID methyl acetate
+CG2O2  CG2R51  254.00     1.4800 ! from CG2O2 CG2R61, penalty= 45
+CG2O2  CG301      200.00    1.5220 !
+CG321  NG2R53  320.00     1.4300 ! from CG311 NG2R53, penalty= 4
+CG321  NG2R53     320.00    1.4300 !
+CG301  NG311   263.00     1.4740 ! from CG321 NG311, penalty= 12
+CG321  CG331   222.50     1.5280 ! PROT alkane update, adm jr., 3/2/92
+CG2O2  OG302   150.00     1.3340 ! LIPID methyl acetate
+CG301  NG2S1   320.00     1.4300 ! from CG311 NG2S1, penalty= 8
+OG311  HGP1    545.00     0.9600 ! PROT EMB 11/21/89 methanol vib fit; og tested on MeOH EtOH,...
+CG311  NG311      263.00    1.4740 !
+CG2O2  OG311   230.00     1.4000 ! PROT adm jr. 5/02/91, acetic acid pure solvent
+CG301  NG311      263.00    1.4740 !
+CG2R61 HGR61   340.00     1.0800 ! PROT phe,tyr JES 8/25/89
+CG1N1  CG321   400.00     1.4700 ! from CG1N1 CG331, penalty= 6
+CG2R51 OG2R50  450.00     1.3710 ! FURA, furan
+CG321  OG302   320.00     1.4400 ! PROTNA serine/threonine phosphate
+CG2R61 CG2R61  305.00     1.3750 ! PROT benzene, JES 8/25/89
+CG2R51 CG2R51  410.00     1.3600 ! PROT histidine, adm jr., 6/27/90
+CG2R51 HGR51   350.00     1.0800 ! INDO/TRP
+CG1N1  CG311   400.00     1.4700 ! from CG1N1 CG331, penalty= 10
+CG311  NG311   263.00     1.4740 ! from CG321 NG311, penalty= 4
+CG321  HGA2    309.00     1.1110 ! PROT alkane update, adm jr., 3/2/92
+CG2O2  CG2R61  254.00     1.4800 ! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+CG331  HGA3    322.00     1.1110 ! PROT alkane update, adm jr., 3/2/92
+CG2O2  OG2D1   750.00     1.2200 ! PROT adm jr. 5/02/91, acetic acid pure solvent; LIPID methyl acetate
+CG321  CG331   222.50     1.5280 ! PROT alkane update, adm jr., 3/2/92
+CG2O2  OG302   150.00     1.3340 ! LIPID methyl acetate
+OG311  HGP1    545.00     0.9600 ! PROT EMB 11/21/89 methanol vib fit; og tested on MeOH EtOH,...
+CG2O2  OG311   230.00     1.4000 ! PROT adm jr. 5/02/91, acetic acid pure solvent
+CG2R61 HGR61   340.00     1.0800 ! PROT phe,tyr JES 8/25/89
+CG2R51 OG2R50  450.00     1.3710 ! FURA, furan
+CG321  OG302   320.00     1.4400 ! PROTNA serine/threonine phosphate
+CG2R61 CG2R61  305.00     1.3750 ! PROT benzene, JES 8/25/89
+CG2R51 CG2R51  410.00     1.3600 ! PROT histidine, adm jr., 6/27/90
+CG2R51 HGR51   350.00     1.0800 ! INDO/TRP
+CG321  HGA2    309.00     1.1110 ! PROT alkane update, adm jr., 3/2/92
+ANGLES
+CG301  CG321  CG324    58.35    110.50   11.16   2.56100 ! lig , from CG311 CG321 CG324, PENALTY= 1.2
+CG2R61 CG2O2  OG302    50.00    111.00   20.00   2.36000 ! MBOA, methylbenzoate (UB term has been adjusted), jal
+CG311  CG1N1  NG1T1    21.20    180.00 ! from CG331 CG1N1 NG1T1, penalty= 1.5
+CG1N1  CG311  OG301   115.00    109.70 ! from CG321 CG311 OG302, penalty= 47.5
+CG2O1  CG311  NG311    43.70    110.00 !
+OG302  CG321  HGA2     60.00    109.50 ! PROT adm jr. 4/05/91, methyl acetate
+CG2O2  CG301  OG301    45.00    109.00 ! from CG2O3 CG301 OG301, penalty= 12.5
+NG2R53 CG311  OG302    70.00    113.50 ! from CG321 CG311 NG2R53, penalty= 45
+CG2O5  CG311  CG321    52.00    108.00 !
+NG2R53 CG311  OG301    70.00    113.50 ! from CG321 CG311 NG2R53, penalty= 45
+CG331  CG311  NG2R53   70.00    113.50 !
+CG2R51 OG2R50 CG2R51  100.00    106.00 ! CG2R51 OG2R50 CG2R51  100.00    106.00 ! FURA, furan
+CG331  CG301  NG311    43.70    112.20 !
+HGA2   CG321  HGA2     35.50    109.00    5.40   1.80200 ! PROT alkane update, adm jr., 3/2/92
+OG301  CG311  OG311    45.00    116.50 !
+CG2O3  CG311  OG302    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 0.5
+CG2O5  CG311  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 7.2
+CG2O1  CG311  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 6.7
+CG2D1  CG321  CG301    32.00    112.20 !
+CG1N1  CG311  HGA1     50.00    110.50 ! from CG1N1 CG331 HGA3, penalty= 11
+CG1N1  CG321  CG321    70.00    113.50 ! from CG321 CG321 NG2S1, penalty= 34
+CG331  CG301  NG2S1    70.00    113.50 ! from CG331 CG311 NG2S1, penalty= 8
+CG2O5  CG311  CG321    52.00    108.00 ! from CG2O2 CG311 CG321, penalty= 2
+CG1N1  CG311  CG321    70.00    113.50 ! from CG321 CG311 NG2S1, penalty= 34
+CG2D1  CG321  NG311    57.00    107.00 ! from CG2R51 CG321 NG301, penalty= 23.1
+CG311  NG311  CG321    40.50    112.20      5.00   2.42170 !
+CG2O2  CG311  CG331    52.00    108.00 ! from CG2O2 CG311 CG321, penalty= 0.9
+CG2O2  CG301  NG2S1    50.00    107.00 !
+CG321  NG311  CG321    40.50    112.20      5.00   2.42170 !
+CG2D1  CG321  CG301    32.00    112.20 ! from CG2D1 CG321 CG311, penalty= 1.2
+CG331  CG301  NG311    43.70    112.20 ! from CG331 CG321 NG311, penalty= 12
+CG311  NG2R53 CG3C52   38.00    116.00 !
+CG2O2  CG301  CG331    52.00    108.00 ! from CG2O2 CG311 CG321, penalty= 8.9
+CG331  CG2D1  CG331    48.00    123.50 !
+CG2O3  CG311  NG311    43.70    110.00 !
+CG2R61 CG311  OG302    75.70    110.10 ! from CG2R61 CG321 OG302, penalty= 4
+CG301  NG311  CG321    40.50    112.20    5.00   2.42170 ! from CG3AM1 NG311 CG3AM1, penalty= 35
+OG301  CG311  OG311    45.00    116.50 ! from OG301 CG301 OG311, penalty= 8
+CG1N1  CG311  NG2S1    70.00    113.50 !
+CG2R61 CG311  NG311    43.70    110.00 !
+CG301  NG2S1  HGP1     35.00    117.00 !
+CG2O2  CG301  CG331    52.00    108.00 !
+CG1N1  CG311  OG302   115.00    109.70 ! from CG321 CG311 OG302, penalty= 47
+CG2O1  CG311  OG301    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 13.5
+CG2R61 CG311  OG301    75.70    110.10 ! from CG2R61 CG321 OG302, penalty= 4.5
+CG311  CG321  OG301    75.70    110.10 ! from CG311 CG321 OG302, penalty= 0.5
+CG311  CG321  OG301    75.70    110.10 !
+CG1N1  CG311  NG2S1    70.00    113.50 ! from CG321 CG311 NG2S1, penalty= 47
+CG2O5  CG311  NG311    43.70    110.00 !
+CG331  CG321  OG301    45.00    111.50 !
+CG331  CG311  NG2R53   70.00    113.50 ! from CG321 CG311 NG2R53, penalty= 0.9
+NG2R53 CG311  NG2S1    53.00    115.20 ! from CG2R61 CG321 NG2S1, penalty= 51
+CG321  CG321  NG311    43.70    112.20 !
+CG301  OG301  CG321    95.00    109.70 !
+CG2O5  CG311  OG301    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 12
+CG1N1  CG311  NG311    90.00    113.00 ! from NG311 CG321 NG311, penalty= 48
+CG2R51 CG2R51 CG2R51   90.00    107.20 ! CG2R51 CG2R51 CG2R51   90.00    107.20 ! PYRL, pyrrole
+NG311  CG311  OG311    90.00    113.00 ! from NG311 CG321 NG311, penalty= 37
+CG2O5  CG311  OG302    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 12.5
+CG2O2  CG311  OG302    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 13
+CG301  NG311  HGPAM1   35.00    111.00 ! from CG321 NG311 HGPAM1, penalty= 1.8
+CG321  NG311  CG321    40.50    112.20    5.00   2.42170 ! from CG3AM1 NG311 CG3AM1, penalty= 35
+CG321  NG2R53 CG3C52   38.00    116.00 !
+CG301  NG311  CG321    40.50    109.60 ! from CG321 NG311 CG321, penalty= 1.8
+CG2R61 CG2O2  OG311    40.00    113.90   30.00   2.37000 ! ZOIC, benzoic acid (UB term has been adjusted), jal
+CG2O2  OG302  CG321    40.00    109.60   30.00   2.26510 ! LIPID methyl acetate
+CG331  CG2D1  CG331    48.00    123.50 ! from CG321 CG2D1 CG331, penalty= 0.9
+NG2R53 CG311  NG2S1    53.00    115.20 !
+CG2O1  CG321  OG301    45.00    109.00 !
+CG311  OG301  CG321    95.00    109.70 ! from CG321 OG301 CG321, penalty= 0.6
+CG2O2  OG311  HGP1     55.00    115.00 ! PROT adm jr. 5/02/91, acetic acid pure solvent
+CG2R51 CG2O2  OG2D1    70.00    123.10   20.00   2.44200 ! from CG2R61 CG2O2 OG2D1, penalty= 8.5
+CG2O2  CG2R61 CG2R61   45.00    120.00 ! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+CG2O1  NG2S1  CG301    50.00    120.00 ! from CG2O1 NG2S1 CG311, penalty= 1.2
+NG311  CG311  OG311    90.00    113.00 !
+CG321  CG301  NG311    43.70    112.20 ! from CG331 CG321 NG311, penalty= 12.9
+CG2R61 CG311  OG301    75.70    110.10 !
+CG321  CG311  OG301    115.00    109.70 !
+CG1N1  CG311  HGA1     50.00    110.50 !
+CG2O2  CG311  CG331    52.00    108.00 !
+CG321  CG321  NG2R53   70.00    113.50 ! from CG321 CG321 NG2S1, penalty= 1
+CG2D1  CG321  NG2S1    53.00    115.20 ! from CG2R61 CG321 NG2S1, penalty= 21
+CG2R53 NG2R53 CG321    50.00    120.00 ! from CG2R53 NG2R53 CG311, penalty= 0.6
+CG2D1  CG321  OG301    20.00     99.00 ! from CG2DC1 CG321 OG3R60, penalty= 7.7
+CG2O2  CG301  OG301    45.00    109.00 !
+CG2O2  CG301  CG2O2    51.80    107.50 !
+CG2O2  CG301  CG2O2    51.80    107.50 ! from CG2O3 CG311 CG2R61, penalty= 45.5
+CG2O2  CG2R51 OG2R50   35.00    124.00 ! from CG2O1 CG2R51 NG2R51, penalty= 47.5
+CG2D1  CG321  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 28.7
+CG1N1  CG311  CG321    70.00    113.50 !
+CG2O5  CG311  CG331    52.00    108.00 ! from CG2O2 CG311 CG321, penalty= 2.9
+CG2R61 CG2R61 CG2R61   40.00    120.00   35.00   2.41620 ! PROT JES 8/25/89
+CG2O2  CG311  CG2O2    51.80    107.50 !
+NG2R53 CG311  OG301    70.00    113.50 !
+OG2D1  CG2O2  OG311    50.00    123.00  210.00   2.26200 ! PROT adm jr, 10/17/90, acetic acid vibrations
+CG2R51 CG2R51 HGR51    32.00    126.40   25.00   2.17300 ! INDO/TRP
+CG321  NG311  CG331    40.50    109.60 ! from CG321 NG311 CG321, penalty= 0.9
+OG2D1  CG2O2  OG302    90.00    125.90  160.00   2.25760 ! LIPID acetic acid
+CG321  CG301  NG2S1    70.00    113.50 !
+NG2R53 CG311  NG311    70.00    113.50 ! from CG321 CG311 NG2R53, penalty= 39
+CG321  CG321  NG321    43.70    110.00 ! from CG321 CG321 NG311, penalty= 1.2
+CG2O1  CG321  NG311    43.70    110.00 !
+CG311  NG311  HGPAM1   35.00    111.00 ! from CG321 NG311 HGPAM1, penalty= 0.6
+CG2R61 CG311  NG2S1    53.00    115.20 !
+NG311  CG311  HGA1     32.40    109.50     50.00   2.13000 !
+CG2O5  CG311  CG331    52.00    108.00 !
+CG2O1  CG321  OG302    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 18
+CG2O2  CG311  NG311    43.70    110.00 !
+CG331  CG321  HGA2     34.60    110.10   22.53   2.17900 ! PROT alkane update, adm jr., 3/2/92
+CG2D1  CG321  OG302    20.00     99.00 ! from CG2DC1 CG321 OG3R60, penalty= 7.7
+CG1N1  CG311  OG301   115.00    109.70 !
+CG2R53 NG2R53 CG321    50.00    120.00 !
+CG321  CG311  NG311    43.70    112.20 ! from CG331 CG321 NG311, penalty= 4.9
+CG1N1  CG321  HGA2     50.00    110.50 !
+CG2O2  CG301  CG321    52.00    108.00 ! from CG2O2 CG311 CG321, penalty= 8
+CG2O2  CG311  OG301    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 12.5
+CG2R51 CG2O2  OG311    40.00    113.90   30.00   2.37000 ! from CG2R61 CG2O2 OG311, penalty= 8.5
+CG2O5  CG311  OG301    45.00    109.00 !
+CG321  CG321  NG321    43.70    112.20 !
+CG1N1  CG311  NG311    90.00    113.00 !
+CG321  CG1N1  NG1T1    21.20    180.00 ! from CG331 CG1N1 NG1T1, penalty= 0.9
+CG311  OG301  CG321    95.00    109.70 !
+CG2R61 CG311  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 33.7
+CG2O2  CG2R51 OG2R50   45.80    124.00 ! from CG321 CG2R51 NG2R51, penalty= 116
+CG2O5  CG311  NG2S1    50.00    107.00 ! from CG2O2 CG311 NG2S1, penalty= 2
+CG301  NG311  CG321    40.50    112.20      5.00   2.42170 !
+CG2O2  CG311  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 5.2
+CG331  CG301  NG2S1    70.00    113.50 !
+CG321  CG331  HGA3     34.60    110.10   22.53   2.17900 ! PROT alkane update, adm jr., 3/2/92
+CG321  CG321  NG321    43.70    112.20 ! from CG331 CG321 NG311, penalty= 2.1
+CG301  CG321  CG311    58.35    113.50   11.16   2.56100 ! from CG301 CG321 CG321, penalty= 0.6
+NG2R53 CG321  HGA2     51.50    109.50 ! from NG2S1 CG321 HGA2, penalty= 1
+CG2O2  CG311  CG2O2    51.80    107.50 ! from CG2O3 CG311 CG2R61, penalty= 37.5
+CG2O2  CG301  NG2S1    50.00    107.00 ! from CG2O2 CG311 NG2S1, penalty= 8
+CG2O1  NG2S1  CG301    50.00    120.00 !
+CG301  CG2O2  OG302    55.00    109.00     20.00   2.32600 !
+CG331  CG311  NG311    43.70    112.20 !
+CG2O2  CG2R51 CG2R51   35.00    130.00 ! from CG2O1 CG2R51 CG2R51, penalty= 2.5
+CG321  CG301  OG302    45.50    114.50 ! from CG321 CG301 OG301, penalty= 0.5
+CG2O2  CG301  CG321    52.00    108.00 !
+OG302  CG311  OG311    45.00    116.50 ! from OG301 CG301 OG311, penalty= 8.5
+CG301  CG2O2  OG2D1    70.00    125.00     20.00   2.44200 !
+CG2D1  CG321  NG2S1    53.00    115.20 !
+CG331  CG321  NG321    43.70    112.20 !
+CG321  CG321  NG2R53   70.00    113.50 !
+CG331  CG321  NG2R53   70.00    120.00 !
+NG2S1  CG311  OG311    70.00    113.50 !
+CG2O2  CG301  NG311    43.70    110.00 !
+CG301  CG321  CG311    58.35    113.50     11.16   2.56100 !
+CG2O2  CG301  OG302    45.00    109.00 ! from CG2O3 CG301 OG301, penalty= 13
+HGA3   CG331  HGA3     35.50    108.40    5.40   1.80200 ! PROT alkane update, adm jr., 3/2/92
+CG311  NG311  CG321    40.50    112.20    5.00   2.42170 ! from CG3AM1 NG311 CG3AM1, penalty= 35
+CG301  CG321  CG301    58.35    113.50   11.16   2.56100 ! from CG301 CG321 CG321, penalty= 1.8
+CG321  CG311  OG301   115.00    109.70 ! from CG321 CG311 OG302, penalty= 0.5
+CG1N1  CG321  CG321    70.00    113.50 !
+CG301  OG301  CG321    95.00    109.70 ! from CG301 OG301 CG331, penalty= 0.9
+CG2D1  CG321  OG301    20.00     99.00 !
+CG311  CG2O5  CG331    35.00    115.60 ! from CG321 CG2O5 CG331, penalty= 0.6
+CG2O2  CG2R51 CG2R51   45.80    130.00 ! from CG2R51 CG2R51 CG321, penalty= 71
+CG311  NG311  HGPAM1   35.00    111.00 !
+CG2R51 CG2O2  OG302    50.00    111.00   20.00   2.36000 ! from CG2R61 CG2O2 OG302, penalty= 8.5
+CG2O1  CG311  OG302    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 14
+CG311  CG1N1  NG1T1    21.20    180.00 !
+NG2R53 CG311  NG311    70.00    113.50 !
+CG2O1  CG321  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 2.7
+CG2O5  CG311  NG2S1    50.00    107.00 !
+CG321  CG301  NG311    43.70    112.20 !
+CG2O2  CG311  OG301    45.00    109.00 !
+CG2D1  CG321  NG311    43.70    110.00 !
+CG331  CG311  NG311    43.70    112.20 ! from CG331 CG321 NG311, penalty= 4
+CG321  NG311  CG331    40.50    112.20      5.00   2.42170 !
+CG321  NG2R53 CG3C52   38.00    116.00 ! from CG3C52 NG2R53 HGP1, penalty= 139.5
+CG321  CG311  NG311    43.70    112.20 !
+CG331  CG321  OG302    75.70    110.10 ! LIPID acetic acid
+CG301  CG321  CG301    58.35    113.50     11.16   2.56100 !
+CG311  CG2O5  CG331    35.00    115.60 !
+CG2R61 CG311  NG2S1    53.00    115.20 ! from CG2R61 CG321 NG2S1, penalty= 4
+CG2R51 CG2R51 OG2R50  130.00    111.70 ! FURA, furan @@@@@ Kenno: 108-->112 @@@@@
+CG2R61 CG311  NG311    57.00    107.00 ! from CG2R51 CG321 NG301, penalty= 13.6
+CG1N1  CG311  CG331    70.00    113.50 ! from CG331 CG311 NG2S1, penalty= 34
+CG321  CG301  NG2S1    70.00    113.50 ! from CG321 CG311 NG2S1, penalty= 8
+CG1N1  CG321  CG331    70.00    120.00 !
+CG2O1  CG321  OG301    45.00    109.00 ! from CG2O3 CG311 OG301, penalty= 17.5
+CG2O3  CG311  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 11.7
+NG2S1  CG311  OG311    70.00    113.50 ! from CG321 CG311 NG2S1, penalty= 45
+CG301  NG2S1  HGP1     35.00    117.00 ! from CG311 NG2S1 HGP1, penalty= 1.2
+CG1N1  CG321  HGA2     50.00    110.50 ! from CG1N1 CG331 HGA3, penalty= 6
+CG301  CG2O2  OG2D1    70.00    125.00   20.00   2.44200 ! from CG311 CG2O2 OG2D1, penalty= 1.2
+NG311  CG311  HGA1     32.40    109.50   50.00   2.13000 ! from NG311 CG321 HGA2, penalty= 4
+CG311  NG311  CG321    40.50    109.60 ! from CG321 NG311 CG321, penalty= 0.6
+CG321  CG1N1  NG1T1    21.20    180.00 !
+CG1N1  CG311  CG331    70.00    113.50 !
+CG311  NG2R53 CG3C52   38.00    116.00 ! from CG3C52 NG2R53 HGP1, penalty= 139.5
+CG2R61 CG2R61 HGR61    30.00    120.00   22.00   2.15250 ! PROT JES 8/25/89 benzene
+NG2R53 CG321  HGA2     51.50    109.50 !
+CG321  CG321  NG311    43.70    112.20 ! from CG331 CG321 NG311, penalty= 0.9
+CG2O1  CG311  OG301    45.00    109.00 !
+CG321  CG301  NG311    43.70    110.00 ! from CG321 CG321 NG311, penalty= 12
+CG2R61 CG2O2  OG2D1    70.00    123.10   20.00   2.44200 ! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+CG2O2  CG301  NG311    43.70    110.00 ! from CG2O2 CG321 NG321, penalty= 13.2
+CG301  CG2O2  OG302    55.00    109.00   20.00   2.32600 ! from CG311 CG2O2 OG302, penalty= 1.2
+CG301  NG311  HGPAM1   35.00    111.00 !
+CG321  CG311  NG311    43.70    110.00 ! from CG321 CG321 NG311, penalty= 4
+CG2R61 CG2O2  OG302    50.00    111.00   20.00   2.36000! MBOA, methylbenzoate (UB term has been adjusted), jal
+OG302  CG321  HGA2     60.00    109.50! PROT adm jr. 4/05/91, methyl acetate
+CG2R51 OG2R50 CG2R51  100.00    106.00! FURA, furan
+HGA2   CG321  HGA2     35.50    109.00    5.40   1.80200! PROT alkane update, adm jr., 3/2/92
+CG2O2  CG2R61 CG2R61   45.00    120.00! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+CG2R51 CG2R51 CG2R51   90.00    107.20! PYRL, pyrrole
+CG2R61 CG2O2  OG311    40.00    113.90   30.00   2.37000! ZOIC, benzoic acid (UB term has been adjusted), jal
+CG2O2  OG302  CG321    40.00    109.60   30.00   2.26510! LIPID methyl acetate
+CG2R61 CG2R61 CG2R61   40.00    120.00   35.00   2.41620! PROT JES 8/25/89
+OG2D1  CG2O2  OG311    50.00    123.00  210.00   2.26200! PROT adm jr, 10/17/90, acetic acid vibrations
+CG2R51 CG2R51 HGR51    32.00    126.40   25.00   2.17300! INDO/TRP
+OG2D1  CG2O2  OG302    90.00    125.90  160.00   2.25760! LIPID acetic acid
+CG331  CG321  HGA2     34.60    110.10   22.53   2.17900! PROT alkane update, adm jr., 3/2/92
+CG321  CG331  HGA3     34.60    110.10   22.53   2.17900! PROT alkane update, adm jr., 3/2/92
+HGA3   CG331  HGA3     35.50    108.40    5.40   1.80200! PROT alkane update, adm jr., 3/2/92
+CG2O2  OG311  HGP1     55.00    115.00! PROT adm jr. 5/02/91, acetic acid pure solvent
+NG2S1  CG321  SG311    58.00    114.50! from CG321 CG321 SG311, penalty= 69
+CG331  CG321  OG302    75.70    110.10! LIPID acetic acid
+NG311  CG321  SG311    58.00    114.50! from CG321 CG321 SG311, penalty= 39
+OG301  CG321  SG311    58.00    114.50! from CG321 CG321 SG311, penalty= 45
+CG2R51 CG2R51 OG2R50  130.00    111.70! FURA, furan @@@@@ Kenno: 108-->112 @@@@@
+CG2R61 CG2O2  OG2D1    70.00    123.10   20.00   2.44200! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+CG2R61 CG2R61 HGR61    30.00    120.00   22.00   2.15250! PROT JES 8/25/89 benzene
+DIHEDRALS
+HGA2   CG321  NG311  CG321      0.0000  3   180.00 ! from HGA2 CG321 NG311 CG2R61, penalty= 73.5
+CG331  CG2O5  CG311  NG311   0.0650  3   0.00 !
+CG2O1  CG321  CG321  CG331      0.1950  3     0.00 ! from CG2O1 CG321 CG321 CG311, penalty= 1.5
+OG311  CG311  OG301  CG321      0.0500  3     0.00 ! from OG311 CG301 OG301 CG331, penalty= 8.9
+CG331  CG321  NG311  CG311      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 6.5
+CG2O5  CG311  NG2S1  CG2O1   0.2000  1 180.00 !
+NG2S1  CG321  CG321  NG311      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 39
+CG2O1  CG311  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 14.4
+CG311  CG321  CG321  CG331   0.1505  2   0.00 !
+CG3C52 CG2R53 NG2R53 CG311      0.4000  2   180.00 ! from CG3C52 CG2R53 NG2R53 CG3C52, penalty= 31
+CG2O2  CG311  CG321  CG2D1   0.2000  3   0.00 !
+CG2O1  CG321  OG301  CG321   0.2000  3   0.00 !
+CG2R61 CG311  NG2S1  CG2O1   0.1480  6   0.00 !
+HGA1   CG311  NG311  HGPAM1  0.0500  3   0.00 !
+CG331  CG2O5  CG311  NG2S1      0.0000  1     0.00 ! from OG302 CG2O2 CG311 NG2S1, penalty= 56
+CG331  CG2O5  CG311  OG301      0.0300  6     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG2R61 CG321  CG321  CG301      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 1.8
+NG2S2  CG2O1  CG321  NG311   0.4000  1   0.00 !
+NG2S1  CG2O1  CG321  OG301      0.4000  1     0.00 ! from NG2S1 CG2O1 CG324 NG3P3, penalty= 40.9
+CG1N1  CG321  CG321  CG311      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 34.6
+CG2O5  CG311  CG321  CG301      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 3.8
+OG2D3  CG2O5  CG311  NG311   0.0000  6 180.00 !
+CG331  CG2O1  NG2S1  CG301   1.6000  1   0.00 !
+OG2D1  CG2O1  NG2S1  CG301      2.5000  2   180.00 ! from OG2D1 CG2O1 NG2S1 CG311, penalty= 1.2
+NG2S1  CG311  CG321  CG331   0.2000  3   0.00 !
+CG331  CG301  CG321  CG301      0.2000  3     0.00 ! from CG331 CG301 CG321 CG321, penalty= 1.8
+HGA2   CG321  NG311  CG301   0.0000  3 180.00 !
+CG331  CG321  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 5.9
+CG331  CG2O5  CG321  CG321   0.7500  1   0.00 !
+CG2R61 CG311  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 34.9
+HGA2   CG321  NG2R53 CG2R53  0.0000  1   0.00 !
+CG2D1  CG2D1  CG321  OG302      0.4000  2   180.00 ! from CG2D2 CG2D1 CG321 OG311, penalty= 18.5
+OG302  CG311  CG321  OG301      0.2000  3     0.00 ! from OG302 CG311 CG321 OG302, penalty= 0.5
+CG331  CG301  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 125
+CG331  CG301  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 17.9
+CG331  CG321  OG301  CG301      0.4900  3     0.00 ! from CG331 CG321 OG301 CG321, penalty= 1.8
+CG1N1  CG311  CG321  CG311      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 34
+CG321  CG321  CG321  NG311   0.1600  1 180.00 !
+CG2R51 CG2O2  OG302  CG331      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 8.5
+HGA2   CG321  NG2R53 CG2R53     0.0000  1     0.00 ! from HGA1 CG311 NG2R53 CG2R53, penalty= 4.1
+CG331  CG311  CG321  CG2D1   0.2000  3   0.00 !
+OG311  CG311  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 54
+NG311  CG301  CG321  CG321      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 12.6
+CG331  CG2O5  CG311  OG301      0.7500  1     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG321  CG301  CG321  CG301   0.2000  3   0.00 !
+OG301  CG311  CG321  CG331      0.3900  2     0.00 ! from CG331 CG321 CG321 OG301, penalty= 4
+CG321  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 117
+CG321  CG321  NG311  CG311      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+NG2S2  CG2O1  CG311  OG301      0.6000  1     0.00 ! from NG2S2 CG2O1 CG314 NG3P3, penalty= 40.9
+CG321  CG321  NG311  CG301   1.5000  2   0.00 !
+NG2S1  CG311  NG2R53 CG3C52  0.0000  1 180.00 !
+CG2O2  CG301  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 22.5
+CG1N1  CG321  CG321  CG331      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 34.9
+CG321  CG321  CG321  NG2R53     0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 1
+CG2O3  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 149.5
+CG331  CG311  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 9.9
+CG2O2  CG301  NG311  CG321   0.5000  3   0.00 !
+NG321  CG321  CG321  OG301   0.2500  1 180.00 !
+CG2R61 CG2R61 CG2R61 HGR61      4.2000  2   180.00 ! PROT JES 8/25/89 benzene
+OG302  CG2O2  CG311  OG301      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 45
+CG2O1  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG331  CG301  OG301  CG321   0.4900  3   0.00 !
+OG302  CG2O2  CG2R51 OG2R50     0.8500  2   180.00 ! from OG302 CG2O2 CG2R61 CG2R61, penalty= 143
+CG2O5  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+OG311  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 110.5
+NG2R53 CG311  NG2S1  CG2O1      0.2980  2     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 51
+CG331  CG311  NG311  CG321   1.5000  2   0.00 !
+CG2O3  CG311  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 21
+CG321  CG321  CG321  NG321      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 33
+CG2D1  CG321  OG301  CG321   0.2000  3   0.00 !
+CG321  CG321  CG321  NG2R53  0.2000  3   0.00 !
+CG331  CG301  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 125
+HGA2   CG3C52 NG2R53 CG311      0.0000  3     0.00 ! from HGA2 CG3C52 NG2R53 CG2R53, penalty= 118
+CG2O1  CG321  CG321  CG301   0.1950  3   0.00 !
+CG311  CG321  OG301  CG321      0.2900  2     0.00 ! from CG321 CG321 OG301 CG321, penalty= 0.6
+CG311  CG2O5  CG331  HGA3    0.1000  3   0.00 !
+OG302  CG321  CG321  OG302      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 1
+OG311  CG2O2  CG2R61 CG2R61     1.0250  2   180.00 ! ZOIC, benzoic acid, jal
+OG302  CG2O2  CG311  CG2O2      0.0000  1     0.00 ! from OG302 CG2O2 CG311 NG2S1, penalty= 43
+NG2R53 CG311  NG311  CG321   2.5000  1 180.00 !
+CG331  CG321  NG311  CG321   1.5000  2   0.00 !
+CG2R61 CG2O2  OG302  CG321      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 0.9
+CG2O5  CG321  CG321  CG301   0.1100  4   0.00 !
+CG2O5  CG321  CG321  CG301      0.1100  4     0.00 ! from CG2O5 CG321 CG321 CG321, penalty= 1.8
+CG2O2  CG301  CG321  CG321      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 8
+CG311  CG321  CG321  OG311   0.1950  3   0.00 !
+CG311  CG321  OG301  CG311      0.5700  1     0.00 ! from CG321 CG321 OG301 CG321, penalty= 1.2
+CG2O2  CG301  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG301 OG301 CG331, penalty= 13.4
+NG2R53 CG311  CG321  CG321      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 1
+CG2O2  CG311  NG311  HGPAM1  0.1600  3   0.00 !
+OG302  CG2O2  CG301  OG301   0.0500  6 180.00 !
+CG331  CG321  OG301  CG301   0.4000  1   0.00 !
+CG2R61 CG311  OG301  CG321   0.2000  3   0.00 !
+CG2O2  CG301  NG311  CG321   1.5000  2   0.00 !
+CG331  CG2O5  CG311  OG302      0.7500  1     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG2O1  CG311  NG311  HGPAM1  0.1600  3   0.00 !
+NG311  CG301  CG321  CG311      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 13.2
+OG311  CG311  OG301  CG321   0.4100  1 180.00 !
+CG1N1  CG311  NG2S1  CG2O1      1.8000  1     0.00 ! from CG321 CG311 NG2S1 CG2O1, penalty= 47
+CG331  CG321  NG311  CG301   0.5000  3   0.00 !
+CG2R51 CG2O2  OG302  CG301      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 11.2
+NG2R53 CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 57.5
+CG2O1  CG321  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 31.5
+CG2D1  CG321  CG321  CG2D1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 33
+CG311  CG321  CG321  OG301   0.3900  2   0.00 !
+CG331  CG301  NG311  CG321   1.5000  2   0.00 !
+CG311  CG321  OG301  CG321   0.5700  1   0.00 !
+CG331  CG311  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 9.9
+CG311  CG321  OG301  CG311   0.4300  3   0.00 !
+CG2D1  CG2D1  CG321  CG301      0.5000  1   180.00 ! from CG2D1 CG2D1 CG321 CG311, penalty= 1.2
+OG2D3  CG2O5  CG311  NG2S1      0.0000  1     0.00 ! from OG2D1 CG2O2 CG311 NG2S1, penalty= 10.5
+CG331  CG2O5  CG311  CG321   0.0650  3   0.00 !
+NG321  CG321  CG321  OG302      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 33.5
+HGA2   CG321  OG301  CG301      0.2840  3     0.00 ! from HGA2 CG321 OG301 CG321, penalty= 1.8
+CG321  CG321  NG311  CG301      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 6.8
+CG311  CG321  OG301  CG301   0.5700  1   0.00 !
+CG1N1  CG311  CG321  CG331      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 34.9
+CG2O1  CG321  CG321  CG301      0.1950  3     0.00 ! from CG2O1 CG321 CG321 CG311, penalty= 1.2
+CG321  CG321  OG301  CG301      0.5700  1     0.00 ! from CG321 CG321 OG301 CG321, penalty= 1.8
+CG311  CG321  CG321  OG301   0.1600  1 180.00 !
+CG321  CG321  NG311  CG321   2.5000  1 180.00 !
+CG311  CG321  CG321  CG331      0.1082  4     0.00 ! from CG321 CG321 CG321 CG331, penalty= 0.6
+CG1N1  CG321  CG331  HGA3    0.1950  3   0.00 !
+HGA1   CG311  OG301  CG321      0.2840  3     0.00 ! from HGA1 CG311 OG301 CG331, penalty= 0.9
+NG311  CG301  CG321  HGA2    0.1600  3   0.00 !
+CG311  CG321  CG321  NG2R53  0.2000  3   0.00 !
+CG2O3  CG321  CG321  CG331   0.0645  2   0.00 !
+HGR51  CG2R51 CG2R51 HGR51      1.0000  2   180.00 ! INDO/TRP
+CG331  CG2O5  CG311  OG301      0.0650  3     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG1N1  CG311  NG2S1  CG2O1   1.8000  1   0.00 !
+CG2O1  CG321  CG321  OG301   0.2000  3   0.00 !
+OG2D2  CG2O3  CG311  NG311   0.5500  2 180.00 !
+OG2D1  CG2O2  CG311  NG311   0.0000  6 180.00 !
+OG311  CG311  NG2S1  CG2O1   1.8000  1   0.00 !
+CG2O2  CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+NG311  CG311  CG321  HGA2    0.1600  3   0.00 !
+CG331  CG311  CG321  CG301      0.2000  3     0.00 ! from CG331 CG311 CG321 CG311, penalty= 1.2
+OG311  CG311  NG311  HGPAM1     1.7000  2     0.00 ! from NG311 CG321 NG311 HGPAM1, penalty= 37
+OG301  CG311  NG2R53 CG3C52  0.0000  1   0.00 !
+CG331  CG2O5  CG311  CG331   0.0300  6   0.00 !
+CG2O5  CG321  CG321  CG301      0.3500  3   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 1.8
+NG2S1  CG321  CG321  NG321   0.2000  3   0.00 !
+OG2D1  CG2O1  CG311  OG301      0.5500  2   180.00 ! from OG2D2 CG2O3 CG311 OG301, penalty= 31
+CG331  CG2O5  CG321  CG321      0.0300  6     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 0.9
+CG2O5  CG321  CG321  CG311      0.0900  6   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.6
+OG2D1  CG2O1  CG321  OG302      0.5500  2   180.00 ! from OG2D2 CG2O3 CG311 OG301, penalty= 35.5
+OG301  CG311  OG311  HGP1    1.0700  3   0.00 !
+OG311  CG311  OG301  CG321      0.8900  2     0.00 ! from OG311 CG301 OG301 CG331, penalty= 8.9
+CG1N1  CG311  CG321  CG321   0.2000  3   0.00 !
+CG2R61 CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 18
+CG331  CG2O5  CG311  OG301      0.1800  2   180.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG2R61 CG2O2  OG302  CG311      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 1.5
+OG311  CG311  NG311  CG321   1.5000  2   0.00 !
+CG321  CG321  NG311  CG301      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2O1  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+OG301  CG311  CG321  CG311   0.3900  2   0.00 !
+CG331  CG301  NG2S1  HGP1       0.0000  1     0.00 ! from CG331 CG311 NG2S1 HGP1, penalty= 8
+OG2D1  CG2O2  CG311  CG2O2   0.0000  1   0.00 !
+CG301  CG321  CG321  OG301      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 1.8
+CG2O5  CG321  CG321  CG331   0.3500  3 180.00 !
+CG331  CG2D1  CG331  HGA3    0.1600  3   0.00 !
+OG2D3  CG2O5  CG311  CG331      0.0300  6     0.00 ! from OG2D3 CG2O5 CG321 CG331, penalty= 4
+OG311  CG2O2  CG321  CG331   0.0000  6 180.00 !
+CG301  CG2O2  OG302  CG331   2.0500  2 180.00 !
+CG331  CG2O5  CG311  NG311   0.0300  6   0.00 !
+CG2O3  CG321  CG321  CG331      0.0645  2     0.00 ! from CG2O3 CG321 CG321 CG321, penalty= 0.9
+CG2O1  CG321  CG321  NG311   0.1950  3   0.00 !
+CG2O3  CG311  NG311  CG321   0.5000  3   0.00 !
+CG2D1  CG321  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 27.5
+NG2S1  CG2O1  CG321  CG331   0.0000  1   0.00 !
+NG311  CG321  CG321  OG311   0.7000  1 180.00 !
+OG301  CG301  CG321  CG321   0.8000  3   0.00 !
+CG2R61 CG311  NG2S1  CG2O1      0.2980  2     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 4
+CG2O3  CG311  CG321  CG301      0.2000  3     0.00 ! from CG2O3 CG311 CG321 CG311, penalty= 1.2
+CG2R61 CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG2O2  CG2R51 OG2R50 CG2R51     7.5000  2   180.00 ! from CG2R51 CG2R51 OG2R50 CG2R51, penalty= 66.5
+OG302  CG2O2  CG311  NG311      0.0000  6   180.00 ! from OG311 CG2O2 CG321 NG321, penalty= 20.2
+CG1N1  CG311  OG301  CG321      0.4900  3     0.00 ! from CG331 CG311 OG301 CG331, penalty= 48.8
+CG331  CG301  NG2S1  CG2O1   1.8000  1   0.00 !
+CG2R61 CG321  CG321  CG311   0.0400  3   0.00 !
+CG2O1  CG321  CG321  CG321   0.1950  3   0.00 !
+CG331  CG2O5  CG311  CG321   0.0300  6   0.00 !
+NG311  CG321  CG321  HGA2    0.1600  3   0.00 !
+OG302  CG301  CG321  HGA2       0.1600  3     0.00 ! from OG301 CG301 CG321 HGA2, penalty= 0.5
+CG321  CG321  OG301  CG311   0.4300  3   0.00 !
+OG302  CG2O2  CG301  CG331   0.0500  6 180.00 !
+HGA1   CG311  CG321  OG301      0.1950  3     0.00 ! from HGA1 CG311 CG321 OG302, penalty= 0.5
+CG331  CG2O5  CG311  CG321      0.7500  1     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4.9
+CG2O5  CG321  CG321  CG311   0.0900  6 180.00 !
+CG1N1  CG311  CG331  HGA3       0.2000  3     0.00 ! from NG2S1 CG311 CG331 HGA3, penalty= 34
+CG331  CG321  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2D1  CG2D1  CG321  OG301      0.4000  2   180.00 ! from CG2D2 CG2D1 CG321 OG311, penalty= 18.5
+CG331  CG321  NG311  CG301      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 7.7
+OG301  CG321  CG321  OG302      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 0.5
+CG331  CG321  CG321  NG311      0.3900  2     0.00 ! from CG331 CG321 CG321 OG301, penalty= 33
+OG311  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 110.5
+CG2O5  CG311  CG321  CG331   0.2000  3   0.00 !
+OG311  CG311  CG321  CG301   0.8000  6   0.00 !
+CG331  CG321  NG2S1  CG2O1      1.8000  1     0.00 ! from CG321 CG321 NG2S1 CG2O1, penalty= 0.9
+NG2R53 CG311  NG311  HGPAM1  0.1600  3   0.00 !
+HGA2   CG3C52 NG2R53 CG321   0.0000  3   0.00 !
+CG2O5  CG311  NG2S1  HGP1       0.0000  1     0.00 ! from CG2O2 CG311 NG2S1 HGP1, penalty= 2
+NG311  CG311  CG321  CG311      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 5.2
+CG1N1  CG311  CG321  CG2D1      0.2000  3     0.00 ! from CG321 CG311 CG321 CG2D1, penalty= 47
+CG2R61 CG311  NG311  HGPAM1  0.1600  3   0.00 !
+CG2O3  CG321  CG321  CG301      0.1950  3     0.00 ! from CG2O3 CG321 CG321 CG311, penalty= 1.2
+NG2R53 CG311  NG2S1  CG2O1      0.0150  1     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 51
+OG302  CG2O2  CG301  OG302      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 53
+CG321  CG321  CG321  NG311      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 33
+CG1N1  CG311  OG301  CG321      0.4000  1     0.00 ! from CG331 CG311 OG301 CG331, penalty= 48.8
+CG331  CG321  NG311  CG331   0.5000  3   0.00 !
+NG2S1  CG311  CG321  OG301      0.2000  3     0.00 ! from NG2S1 CG311 CG321 OG311, penalty= 15
+CG2R61 CG311  NG2S1  CG2O1      0.6190  4     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 4
+OG2D1  CG2O2  CG301  CG321   0.0500  6 180.00 !
+CG331  CG301  NG311  CG321   0.5000  3   0.00 !
+CG331  CG321  NG311  CG311   1.5000  2   0.00 !
+NG2R53 CG311  NG2S1  CG2O1   0.0760  3 180.00 !
+HGA2   CG321  NG311  CG311   0.0000  3 180.00 !
+CG321  CG321  OG301  CG311      0.5700  1     0.00 ! from CG321 CG321 OG301 CG321, penalty= 0.6
+NG2R53 CG311  NG2S1  CG2O1   0.2980  2   0.00 !
+CG331  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 117
+CG321  CG301  OG301  CG321      0.2300  2   180.00 ! from CG321 CG301 OG301 CG331, penalty= 0.9
+CG2R61 CG311  NG2S1  CG2O1   0.0150  1   0.00 !
+OG302  CG2O2  CG301  CG2O2      0.0000  1     0.00 ! from OG302 CG2O2 CG311 NG2S1, penalty= 51
+CG2D1  CG321  NG311  HGPAM1  0.1600  3   0.00 !
+CG321  CG321  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 5
+CG331  CG321  CG321  NG321   0.1600  1 180.00 !
+CG2O1  CG311  OG301  CG321   0.2000  3   0.00 !
+CG2O2  CG301  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 43.5
+CG1N1  CG311  NG2S1  HGP1    0.0000  1   0.00 !
+CG2R51 CG2O2  OG302  CG311      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 10
+CG2R51 CG2O2  OG302  CG311      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 10
+CG321  CG301  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 125
+NG2R53 CG311  NG2S1  CG2O1   0.1480  6   0.00 !
+OG302  CG2O2  CG301  CG321   0.0500  6 180.00 !
+CG2R61 CG2R61 CG311  NG2S1   0.0130  6 180.00 !
+CG311  CG321  OG301  CG301      0.4300  3     0.00 ! from CG321 CG321 OG301 CG321, penalty= 2.4
+CG2O2  CG301  NG2S1  CG2O1   0.2000  1 180.00 !
+OG2D1  CG2R53 NG2R53 CG321   2.5000  2 180.00 !
+CG2O2  CG2R51 CG2R51 CG2R51    15.0000  2   180.00 ! from CG2R51 CG2R51 CG2R51 CG2R51, penalty= 66.5
+CG311  CG321  OG301  CG311      0.2900  2     0.00 ! from CG321 CG321 OG301 CG321, penalty= 1.2
+NG2S1  CG321  CG321  NG321      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 39
+CG321  CG301  OG302  CG2O2      0.0000  3     0.00 ! from CG331 CG301 OG302 CG2O2, penalty= 0.9
+OG301  CG311  CG321  HGA2    0.1950  3   0.00 !
+OG301  CG311  OG311  HGP1    1.1700  2   0.00 !
+CG2D1  CG321  NG2S1  CG2O1   0.1480  6   0.00 !
+CG331  CG321  CG321  NG2S1      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 0.9
+OG302  CG2O2  CG301  OG301      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 53
+OG311  CG2O2  CG311  OG301      0.0000  6   180.00 ! from OG311 CG2O2 CG321 NG321, penalty= 38.2
+CG301  CG321  CG321  NG311      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 34.8
+CG321  CG311  NG311  CG321   1.5000  2   0.00 !
+NG321  CG321  CG321  HGA2       0.1950  3     0.00 ! from NG311 CG321 CG321 HGA2, penalty= 1.2
+HGA3   CG331  NG311  CG321      0.0000  3   180.00 ! from HGA3 CG331 NG301 CG331, penalty= 5.9
+CG331  CG2O5  CG311  CG331   0.7500  1   0.00 !
+OG311  CG311  CG321  CG301      0.8000  6     0.00 ! from OG311 CG311 CG321 CG311, penalty= 1.2
+HGA2   CG321  NG311  CG311      0.0000  3     0.00 ! from HGA2 CG321 NG311 CG321, penalty= 0.6
+CG1N1  CG311  CG321  CG301      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 35.2
+NG311  CG311  CG321  CG321      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 4.6
+CG331  CG321  CG321  NG311      0.1600  1   180.00 ! from CG331 CG321 CG321 OG301, penalty= 33
+CG331  CG321  OG301  CG311   0.4900  3   0.00 !
+CG321  CG321  OG301  CG311   0.2900  2   0.00 !
+CG331  CG2D1  CG321  CG301   0.1900  3   0.00 !
+OG311  CG311  OG302  CG2O2      0.7000  1   180.00 ! from CG321 CG311 OG302 CG2O2, penalty= 45
+CG2R51 CG2O2  OG311  HGP1       0.9750  1   180.00 ! from CG2R61 CG2O2 OG311 HGP1, penalty= 8.5
+OG2D1  CG2O1  CG321  OG301      0.5500  2   180.00 ! from OG2D2 CG2O3 CG311 OG301, penalty= 35
+NG2S1  CG301  CG321  CG331      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 8.9
+OG2D1  CG2O2  CG2R51 CG2R51     1.0250  2   180.00 ! from OG2D1 CG2O2 CG2R61 CG2R61, penalty= 93.5
+CG2R61 CG321  CG321  CG301   0.0400  3   0.00 !
+NG2S1  CG311  NG2R53 CG2R53  0.0000  1 180.00 !
+CG301  CG321  CG321  NG311      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 34.8
+OG2D1  CG2O2  CG311  OG302      0.0000  2     0.00 ! from OG2D3 CG2O5 CG311 OG311, penalty= 25.5
+CG321  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 117
+CG331  CG2D1  CG331  HGA3       0.1600  3     0.00 ! from CG321 CG2D1 CG331 HGA3, penalty= 0.9
+CG2O5  CG321  CG321  CG301   0.3500  3 180.00 !
+CG2R61 CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+HGA2   CG321  CG331  HGA3       0.1600  3     0.00 ! PROT rotation barrier in Ethane (SF)
+CG2D1  CG2D1  CG321  OG301   0.6000  3 180.00 !
+CG2O5  CG321  CG321  CG311   0.3500  3 180.00 !
+CG2O1  CG321  CG321  CG321      0.1950  3     0.00 ! from CG2O1 CG321 CG321 CG311, penalty= 0.6
+CG331  CG2D1  CG321  CG311      0.1900  3     0.00 ! from CG331 CG2D1 CG321 CG321, penalty= 0.6
+OG2D1  CG2O2  CG301  NG311   0.0000  6 180.00 !
+CG2R61 CG2O2  OG302  CG301      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 2.7
+CG331  CG321  NG311  CG311      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG321  CG321  CG321  NG311      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 33
+CG2D1  CG2D1  CG321  NG311   0.6000  1 180.00 !
+CG2O2  CG301  CG321  HGA2       0.2000  3     0.00 ! from CG2O2 CG311 CG321 HGA2, penalty= 8
+CG2D1  CG321  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 27.5
+CG2O3  CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 39.5
+CG2R61 CG311  NG311  CG321   0.5000  3   0.00 !
+CG2R61 CG2R61 CG311  NG2S1   0.1320  4 180.00 !
+CG331  CG311  CG321  OG301   0.2000  3   0.00 !
+CG1N1  CG311  CG321  CG331   0.2000  3   0.00 !
+NG311  CG321  CG321  OG301   1.2400  2   0.00 !
+OG301  CG311  CG321  CG301      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 5.8
+OG311  CG2O2  CG311  NG311      0.0000  6   180.00 ! from OG311 CG2O2 CG321 NG321, penalty= 5.2
+OG2D1  CG2O1  CG311  NG311   0.0000  1   0.00 !
+CG331  CG321  NG2S1  CG2O1   1.8000  1   0.00 !
+CG2R61 CG2R61 CG311  OG302      0.0000  2     0.00 ! from CG2R61 CG2R61 CG321 OG302, penalty= 4
+HGA1   CG311  CG321  CG301   0.1950  3   0.00 !
+CG321  CG301  CG321  CG2D1      0.2000  3     0.00 ! from CG321 CG311 CG321 CG2D1, penalty= 8
+HGR61  CG2R61 CG2R61 HGR61      2.4000  2   180.00 ! PROT JES 8/25/89 benzene
+HGA3   CG331  NG311  CG321   0.0000  3 180.00 !
+OG2D1  CG2O2  CG301  CG321      0.0500  6   180.00 ! from OG2D1 CG2O2 CG311 CG321, penalty= 8
+CG2O2  CG2R51 CG2R51 HGR51      1.0000  2   180.00 ! from CG2R51 CG2R51 CG2R51 HGR51, penalty= 66.5
+HGA4   CG2D1  CG321  NG2S1      0.0000  3     0.00 ! from HGA4 CG2D1 CG321 CG2D1, penalty= 41
+CG331  CG301  NG311  HGPAM1     0.3000  3     0.00 ! from CG321 CG321 NG311 HGPAM1, penalty= 12.9
+CG321  CG301  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 17
+CG2O5  CG311  NG311  CG321   2.5000  1 180.00 !
+CG2R61 CG2O2  OG302  CG301      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 2.7
+CG2O1  CG311  NG311  CG321   2.5000  1 180.00 !
+CG331  CG2O5  CG311  CG331      0.7500  1     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4
+CG2O2  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+NG2R53 CG321  CG321  HGA2       0.1950  3     0.00 ! from NG2S1 CG321 CG321 HGA2, penalty= 1
+CG2R61 CG2R61 CG2R61 CG2R61     3.1000  2   180.00 ! PROT JES 8/25/89
+CG1N1  CG311  NG311  HGPAM1     0.3000  3     0.00 ! from NG311 CG321 NG311 HGPAM1, penalty= 48
+NG2S1  CG301  CG331  HGA3       0.2000  3     0.00 ! from NG2S1 CG311 CG331 HGA3, penalty= 8
+NG2S1  CG311  NG2R53 CG3C52     0.0000  1   180.00 ! from CG2O2 CG311 NG2R53 CG2R53, penalty= 151.5
+CG2O1  CG321  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 31.5
+NG311  CG311  NG2R53 CG2R53     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 39
+CG331  CG311  NG2R53 CG3C52     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 98.9
+NG2R53 CG321  CG331  HGA3    0.1950  3   0.00 !
+CG2O5  CG311  CG321  HGA2    0.2000  3   0.00 !
+CG321  CG301  CG321  CG2D1   0.2000  3   0.00 !
+CG331  CG2D1  CG321  CG301      0.1900  3     0.00 ! from CG331 CG2D1 CG321 CG321, penalty= 1.8
+CG311  CG321  OG301  CG301   0.2900  2   0.00 !
+CG311  CG321  OG301  CG301   0.4300  3   0.00 !
+CG331  CG321  CG321  NG321      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 2.7
+CG2O5  CG321  CG321  CG331   0.3900  2   0.00 !
+CG2O3  CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 39.5
+OG2D1  CG2O2  CG301  CG2O2   0.0000  1   0.00 !
+NG311  CG301  CG321  CG311   0.8000  3   0.00 !
+OG302  CG311  OG311  HGP1       1.0700  3     0.00 ! from OG301 CG301 OG311 HGP1, penalty= 8.5
+CG2R61 CG2R61 CG311  NG2S1      0.1190  2     0.00 ! from CG2R61 CG2R61 CG321 NG2S1, penalty= 4
+NG2R53 CG311  CG321  CG311      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 1
+NG2S1  CG311  CG321  CG301      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 1.2
+CG2D1  CG2D1  CG321  CG301   0.5000  1 180.00 !
+CG331  CG2O5  CG311  CG331      0.0300  6     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4
+CG2O1  CG311  NG311  CG321   0.5000  3   0.00 !
+CG1N1  CG321  CG321  CG301   0.2000  3   0.00 !
+NG311  CG321  CG321  HGA2       0.1600  3     0.00 ! from NG311 CG321 CG331 HGA3, penalty= 6
+CG2O3  CG311  CG321  CG2D1   0.2000  3   0.00 !
+OG301  CG321  CG321  OG302      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 0.5
+OG311  CG2O2  CG311  CG331   0.0500  6 180.00 !
+OG301  CG311  CG321  CG321      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 4
+CG321  CG321  OG301  CG311      0.4300  3     0.00 ! from CG321 CG321 OG301 CG321, penalty= 0.6
+HGA4   CG2D1  CG321  OG302      0.2000  3     0.00 ! from HGA4 CG2D1 CG321 OG311, penalty= 15
+HGA1   CG311  NG311  CG321      0.0000  3     0.00 ! from HGA2 CG321 NG311 CG321, penalty= 4
+NG2S1  CG301  CG321  CG311      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 8
+CG331  CG2O1  NG2S1  CG301   2.5000  2 180.00 !
+CG2D1  CG321  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 140.5
+NG2R53 CG311  NG2S1  CG2O1      0.6190  4     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 51
+CG331  CG2O5  CG321  CG321   0.0650  3   0.00 !
+CG2O2  CG311  CG331  HGA3       0.2000  3     0.00 ! from CG2O1 CG311 CG331 HGA3, penalty= 2.5
+NG311  CG301  CG321  CG311      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 34.5
+CG2D1  CG321  CG321  CG301      0.1400  1   180.00 ! from CG2D1 CG321 CG321 CG321, penalty= 1.8
+CG331  CG2O5  CG311  NG311   0.1800  2 180.00 !
+CG1N1  CG311  CG321  HGA2       0.2000  3     0.00 ! from NG2S1 CG311 CG321 HGA2, penalty= 34
+OG2D3  CG2O5  CG311  OG301      0.0000  2     0.00 ! from OG2D3 CG2O5 CG311 OG311, penalty= 15
+CG2D1  CG2D1  CG321  OG301   0.4000  2 180.00 !
+OG311  CG311  OG301  CG321   0.8900  2   0.00 !
+NG2S1  CG2O1  CG311  NG311      0.6000  1     0.00 ! from NG2S1 CG2O1 CG314 NG3P3, penalty= 37.9
+CG321  CG321  NG311  CG301      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG331  CG321  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2O3  CG311  NG311  HGPAM1  0.1600  3   0.00 !
+CG311  CG321  CG321  OG311      0.1950  3     0.00 ! from CG321 CG321 CG321 OG311, penalty= 0.6
+CG2R61 CG311  NG2S1  CG2O1      0.0150  1     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 4
+CG331  CG311  NG2R53 CG3C52  0.0000  1   0.00 !
+CG301  CG321  CG321  CG331   0.1950  3   0.00 !
+OG2D3  CG2O5  CG311  CG321      0.0650  3   180.00 ! from OG2D3 CG2O5 CG321 CG321, penalty= 4
+CG321  CG311  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 9
+CG331  CG321  NG311  CG321   2.5000  1 180.00 !
+CG1N1  CG311  NG2S1  HGP1       0.0000  1     0.00 ! from CG321 CG311 NG2S1 HGP1, penalty= 47
+NG2R53 CG311  CG321  CG331   0.2000  3   0.00 !
+CG331  CG321  CG321  NG321   0.3900  2   0.00 !
+OG301  CG311  CG321  OG311   0.2000  3   0.00 !
+OG302  CG311  CG321  CG331      0.1600  1   180.00 ! from CG331 CG321 CG321 OG301, penalty= 4.5
+OG311  CG311  OG301  CG321      0.4100  1   180.00 ! from OG311 CG301 OG301 CG331, penalty= 8.9
+CG321  CG301  NG311  CG321   1.5000  2   0.00 !
+CG321  CG311  OG301  CG321      0.4900  3     0.00 ! from CG331 CG311 OG301 CG331, penalty= 1.8
+NG311  CG301  CG321  CG311      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 13.2
+CG2O2  CG301  CG321  CG311      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 8.6
+CG2O2  CG301  CG321  CG301   0.2000  3   0.00 !
+CG301  CG321  CG321  CG331      0.1950  3     0.00 ! from CG301 CG321 CG321 CG321, penalty= 0.9
+CG2O1  CG321  CG321  NG2S1      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG2O1, penalty= 4
+CG321  CG301  OG301  CG321   1.1500  1   0.00 !
+CG2O1  CG321  CG321  OG302      0.2000  3     0.00 ! from CG2O1 CG311 CG321 OG311, penalty= 19
+CG321  CG321  NG311  CG311      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 5.6
+CG2R61 CG311  CG321  CG311      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 4.6
+CG311  CG321  CG321  NG2S1   0.2000  3   0.00 !
+NG311  CG311  OG311  HGP1       0.3000  1     0.00 ! from CG321 CG311 OG311 HGP1, penalty= 39
+CG321  CG311  OG301  CG321   0.4900  3   0.00 !
+CG2O3  CG321  CG321  CG331   0.1497  3 180.00 !
+HGA2   CG321  NG311  CG301      0.0000  3   180.00 ! from HGA2 CG321 NG311 CG2R61, penalty= 73.5
+CG2D1  CG321  CG321  CG2D1   0.2000  3   0.00 !
+CG2D1  CG321  NG311  CG321   1.5000  2   0.00 !
+CG2O1  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG2R61 CG2O2  OG311  HGP1       0.9750  1   180.00 ! ZOIC, benzoic acid, jal
+OG301  CG311  NG2R53 CG2R53  0.0000  1   0.00 !
+CG2O2  CG311  CG321  CG311      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 0.6
+CG321  CG301  NG311  HGPAM1  0.1000  3   0.00 !
+NG2S1  CG2O1  CG311  OG302      0.6000  1     0.00 ! from NG2S1 CG2O1 CG314 NG3P3, penalty= 40.9
+CG311  CG321  CG321  CG331   0.0813  3 180.00 !
+CG321  CG311  OG301  CG321      0.4000  1     0.00 ! from CG331 CG311 OG301 CG331, penalty= 1.8
+CG331  CG321  NG311  HGPAM1     0.3000  3     0.00 ! from CG321 CG321 NG311 HGPAM1, penalty= 0.9
+NG2S1  CG321  CG321  OG311      0.2000  3     0.00 ! from NG2S1 CG311 CG321 OG311, penalty= 4
+CG2O5  CG311  CG321  CG321   0.2000  3   0.00 !
+CG321  CG321  OG301  CG301   0.2900  2   0.00 !
+CG2O2  CG301  CG321  HGA2    0.2000  3   0.00 !
+CG2D1  CG321  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 37.9
+OG2D3  CG2O5  CG311  CG321   0.7500  1 180.00 !
+NG311  CG321  CG321  OG301      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 33
+CG331  CG321  NG311  CG331   2.5000  1 180.00 !
+CG2D1  CG321  NG311  CG321   2.5000  1 180.00 !
+HGA1   CG311  NG311  HGPAM1     0.0500  3     0.00 ! from HGA2 CG321 NG311 HGPAM1, penalty= 4
+CG301  CG2O2  OG302  CG331      2.0500  2   180.00 ! from CG311 CG2O2 OG302 CG331, penalty= 1.2
+CG321  CG321  NG2R53 CG3C52  0.0000  1   0.00 !
+CG321  CG321  CG321  NG321      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 33
+OG2D3  CG2O5  CG311  CG321      0.0300  6     0.00 ! from OG2D3 CG2O5 CG321 CG321, penalty= 4
+CG2O5  CG311  CG321  CG2D1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 16
+CG2O1  CG321  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 141.5
+CG331  CG321  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 5.9
+CG311  CG321  OG301  CG321      0.4300  3     0.00 ! from CG321 CG321 OG301 CG321, penalty= 0.6
+NG311  CG311  CG321  OG311      0.2000  3     0.00 ! from NG3P3 CG314 CG321 OG311, penalty= 37.9
+CG331  CG311  CG321  OG311      0.2000  3   180.00 ! from CG321 CG311 CG321 OG311, penalty= 0.9
+OG301  CG311  CG321  CG331   0.1600  1 180.00 !
+OG2D1  CG2O2  CG311  CG331   0.0500  6 180.00 !
+CG2O2  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG321  CG311  CG321  CG331      0.2000  3     0.00 ! from CG311 CG311 CG321 CG331, penalty= 0.6
+OG2R50 CG2R51 CG2R51 HGR51      4.5000  2   180.00 ! FURA, furan
+CG2O2  CG311  NG311  CG321   0.5000  3   0.00 !
+CG321  CG301  NG311  CG321   2.5000  1 180.00 !
+OG2D2  CG2O3  CG311  OG302      0.5500  2   180.00 ! from OG2D2 CG2O3 CG311 OG301, penalty= 0.5
+CG1N1  CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 53.5
+CG331  CG2O5  CG311  OG301   0.1800  2 180.00 !
+HGA1   CG311  CG321  CG301      0.1950  3     0.00 ! from HGA1 CG311 CG321 CG311, penalty= 1.2
+CG331  CG2O5  CG311  CG321      0.0650  3     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4.9
+OG302  CG311  NG2R53 CG3C52     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 143
+CG311  CG321  OG301  CG321      0.5700  1     0.00 ! from CG321 CG321 OG301 CG321, penalty= 0.6
+NG2S1  CG321  CG321  OG311   0.2000  3   0.00 !
+OG2D1  CG2O1  CG311  NG311      0.0000  1     0.00 ! from OG2D1 CG2O1 CG314 NG3P3, penalty= 37.9
+CG331  CG321  NG311  CG301      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 7.7
+CG2D1  CG321  CG321  CG301      0.0500  3   180.00 ! from CG2D1 CG321 CG321 CG321, penalty= 1.8
+CG2R51 CG2R51 CG2R51 OG2R50     8.5000  2   180.00 ! FURA, furan
+OG302  CG2O2  CG2R61 CG2R61     0.8500  2   180.00 ! MBOA, methylbenzoate, jal
+CG2O1  CG311  CG321  CG2D1   0.2000  3   0.00 !
+CG2O3  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 149.5
+CG2O5  CG311  CG321  HGA2       0.2000  3     0.00 ! from CG2O2 CG311 CG321 HGA2, penalty= 2
+CG331  CG311  NG311  CG321   0.5000  3   0.00 !
+CG2R61 CG2R61 CG311  NG311      0.0000  2     0.00 ! from CG2R61 CG2R61 CG321 OG302, penalty= 37.5
+HGA1   CG311  NG311  CG321      0.0000  3   180.00 ! from HGA2 CG321 NG311 CG2R61, penalty= 77.5
+CG2D1  CG321  NG2S1  HGP1    0.0000  1   0.00 !
+OG2D3  CG2O5  CG311  CG321   0.0650  3 180.00 !
+CG2O1  CG321  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 18.4
+CG1N1  CG311  CG321  CG321      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 34
+CG2D1  CG321  CG321  CG301   0.0500  3 180.00 !
+NG311  CG311  CG321  HGA2       0.1600  3     0.00 ! from NG311 CG321 CG331 HGA3, penalty= 10
+OG302  CG2O2  CG311  OG301   0.0500  6 180.00 !
+CG331  CG301  CG321  CG301   0.2000  3   0.00 !
+OG302  CG311  CG321  CG311      0.1950  3     0.00 ! from CG321 CG321 CG321 OG302, penalty= 4.6
+CG2R61 CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 18
+OG2D3  CG2O5  CG311  CG321   0.1800  2 180.00 !
+CG2R61 CG311  NG2S1  CG2O1   0.2980  2   0.00 !
+CG331  CG2O5  CG311  CG321   0.1800  2 180.00 !
+NG2R53 CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 143.5
+CG2R61 CG311  CG321  CG321      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 4
+CG311  CG321  OG301  CG321   0.4300  3   0.00 !
+CG321  CG321  NG311  CG301      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG331  CG2O5  CG311  HGA1    0.1000  3   0.00 !
+OG301  CG311  OG311  HGP1       1.5500  1     0.00 ! from OG301 CG301 OG311 HGP1, penalty= 8
+CG2O5  CG321  CG321  CG301   0.0900  6 180.00 !
+OG2D3  CG2O5  CG311  CG321   0.0300  6   0.00 !
+CG2O2  CG301  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 153.5
+CG311  CG321  CG321  NG2S1      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 0.6
+CG331  CG321  NG311  HGPAM1     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 1.5
+OG2D1  CG2O2  CG311  NG311      0.0000  6   180.00 ! from OG2D1 CG2O2 CG321 NG321, penalty= 5.2
+CG1N1  CG311  NG311  HGPAM1  0.3000  3   0.00 !
+CG301  CG321  CG321  OG301   0.1600  1 180.00 !
+CG331  CG2D1  CG321  CG331      0.1900  3     0.00 ! from CG331 CG2D1 CG321 CG321, penalty= 0.9
+CG2D1  CG2D1  CG321  CG301      1.3000  3   180.00 ! from CG2D1 CG2D1 CG321 CG311, penalty= 1.2
+CG2O5  CG321  CG321  CG331   0.1100  4   0.00 !
+CG1N1  CG321  CG321  CG321      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 34
+CG2O1  CG311  CG321  CG331      0.2000  3     0.00 ! from CG2O1 CG311 CG321 CG321, penalty= 0.9
+OG311  CG2O2  CG311  OG302      0.0000  6   180.00 ! from OG311 CG2O2 CG321 NG321, penalty= 38.2
+OG301  CG321  CG321  OG311      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 5
+NG2S1  CG2O1  CG321  OG302      0.4000  1     0.00 ! from NG2S1 CG2O1 CG324 NG3P3, penalty= 40.9
+NG311  CG321  CG321  OG301   0.2500  1 180.00 !
+CG321  CG301  CG321  CG331   0.2000  3   0.00 !
+OG311  CG2O2  CG321  CG321   0.0000  6 180.00 !
+CG2R61 CG311  NG2S1  HGP1    0.0000  1   0.00 !
+CG321  CG321  NG311  CG311      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG301  CG321  CG321  OG311      0.1950  3     0.00 ! from CG321 CG321 CG321 OG311, penalty= 1.8
+CG331  CG321  CG321  OG302      0.3900  2     0.00 ! from CG331 CG321 CG321 OG301, penalty= 0.5
+CG331  CG301  NG311  HGPAM1     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 13.5
+NG2R53 CG311  CG321  CG311   0.2000  3   0.00 !
+CG2O3  CG311  CG321  CG2D1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 4
+CG331  CG311  NG311  HGPAM1  0.1000  3   0.00 !
+CG331  CG311  NG311  CG321   2.5000  1 180.00 !
+CG2R61 CG311  NG2S1  HGP1       0.0000  1     0.00 ! from CG2R61 CG321 NG2S1 HGP1, penalty= 4
+NG321  CG321  CG321  HGA2       0.1600  3     0.00 ! from NG311 CG321 CG331 HGA3, penalty= 7.2
+NG311  CG311  NG2R53 CG3C52     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 137
+NG2R53 CG311  CG321  CG301   0.2000  3   0.00 !
+OG311  CG311  NG311  HGPAM1  0.3000  3   0.00 !
+CG321  CG321  OG301  CG301   0.5700  1   0.00 !
+CG311  CG321  CG321  NG2R53     0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 1.6
+CG321  CG311  CG321  OG301   0.2000  3 180.00 !
+CG321  CG321  NG311  CG301   0.5000  3   0.00 !
+OG2D3  CG2O5  CG311  CG331      0.0650  3   180.00 ! from OG2D3 CG2O5 CG321 CG331, penalty= 4
+CG311  CG321  CG321  NG311   0.1600  1 180.00 !
+OG302  CG301  CG321  CG331      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 0.5
+CG2O5  CG311  NG2S1  CG2O1      0.2000  1   180.00 ! from CG2O2 CG311 NG2S1 CG2O1, penalty= 2
+CG321  CG311  NG311  CG321   2.5000  1 180.00 !
+CG331  CG301  OG301  CG321      0.4000  1     0.00 ! from CG331 CG301 OG301 CG331, penalty= 0.9
+CG1N1  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 121.5
+CG2D1  CG321  CG321  CG311      0.0500  3   180.00 ! from CG2D1 CG321 CG321 CG321, penalty= 0.6
+NG321  CG321  CG321  HGA2    0.1600  3   0.00 !
+CG301  CG321  CG321  NG311   0.1600  1 180.00 !
+CG321  CG301  NG311  HGPAM1     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 14.4
+CG2O2  CG311  CG321  CG331   0.2000  3   0.00 !
+NG2R53 CG311  NG2S1  HGP1       0.0000  1     0.00 ! from CG2R61 CG321 NG2S1 HGP1, penalty= 51
+CG2O3  CG321  CG321  CG301   0.1950  3   0.00 !
+OG301  CG311  CG321  OG301      0.2000  3     0.00 ! from OG302 CG311 CG321 OG302, penalty= 1
+OG311  CG2O2  CG311  OG301   0.0000  6 180.00 !
+CG321  CG301  CG321  CG311      0.2000  3     0.00 ! from CG321 CG301 CG321 CG321, penalty= 0.6
+OG302  CG2O2  CG301  CG331      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 8.9
+CG2D1  CG321  CG321  CG2O1   0.2000  3   0.00 !
+CG321  CG321  NG321  HGPAM2     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 12.4
+CG321  CG2O1  NG2S1  CG301   1.6000  1   0.00 !
+OG302  CG2O2  CG311  NG311   0.0000  6 180.00 !
+CG2O2  CG301  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 153.5
+NG311  CG311  CG321  CG311   0.1950  3   0.00 !
+NG2R53 CG311  NG2S1  CG2O1      0.0760  3   180.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 51
+OG311  CG311  CG321  CG301   0.4000  5   0.00 !
+OG301  CG311  CG321  CG321      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 4
+NG2S1  CG301  CG331  HGA3    0.2000  3   0.00 !
+CG321  CG321  NG311  CG311      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+OG301  CG311  CG321  OG301   0.2000  3   0.00 !
+OG301  CG301  CG321  CG311   0.8000  3   0.00 !
+NG2S1  CG311  CG321  CG301   0.2000  3   0.00 !
+NG311  CG301  CG321  CG321      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 33.9
+OG302  CG2O2  CG301  NG2S1      0.0000  1     0.00 ! from OG302 CG2O2 CG311 NG2S1, penalty= 8
+CG311  CG321  OG301  CG321   0.2900  2   0.00 !
+CG311  CG321  CG321  CG331   0.2039  5   0.00 !
+CG2O1  CG321  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 25
+NG2S1  CG2O1  CG321  CG331      0.0000  1     0.00 ! from NG2S1 CG2O1 CG321 CG321, penalty= 0.9
+CG2O3  CG311  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 0.9
+CG2O5  CG311  NG311  HGPAM1  0.1600  3   0.00 !
+NG2S2  CG2O1  CG311  OG301   0.6000  1   0.00 !
+CG2O1  CG311  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 29
+CG2D1  CG321  NG2S1  CG2O1      0.6190  4     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 21
+HGA4   CG2D1  CG321  NG311   0.2000  3   0.00 !
+CG311  CG321  CG321  NG311   0.3900  2   0.00 !
+NG2S1  CG301  CG321  HGA2    0.2000  3   0.00 !
+CG321  CG301  OG301  CG321   0.4900  3   0.00 !
+OG311  CG311  CG321  CG301      2.0000  3   180.00 ! from OG311 CG311 CG321 CG311, penalty= 1.2
+HGA2   CG321  NG2R53 CG3C52  0.4200  3   0.00 !
+CG331  CG2O5  CG311  NG311      0.0650  3     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 43.9
+HGA2   CG321  NG311  CG321   0.0000  3 180.00 !
+CG331  CG321  NG311  CG311      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2R61 CG2R61 CG311  NG2S1      0.0130  6   180.00 ! from CG2R61 CG2R61 CG321 NG2S1, penalty= 4
+CG2O2  CG301  CG321  CG2D1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 24.5
+OG2D1  CG2O2  CG311  OG301   0.0000  2   0.00 !
+HGA4   CG2D1  CG321  CG301   0.0000  3   0.00 !
+OG301  CG311  CG321  CG311      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 4.6
+CG321  CG301  NG2S1  HGP1       0.0000  1     0.00 ! from CG321 CG311 NG2S1 HGP1, penalty= 8
+OG302  CG311  CG321  CG321      0.1950  3     0.00 ! from CG321 CG321 CG321 OG302, penalty= 4
+NG311  CG301  CG331  HGA3       0.1600  3     0.00 ! from NG311 CG321 CG331 HGA3, penalty= 12
+CG2O5  CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+OG2D1  CG2O2  CG2R51 OG2R50     1.0250  2   180.00 ! from OG2D1 CG2O2 CG2R61 CG2R61, penalty= 143
+CG331  CG321  NG311  CG301      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+OG2D1  CG2O2  CG301  OG301      0.0000  2     0.00 ! from OG2D3 CG2O5 CG311 OG311, penalty= 33.5
+OG302  CG2O2  CG301  CG321      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 8
+CG321  CG2O1  NG2S1  CG301      1.6000  1     0.00 ! from CG321 CG2O1 NG2S1 CG311, penalty= 1.2
+NG311  CG311  CG321  HGA2       0.1950  3     0.00 ! from NG311 CG321 CG321 HGA2, penalty= 4
+NG311  CG301  CG321  CG301      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 14.4
+CG2R61 CG311  NG311  CG321   1.5000  2   0.00 !
+CG2D1  CG321  NG2S1  CG2O1   0.2980  2   0.00 !
+CG2O5  CG321  CG321  CG331      0.3500  3   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.9
+NG311  CG311  CG321  CG321      0.1950  3     0.00 ! from NG3P2 CG314 CG321 CG321, penalty= 37
+CG2O5  CG321  CG321  CG331   0.2100  1 180.00 !
+OG301  CG311  CG321  CG301      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 5.8
+CG2O1  CG321  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 31.5
+CG2O3  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 149.5
+NG311  CG311  CG321  CG331      0.3900  2     0.00 ! from CG331 CG321 CG321 OG301, penalty= 37
+CG2O2  CG301  CG321  CG321   0.2000  3   0.00 !
+CG331  CG321  CG321  NG321      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 2.7
+OG302  CG311  CG321  CG331      0.3900  2     0.00 ! from CG331 CG321 CG321 OG301, penalty= 4.5
+CG2O2  CG311  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 29
+NG2S1  CG301  CG321  CG301      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 9.2
+CG2O5  CG321  CG321  CG331      0.1100  4     0.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.9
+HGA1   CG311  NG2R53 CG3C52  0.4200  3   0.00 !
+CG2O1  CG321  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 141.5
+NG311  CG311  CG321  OG301      0.2000  3     0.00 ! from OG302 CG311 CG321 OG302, penalty= 34
+OG311  CG311  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 54
+OG2D3  CG2O5  CG311  CG321      0.1800  2   180.00 ! from OG2D3 CG2O5 CG321 CG321, penalty= 4
+CG321  CG321  NG311  CG311      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 5.6
+CG2O5  CG311  CG321  CG311   0.2000  3   0.00 !
+NG311  CG311  CG321  CG331   0.3900  2   0.00 !
+CG321  CG301  OG301  CG321      1.1500  1     0.00 ! from CG321 CG301 OG301 CG331, penalty= 0.9
+CG331  CG311  OG301  CG321   0.4000  1   0.00 !
+CG2O5  CG311  OG301  CG321   0.2000  3   0.00 !
+NG2S1  CG311  OG311  HGP1       0.7000  2     0.00 ! from CG2D1 CG321 OG311 HGP1, penalty= 45
+NG2S1  CG311  OG311  HGP1       1.3000  1     0.00 ! from CG2D1 CG321 OG311 HGP1, penalty= 45
+CG311  CG321  CG321  CG331      0.2039  5     0.00 ! from CG321 CG321 CG321 CG331, penalty= 0.6
+CG3C52 CG2R53 NG2R53 CG321      0.2000  2   180.00 ! from CG3C50 CG2R53 NG2R53 CG331, penalty= 2.1
+CG301  CG321  CG321  NG2S1      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 1.8
+CG331  CG301  OG301  CG321   0.4000  1   0.00 !
+CG3C52 CG3C52 NG2R53 CG321   2.3100  3 180.00 !
+CG2R61 CG2O2  OG302  CG321      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 0.9
+NG311  CG311  CG321  CG311      0.1950  3     0.00 ! from NG3P2 CG314 CG321 CG321, penalty= 37.6
+CG2O1  CG321  NG311  CG321   2.5000  1 180.00 !
+CG2R61 CG311  NG311  CG321   2.5000  1 180.00 !
+CG2O3  CG311  CG321  CG331      0.2000  3     0.00 ! from CG2O3 CG311 CG321 CG321, penalty= 0.9
+NG2R53 CG311  CG331  HGA3       0.2000  3     0.00 ! from NG2S1 CG311 CG331 HGA3, penalty= 1
+OG2D1  CG2O2  CG301  OG301   0.0000  2   0.00 !
+CG2R51 CG2O2  OG311  HGP1       2.7000  2   180.00 ! from CG2R61 CG2O2 OG311 HGP1, penalty= 8.5
+CG2R61 CG311  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 4
+CG331  CG321  NG321  HGPAM2  0.1000  3   0.00 !
+CG2D1  CG321  CG321  CG301   0.1700  2   0.00 !
+CG1N1  CG321  CG321  CG321   0.2000  3   0.00 !
+NG311  CG311  CG331  HGA3       0.1600  3     0.00 ! from NG311 CG321 CG331 HGA3, penalty= 4
+CG331  CG2O5  CG311  NG2S1   0.0000  1   0.00 !
+CG321  CG321  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 5
+OG2D1  CG2O1  NG2S1  CG301   2.5000  2 180.00 !
+CG2R61 CG311  NG2S1  CG2O1      0.0760  3   180.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 4
+CG2O5  CG311  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 29
+CG2O2  CG311  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 14.5
+CG331  CG321  OG301  CG311   0.4000  1   0.00 !
+OG302  CG2O2  CG311  CG331   0.0500  6 180.00 !
+CG1N1  CG311  OG301  CG321   0.4900  3   0.00 !
+HGA2   CG321  NG2R53 CG3C52     0.4200  3     0.00 ! from HGA3 CG331 NG2S0 CG331, penalty= 86.9
+NG311  CG311  CG321  CG321      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 4.6
+CG331  CG321  CG321  NG2R53  0.2000  3   0.00 !
+CG1N1  CG311  OG302  CG2O2      0.7000  1   180.00 ! from CG321 CG311 OG302 CG2O2, penalty= 47
+OG2D1  CG2O1  CG321  OG301   0.5500  2 180.00 !
+NG311  CG321  CG321  NG321      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 39.6
+CG2O5  CG311  NG311  CG321   0.5000  3   0.00 !
+CG321  CG321  NG2R53 CG2R53  0.0000  1   0.00 !
+OG302  CG321  CG321  OG302      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 1
+CG1N1  CG311  CG331  HGA3    0.2000  3   0.00 !
+CG321  CG311  NG311  HGPAM1  0.1000  3   0.00 !
+CG1N1  CG311  NG311  HGPAM1     1.7000  2     0.00 ! from NG311 CG321 NG311 HGPAM1, penalty= 48
+OG311  CG2O2  CG311  NG2S1   0.0000  1   0.00 !
+OG311  CG311  NG311  HGPAM1  1.7000  2   0.00 !
+NG2S2  CG2O1  CG321  OG302      0.4000  1     0.00 ! from NG2S2 CG2O1 CG324 NG3P3, penalty= 40.9
+CG331  CG2O5  CG321  CG321      0.7500  1     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 0.9
+CG2O3  CG311  OG301  CG321   0.2000  3   0.00 !
+OG302  CG301  CG321  CG301      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 3.2
+CG2O1  CG321  NG311  CG321   1.5000  2   0.00 !
+OG2D1  CG2O1  CG321  NG311      0.0000  1     0.00 ! from OG2D1 CG2O1 CG324 NG3P3, penalty= 37.9
+CG2O1  CG321  CG321  NG311      0.1950  3     0.00 ! from CG2O1 CG321 CG321 CG311, penalty= 39.6
+CG331  CG2O5  CG311  CG331      0.1800  2   180.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4
+CG331  CG301  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 17.9
+CG331  CG321  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+OG301  CG301  CG321  CG321      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 0.9
+CG2O2  CG2R61 CG2R61 CG2R61     3.1000  2   180.00 ! ZOIC, benzoic acid, MBOA, methylbenzoate; default parameter; kevo & jal
+OG302  CG311  CG321  CG301      0.1950  3     0.00 ! from CG321 CG321 CG321 OG302, penalty= 5.8
+NG2R53 CG311  NG2S1  HGP1    0.0000  1   0.00 !
+CG331  CG301  NG311  HGPAM1  0.1000  3   0.00 !
+CG2R51 CG2R51 CG2R51 HGR51      1.0000  2   180.00 ! CG2R51 CG2R51 CG2R51 HGR51      1.0000  2   180.00 ! PYRL, pyrrole
+CG331  CG301  NG2S1  HGP1    0.0000  1   0.00 !
+CG321  CG321  NG311  CG301      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 6.8
+CG2D1  CG321  NG2S1  CG2O1      0.0760  3   180.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 21
+NG311  CG301  CG321  HGA2       0.1950  3     0.00 ! from NG311 CG321 CG321 HGA2, penalty= 12
+CG2R61 CG321  CG321  CG311      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 0.6
+OG302  CG2O2  CG301  CG2O2   0.0000  1   0.00 !
+NG2S1  CG311  OG311  HGP1    0.1400  3   0.00 !
+CG321  CG321  CG321  NG321   0.1600  1 180.00 !
+HGA2   CG321  NG311  CG311      0.0000  3   180.00 ! from HGA2 CG321 NG311 CG2R61, penalty= 73.5
+CG2R61 CG2O2  OG311  HGP1       0.2500  6   180.00 ! ZOIC, benzoic acid, jal
+NG2S1  CG2O1  CG321  NG311      0.4000  1     0.00 ! from NG2S1 CG2O1 CG324 NG3P3, penalty= 37.9
+OG301  CG311  CG321  CG311      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 4.6
+CG331  CG301  NG2S1  CG2O1      1.8000  1     0.00 ! from CG331 CG311 NG2S1 CG2O1, penalty= 8
+NG311  CG311  CG321  CG301      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 6.4
+CG2R61 CG2R61 CG311  NG311   0.0000  2   0.00 !
+CG2O5  CG321  CG321  CG311   0.3900  2   0.00 !
+CG1N1  CG311  NG311  CG321   0.5000  3   0.00 !
+NG2S1  CG301  CG321  CG301   0.2000  3   0.00 !
+NG311  CG321  CG321  OG302      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 33.5
+OG301  CG321  CG321  OG311   1.2400  2   0.00 !
+CG2O2  CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+CG2O3  CG311  CG321  CG301   0.2000  3   0.00 !
+CG2O2  CG301  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 37
+CG321  CG301  NG311  CG321   0.5000  3   0.00 !
+CG2R61 CG311  CG321  CG331   0.0400  3   0.00 !
+HGA2   CG321  NG311  CG331   0.0000  3 180.00 !
+CG331  CG321  NG311  CG301      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 7.7
+CG331  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 117
+NG2S1  CG2O1  CG311  NG311   0.6000  1   0.00 !
+NG311  CG321  CG321  NG321   1.2400  2   0.00 !
+CG2R61 CG2R61 CG311  OG301   0.0000  2   0.00 !
+CG2D1  CG2D1  CG321  OG302      1.9000  1   180.00 ! from CG2D2 CG2D1 CG321 OG311, penalty= 18.5
+OG302  CG2O2  CG311  CG331      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 0.9
+CG2O2  CG301  NG2S1  CG2O1      0.2000  1   180.00 ! from CG2O2 CG311 NG2S1 CG2O1, penalty= 8
+OG2D3  CG2O5  CG311  CG331      0.7500  1   180.00 ! from OG2D3 CG2O5 CG321 CG331, penalty= 4
+OG301  CG321  CG321  OG311   0.2500  1 180.00 !
+CG2D1  CG321  NG2S1  CG2O1   0.0760  3 180.00 !
+NG2S1  CG311  NG2R53 CG2R53     0.0000  1   180.00 ! from CG2O2 CG311 NG2R53 CG2R53, penalty= 53.5
+CG311  CG321  OG301  CG311   0.5700  1   0.00 !
+CG331  CG2D1  CG321  CG311   0.1900  3   0.00 !
+OG2D3  CG2O5  CG311  NG2S1   0.0000  1   0.00 !
+CG2R51 CG2O2  OG302  CG321      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 9.4
+CG2O5  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG331  CG321  OG301  CG301   0.4900  3   0.00 !
+CG331  CG2O5  CG311  NG311      0.7500  1     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 43.9
+CG331  CG321  NG2R53 CG2R53  0.0000  1   0.00 !
+CG2O5  CG311  CG321  CG331      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 2.9
+NG2R53 CG311  CG321  CG2D1      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG2R61, penalty= 22
+OG2D3  CG2O5  CG311  CG331      0.1800  2   180.00 ! from OG2D3 CG2O5 CG321 CG331, penalty= 4
+CG2R61 CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG301  CG321  CG321  NG2R53  0.2000  3   0.00 !
+CG2O5  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+NG2S2  CG2O1  CG311  OG302      0.6000  1     0.00 ! from NG2S2 CG2O1 CG314 NG3P3, penalty= 40.9
+OG311  CG311  OG301  CG321   0.0500  3   0.00 !
+CG1N1  CG311  NG311  CG321   1.5000  2   0.00 !
+CG331  CG321  CG321  OG302      0.1600  1   180.00 ! from CG331 CG321 CG321 OG301, penalty= 0.5
+NG311  CG311  OG311  HGP1    0.3000  1   0.00 !
+NG2S2  CG2O1  CG311  NG311   0.6000  1   0.00 !
+HGA1   CG311  CG321  OG301   0.1950  3   0.00 !
+CG2O5  CG311  CG321  CG321      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 2
+OG302  CG2O2  CG301  NG2S1   0.0000  1   0.00 !
+NG2R53 CG311  NG311  CG321   1.5000  2   0.00 !
+NG311  CG311  CG321  OG311   0.2000  3   0.00 !
+CG321  CG321  NG311  CG311   0.5000  3   0.00 !
+CG301  CG321  CG321  OG302      0.1950  3     0.00 ! from CG321 CG321 CG321 OG302, penalty= 1.8
+CG2D1  CG2D1  CG321  OG301      1.9000  1   180.00 ! from CG2D2 CG2D1 CG321 OG311, penalty= 18.5
+CG321  CG311  NG311  HGPAM1     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 6.4
+OG301  CG311  CG321  CG311   0.1600  1 180.00 !
+NG311  CG311  CG321  OG301   0.2000  3   0.00 !
+CG1N1  CG321  CG321  CG331   0.2000  3   0.00 !
+CG331  CG311  NG311  HGPAM1     0.3000  3     0.00 ! from CG321 CG321 NG311 HGPAM1, penalty= 4.9
+CG331  CG2O5  CG321  CG321      0.0650  3     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 0.9
+OG311  CG311  NG2S1  HGP1    0.0000  1   0.00 !
+CG331  CG2O5  CG311  OG302      0.1800  2   180.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG2O1  CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+CG321  CG301  NG311  HGPAM1     0.3000  3     0.00 ! from CG321 CG321 NG311 HGPAM1, penalty= 12
+CG331  CG321  CG321  OG302   0.3900  2   0.00 !
+CG2O2  CG301  NG2S1  HGP1       0.0000  1     0.00 ! from CG2O2 CG311 NG2S1 HGP1, penalty= 8
+CG2O2  CG2R61 CG2R61 HGR61      2.4000  2   180.00 ! ZOIC, benzoic acid, MBOA, methylbenzoate; default parameter; kevo & jal
+NG2S2  CG2O1  CG321  NG311      0.4000  1     0.00 ! from NG2S2 CG2O1 CG324 NG3P3, penalty= 37.9
+CG321  CG321  CG321  NG321   0.3900  2   0.00 !
+OG302  CG2O2  CG311  OG302      0.0500  6   180.00 ! from OG302 CG2O2 CG311 CG321, penalty= 45
+CG321  CG321  NG321  HGPAM2  0.1000  3   0.00 !
+CG2R51 CG2O2  OG311  HGP1       0.2500  6   180.00 ! from CG2R61 CG2O2 OG311 HGP1, penalty= 8.5
+CG2D1  CG321  NG2S1  HGP1       0.0000  1     0.00 ! from CG2R61 CG321 NG2S1 HGP1, penalty= 21
+HGA2   CG321  OG301  CG311      0.2840  3     0.00 ! from HGA2 CG321 OG301 CG321, penalty= 0.6
+OG2D1  CG2O2  CG301  CG331      0.0500  6   180.00 ! from OG2D1 CG2O2 CG311 CG321, penalty= 8.9
+CG1N1  CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 53.5
+CG2D1  CG2D1  CG321  OG301      0.6000  3   180.00 ! from CG2D2 CG2D1 CG321 OG311, penalty= 18.5
+OG2D3  CG2O5  CG311  CG331   0.0300  6   0.00 !
+CG2O5  CG311  CG331  HGA3       0.2000  3     0.00 ! from CG2O1 CG311 CG331 HGA3, penalty= 3
+CG2O5  CG311  CG321  CG301   0.2000  3   0.00 !
+OG301  CG311  OG311  HGP1    1.5500  1   0.00 !
+CG2R61 CG321  CG321  CG331   0.0400  3   0.00 !
+CG321  CG301  CG321  CG301      0.2000  3     0.00 ! from CG321 CG301 CG321 CG321, penalty= 1.8
+NG2R53 CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 57.5
+CG331  CG321  OG301  CG311      0.4000  1     0.00 ! from CG331 CG321 OG301 CG321, penalty= 0.6
+CG311  CG321  OG301  CG311      0.4300  3     0.00 ! from CG321 CG321 OG301 CG321, penalty= 1.2
+CG2O2  CG311  CG321  CG2D1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 16.5
+NG311  CG301  CG321  HGA2       0.1600  3     0.00 ! from NG311 CG321 CG331 HGA3, penalty= 18
+NG2S1  CG311  OG311  HGP1    1.3000  1   0.00 !
+CG331  CG301  CG321  CG2D1      0.2000  3     0.00 ! from CG321 CG311 CG321 CG2D1, penalty= 8.9
+HGA1   CG311  NG2R53 CG3C52     0.4200  3     0.00 ! from HGA3 CG331 NG2S0 CG331, penalty= 91.9
+CG321  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 117
+OG2D1  CG2O1  CG311  OG301   0.5500  2 180.00 !
+OG311  CG311  NG311  HGPAM1     0.3000  3     0.00 ! from NG311 CG321 NG311 HGPAM1, penalty= 37
+CG2O5  CG321  CG321  CG301   0.3900  2   0.00 !
+CG321  CG321  NG311  CG311   1.5000  2   0.00 !
+CG2R61 CG311  NG2S1  CG2O1      0.1480  6     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 4
+CG321  CG321  NG311  CG321   0.5000  3   0.00 !
+NG2R53 CG311  CG321  CG331      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 1.9
+CG1N1  CG321  CG321  CG311   0.2000  3   0.00 !
+CG2O5  CG321  CG321  CG311      0.2100  1   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.6
+CG2O2  CG301  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 43.5
+CG331  CG321  NG311  CG301   2.5000  1 180.00 !
+HGA2   CG321  OG301  CG311   0.2840  3   0.00 !
+CG2R61 CG311  CG321  CG321   0.0400  3   0.00 !
+CG321  CG2O1  NG2S1  CG301      2.5000  2   180.00 ! from CG321 CG2O1 NG2S1 CG311, penalty= 1.2
+CG2O2  CG301  CG331  HGA3    0.2000  3   0.00 !
+CG2R51 CG2O2  OG302  CG331      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 8.5
+NG2S1  CG301  CG321  CG321      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 8
+OG301  CG301  CG321  CG301      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 2.7
+CG331  CG321  NG311  CG301      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2O1  CG321  CG321  NG2S1   0.2000  3   0.00 !
+NG311  CG301  CG321  CG331      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 33
+NG2R53 CG311  NG311  CG321   0.5000  3   0.00 !
+NG2R53 CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 143.5
+CG331  CG321  OG301  CG311      0.4900  3     0.00 ! from CG331 CG321 OG301 CG321, penalty= 0.6
+CG2O5  CG321  CG321  CG331      0.3900  2     0.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.9
+OG311  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 110.5
+CG331  CG2O5  CG311  NG311      0.0300  6     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 43.9
+CG311  CG321  CG321  CG331   0.1082  4   0.00 !
+OG302  CG301  CG321  CG321      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 1.4
+OG2D1  CG2O2  OG302  CG321      3.8500  2   180.00 ! LIPID methyl acetate
+OG2D1  CG2O1  CG321  NG311   0.0000  1   0.00 !
+CG331  CG321  NG311  CG311      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG321  CG311  NG2R53 CG3C52     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 98
+CG2O5  CG321  CG321  CG311   0.2100  1 180.00 !
+CG2R61 CG2O2  OG302  CG311      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 1.5
+CG331  CG301  CG321  CG311      0.2000  3     0.00 ! from CG331 CG301 CG321 CG321, penalty= 0.6
+CG2R61 CG311  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 43
+NG2S1  CG301  CG321  CG321   0.2000  3   0.00 !
+CG321  CG321  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG321  CG311  CG321  CG301      0.2000  3     0.00 ! from CG321 CG311 CG321 CG311, penalty= 1.2
+CG331  CG321  NG311  CG311   2.5000  1 180.00 !
+NG311  CG321  CG321  NG311   1.2400  2   0.00 !
+OG302  CG321  CG321  OG311      0.2000  3     0.00 ! from OG311 CG311 CG321 OG303, penalty= 5
+CG2O5  CG311  NG2S1  HGP1    0.0000  1   0.00 !
+CG331  CG321  CG321  OG302   0.1600  1 180.00 !
+CG321  CG321  NG2R53 CG2R53     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 4
+CG331  CG311  NG2R53 CG2R53     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 0.9
+CG2D1  CG321  CG321  CG311   0.0500  3 180.00 !
+CG2O2  CG301  NG311  HGPAM1  0.1600  3   0.00 !
+CG2R51 CG2O2  OG311  HGP1       0.0500  3   180.00 ! from CG2R61 CG2O2 OG311 HGP1, penalty= 8.5
+NG311  CG321  CG321  NG311   0.2500  1 180.00 !
+CG2R61 CG311  CG321  CG301   0.0400  3   0.00 !
+CG331  CG2O5  CG321  CG321   0.0300  6   0.00 !
+CG301  CG321  CG321  OG301   0.3900  2   0.00 !
+CG2O2  CG301  OG301  CG321   0.2000  3   0.00 !
+CG331  CG321  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 5.9
+CG3C52 CG3C52 NG2R53 CG311   2.3100  3 180.00 !
+NG2R53 CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 143.5
+NG2R53 CG311  NG2S1  CG2O1   0.0150  1   0.00 !
+NG2S1  CG2O1  CG321  NG311   0.4000  1   0.00 !
+CG2O5  CG311  CG331  HGA3    0.2000  3   0.00 !
+CG321  CG311  NG2R53 CG3C52  0.0000  1   0.00 !
+CG1N1  CG321  CG321  HGA2       0.1950  3     0.00 ! from NG2S1 CG321 CG321 HGA2, penalty= 34
+CG2O2  CG301  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 43.5
+CG2O2  CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+CG2D1  CG321  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 21
+CG2D1  CG2D1  CG321  NG2S1   0.3000  3 180.00 !
+NG2R53 CG311  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 59.9
+CG2O5  CG311  CG321  CG2D1   0.2000  3   0.00 !
+NG311  CG311  CG321  CG331      0.1600  1   180.00 ! from CG331 CG321 CG321 OG301, penalty= 37
+CG2O3  CG311  CG321  CG331   0.2000  3   0.00 !
+OG301  CG311  CG321  CG331      0.1600  1   180.00 ! from CG331 CG321 CG321 OG301, penalty= 4
+CG331  CG2O5  CG311  CG331   0.0650  3   0.00 !
+CG2D1  CG2D1  CG321  NG311      0.6000  1   180.00 ! from CG2D1 CG2D1 CG321 CG321, penalty= 39
+CG331  CG311  OG301  CG321      0.4000  1     0.00 ! from CG331 CG311 OG301 CG331, penalty= 0.9
+OG302  CG311  NG2R53 CG2R53     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 45
+CG301  CG321  CG321  NG2S1   0.2000  3   0.00 !
+CG2O3  CG311  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 33
+CG2R61 CG2O2  OG311  HGP1       0.0500  3   180.00 ! ZOIC, benzoic acid, jal
+CG2O1  CG321  NG311  CG321   0.5000  3   0.00 !
+CG2D1  CG321  NG2S1  CG2O1      0.1480  6     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 21
+NG321  CG321  CG321  OG301   1.2400  2   0.00 !
+CG321  CG321  OG301  CG311   0.5700  1   0.00 !
+NG311  CG311  NG2R53 CG2R53  0.0000  1   0.00 !
+NG2S2  CG2O1  CG321  OG301      0.4000  1     0.00 ! from NG2S2 CG2O1 CG324 NG3P3, penalty= 40.9
+CG2O3  CG321  CG321  CG331   0.0946  4   0.00 !
+CG331  CG2O5  CG311  NG311      0.1800  2   180.00 ! from CG321 CG2O5 CG321 CG321, penalty= 43.9
+OG2D1  CG2O2  CG311  CG2O2      0.0000  1     0.00 ! from OG2D1 CG2O2 CG311 NG2S1, penalty= 43
+HGA2   CG321  NG311  CG331      0.0000  3     0.00 ! from HGA2 CG321 NG311 CG321, penalty= 0.9
+CG2O2  CG311  OG301  CG321   0.2000  3   0.00 !
+CG2D1  CG321  CG321  CG301      0.1700  2     0.00 ! from CG2D1 CG321 CG321 CG321, penalty= 1.8
+CG321  CG321  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2O2  CG321  CG321  CG301      0.1950  3     0.00 ! from CG2O2 CG321 CG321 CG311, penalty= 1.2
+CG2O5  CG321  CG321  CG311      0.1100  4     0.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.6
+CG331  CG311  CG321  CG301   0.2000  3   0.00 !
+CG2D1  CG2D1  CG321  OG302      0.6000  3   180.00 ! from CG2D2 CG2D1 CG321 OG311, penalty= 18.5
+CG2O2  CG2R51 CG2R51 CG2R51     0.0000  2   180.00 ! from CG2O1 CG2R51 CG2R51 CG2R52, penalty= 4.5
+CG311  CG321  CG321  CG331      0.1505  2     0.00 ! from CG321 CG321 CG321 CG331, penalty= 0.6
+HGA4   CG2D1  CG321  NG311      0.2000  3     0.00 ! from HGA4 CG2D1 CG321 OG311, penalty= 38
+CG2D1  CG2D1  CG321  NG2S1   0.1000  2   0.00 !
+NG2R53 CG311  OG301  CG321   0.2000  3   0.00 !
+OG311  CG2O2  CG2R51 CG2R51     1.0250  2   180.00 ! from OG311 CG2O2 CG2R61 CG2R61, penalty= 93.5
+CG2D1  CG321  CG321  CG311   0.1400  1 180.00 !
+HGA2   CG3C52 NG2R53 CG311   0.0000  3   0.00 !
+CG2D1  CG321  NG2S1  CG2O1   0.6190  4   0.00 !
+CG2O5  CG321  CG321  CG331      0.2100  1   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.9
+CG2O1  CG321  NG311  HGPAM1  0.1600  3   0.00 !
+CG321  CG311  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 9
+OG311  CG311  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 54
+CG2D1  CG321  CG321  CG311      0.1700  2     0.00 ! from CG2D1 CG321 CG321 CG321, penalty= 0.6
+CG3C52 CG2R53 NG2R53 CG311   0.4000  2 180.00 !
+CG331  CG301  CG321  CG311   0.2000  3   0.00 !
+NG2R53 CG311  NG2S1  CG2O1   0.6190  4   0.00 !
+CG2R61 CG321  CG321  CG331      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 0.9
+OG2D1  CG2R53 NG2R53 CG321      2.5000  2   180.00 ! from OG2D1 CG2R53 NG2R53 CG311, penalty= 0.6
+CG2O3  CG311  NG311  CG321   2.5000  1 180.00 !
+CG321  CG321  OG301  CG301      0.4300  3     0.00 ! from CG321 CG321 OG301 CG321, penalty= 1.8
+CG331  CG321  NG311  CG301   1.5000  2   0.00 !
+OG301  CG311  CG321  CG301   0.1600  1 180.00 !
+CG2O5  CG321  CG321  CG311   0.1100  4   0.00 !
+CG2O5  CG321  CG321  CG311      0.3900  2     0.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.6
+CG321  CG311  CG321  CG331   0.2000  3   0.00 !
+NG2S1  CG2O1  CG311  OG301      0.6000  1     0.00 ! from NG2S1 CG2O1 CG314 NG3P3, penalty= 40.9
+CG331  CG311  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 9.9
+OG302  CG2O2  CG301  NG311      0.0000  6   180.00 ! from OG311 CG2O2 CG321 NG321, penalty= 28.2
+CG331  CG2O1  NG2S1  CG301      1.6000  1     0.00 ! from CG331 CG2O1 NG2S1 CG311, penalty= 1.2
+NG2R53 CG311  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 68
+CG331  CG311  CG321  OG311   0.2000  3 180.00 !
+CG331  CG2O5  CG321  CG321      0.1800  2   180.00 ! from CG331 CG2O5 CG321 CG331, penalty= 0.9
+CG321  CG301  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 125
+CG2O2  CG311  CG321  CG301      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 1.8
+CG2R51 CG2O2  OG302  CG331      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 8.5
+CG311  CG321  OG301  CG301      0.5700  1     0.00 ! from CG321 CG321 OG301 CG321, penalty= 2.4
+OG2D1  CG2O2  CG2R61 CG2R61     1.0250  2   180.00 ! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+NG311  CG301  CG331  HGA3    0.1600  3   0.00 !
+CG301  CG321  CG321  OG311   0.1950  3   0.00 !
+NG311  CG311  NG2R53 CG3C52  0.0000  1   0.00 !
+NG2S1  CG311  OG311  HGP1    0.7000  2   0.00 !
+CG2O2  CG311  CG321  CG301   0.2000  3   0.00 !
+OG302  CG311  CG321  OG311      0.2000  3     0.00 ! from OG302 CG311 CG321 OG302, penalty= 5.5
+OG2D1  CG2O2  CG301  NG311      0.0000  6   180.00 ! from OG2D1 CG2O2 CG321 NG321, penalty= 13.2
+CG2D1  CG321  CG321  CG311   0.1700  2   0.00 !
+CG2O3  CG311  NG311  CG321   1.5000  2   0.00 !
+CG1N1  CG311  NG311  HGPAM1  1.7000  2   0.00 !
+NG2S1  CG311  CG321  OG301   0.2000  3   0.00 !
+CG1N1  CG311  CG321  CG301   0.2000  3   0.00 !
+CG2O2  CG301  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 153.5
+CG2R61 CG311  CG321  CG2D1   0.0400  3   0.00 !
+CG321  CG311  NG311  CG321   0.5000  3   0.00 !
+CG321  CG321  NG311  CG311   2.5000  1 180.00 !
+NG2S1  CG2O1  CG321  OG301   0.4000  1   0.00 !
+NG311  CG311  OG311  HGP1    0.3000  3   0.00 !
+OG2D3  CG2O5  CG311  OG302      0.0000  2     0.00 ! from OG2D3 CG2O5 CG311 OG311, penalty= 15
+OG2D1  CG2O2  CG301  CG2O2      0.0000  1     0.00 ! from OG2D1 CG2O2 CG311 NG2S1, penalty= 51
+OG2D3  CG2O5  CG311  CG331   0.0650  3 180.00 !
+HGA2   CG3C52 NG2R53 CG321      0.0000  3     0.00 ! from HGA2 CG3C52 NG2R53 CG2R53, penalty= 118
+CG321  CG321  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 5
+NG2S1  CG321  CG321  OG301      0.2000  3     0.00 ! from NG2S1 CG311 CG321 OG311, penalty= 19
+OG2D2  CG2O3  CG311  NG311      0.5500  2   180.00 ! from OG2D2 CG2O3 CG311 OG301, penalty= 33
+CG331  CG311  CG321  CG2D1      0.2000  3     0.00 ! from CG321 CG311 CG321 CG2D1, penalty= 0.9
+HGA4   CG2D1  CG321  OG301      0.2000  3     0.00 ! from HGA4 CG2D1 CG321 OG311, penalty= 15
+CG2O5  CG321  CG321  CG311      0.3500  3   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.6
+CG321  CG301  OG301  CG321      0.4900  3     0.00 ! from CG321 CG301 OG301 CG331, penalty= 0.9
+NG2S1  CG2O1  CG311  OG301   0.6000  1   0.00 !
+OG302  CG321  CG331  HGA3       0.1950  3     0.00 ! PROT alkane update, adm jr., 3/2/92
+OG302  CG2O2  CG301  NG311   0.0000  6 180.00 !
+CG2O1  CG311  NG311  CG321      1.0200  3     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+CG3C52 CG2R53 NG2R53 CG321   0.4000  2 180.00 !
+HGA2   CG321  OG302  CG2O2      0.0000  3     0.00 ! LIPID phosphate, new NA, 4/98, adm jr.
+CG331  CG311  NG2R53 CG2R53  0.0000  1   0.00 !
+CG301  CG321  CG321  OG301      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 1.8
+OG311  CG311  CG321  CG301   2.0000  3 180.00 !
+CG321  CG321  NG311  CG321   1.5000  2   0.00 !
+NG311  CG311  CG321  CG301      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 6.4
+OG311  CG2O2  CG311  CG331      0.0500  6   180.00 ! from OG311 CG2O2 CG311 CG321, penalty= 0.9
+OG2D3  CG2O5  CG311  CG331   0.7500  1 180.00 !
+CG311  CG321  CG321  OG301      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 0.6
+CG301  CG321  CG321  NG311   0.3900  2   0.00 !
+NG2R53 CG311  OG302  CG2O2      0.0000  3     0.00 ! from CG2R61 CG321 OG302 CG2O2, penalty= 51
+NG2S1  CG301  CG321  CG311   0.2000  3   0.00 !
+CG321  CG321  NG311  HGPAM1  0.1000  3   0.00 !
+CG2O3  CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 39.5
+CG331  CG321  NG311  CG331      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 6.8
+CG321  CG301  NG311  CG321      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 17
+CG2O1  CG311  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 16
+CG2R61 CG2O2  OG311  HGP1       2.7000  2   180.00 ! ZOIC, benzoic acid, jal
+CG1N1  CG311  CG321  CG2D1   0.2000  3   0.00 !
+OG311  CG2O2  CG311  NG2S1      0.0000  1     0.00 ! from OG311 CG2O2 CG311 NG2R53, penalty= 3
+CG331  CG321  NG311  HGPAM1  0.1000  3   0.00 !
+CG2O5  CG311  NG311  CG321   1.5000  2   0.00 !
+CG331  CG2O5  CG311  OG302      0.0650  3     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG2D1  CG321  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 38
+NG321  CG321  CG321  OG302      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 33.5
+CG2O5  CG321  CG321  CG301   0.2100  1 180.00 !
+CG2D1  CG321  NG2S1  CG2O1      0.0150  1     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 21
+NG2S1  CG301  CG321  HGA2       0.2000  3     0.00 ! from NG2S1 CG311 CG321 HGA2, penalty= 8
+CG2O2  CG301  CG321  CG301      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 9.8
+CG331  CG311  OG301  CG321      0.4900  3     0.00 ! from CG331 CG311 OG301 CG331, penalty= 0.9
+NG311  CG321  CG321  NG321      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 39.6
+CG2O1  CG311  CG321  CG331   0.2000  3   0.00 !
+CG331  CG321  NG311  CG311      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 6.5
+OG311  CG2O2  CG311  NG311   0.0000  6 180.00 !
+CG2D1  CG2D1  CG321  NG2S1      1.0000  1   180.00 ! from CG2D1 CG2D1 CG321 CG2D1, penalty= 41
+CG2O1  CG311  NG311  CG321   1.5000  2   0.00 !
+OG2D3  CG2O5  CG311  OG301   0.0000  2   0.00 !
+CG2D1  CG321  CG321  CG2O1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 13.5
+CG2O3  CG321  CG321  CG331      0.1125  5     0.00 ! from CG2O3 CG321 CG321 CG321, penalty= 0.9
+CG2O5  CG321  CG321  CG331      0.0900  6   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 0.9
+NG2R53 CG311  CG321  CG321   0.2000  3   0.00 !
+CG321  CG321  NG311  CG311      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 5.6
+CG2R61 CG311  NG2S1  CG2O1   0.6190  4   0.00 !
+CG2R51 CG2R51 CG2R51 CG2R51    15.0000  2   180.00 ! PYRL, pyrrole
+NG321  CG321  CG321  OG301      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 33
+CG1N1  CG311  CG321  CG311   0.2000  3   0.00 !
+CG331  CG321  NG2R53 CG3C52  0.0000  1   0.00 !
+CG321  CG321  NG311  HGPAM1     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 2.4
+CG331  CG2O1  NG2S1  CG301      2.5000  2   180.00 ! from CG331 CG2O1 NG2S1 CG311, penalty= 1.2
+OG311  CG2O2  CG2R51 OG2R50     1.0250  2   180.00 ! from OG311 CG2O2 CG2R61 CG2R61, penalty= 143
+CG2R61 CG2R61 CG311  NG2S1      0.1320  4   180.00 ! from CG2R61 CG2R61 CG321 NG2S1, penalty= 4
+OG302  CG311  OG311  HGP1       1.1700  2     0.00 ! from OG301 CG301 OG311 HGP1, penalty= 8.5
+CG2D1  CG2D1  CG321  NG2S1      0.1000  2     0.00 ! from CG2D1 CG2D1 CG321 CG2D1, penalty= 41
+CG331  CG2O5  CG311  NG311   0.7500  1   0.00 !
+OG2D1  CG2O2  OG302  CG321      0.9650  1   180.00 ! LIPID methyl acetate
+CG331  CG321  OG302  CG2O2      0.0000  3     0.00 ! LIPID phosphate, new NA, 4/98, adm jr.
+CG321  CG321  OG301  CG301   0.4300  3   0.00 !
+CG331  CG2O5  CG311  CG321      0.0300  6     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4.9
+OG2D3  CG2O5  CG311  CG321      0.7500  1   180.00 ! from OG2D3 CG2O5 CG321 CG321, penalty= 4
+NG311  CG311  CG321  CG301      0.1950  3     0.00 ! from NG3P2 CG314 CG321 CG321, penalty= 38.8
+CG331  CG321  NG311  CG331      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 6.8
+NG2R53 CG311  NG2S1  CG2O1      0.1480  6     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 51
+CG311  CG321  CG321  NG311      0.3900  2     0.00 ! from CG321 CG321 CG321 OG301, penalty= 33.6
+NG311  CG321  CG321  OG302      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 33.5
+CG3C52 CG2R53 NG2R53 CG311      0.2000  2   180.00 ! from CG3C50 CG2R53 NG2R53 CG331, penalty= 2.7
+HGA4   CG2D1  CG321  CG301      0.0000  3     0.00 ! from HGA4 CG2D1 CG321 CG311, penalty= 1.2
+CG2O1  CG321  CG321  OG301      0.2000  3     0.00 ! from CG2O1 CG311 CG321 OG311, penalty= 19
+CG1N1  CG321  CG321  CG301      0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 35.8
+CG2O5  CG321  CG321  CG301      0.0900  6   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 1.8
+CG321  CG301  CG321  CG311   0.2000  3   0.00 !
+CG331  CG321  OG301  CG301      0.4000  1     0.00 ! from CG331 CG321 OG301 CG321, penalty= 1.8
+OG311  CG311  CG321  CG301      0.4000  5     0.00 ! from OG311 CG311 CG321 CG311, penalty= 1.2
+CG2D1  CG2D1  CG321  NG2S1      0.3000  3   180.00 ! from CG2D1 CG2D1 CG321 CG2D1, penalty= 41
+NG2R53 CG311  CG321  CG301      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG311, penalty= 2.2
+NG311  CG301  CG321  CG301      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 14.4
+CG321  CG301  NG311  CG321      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 17
+CG2O1  CG321  CG321  NG311      0.0400  3     0.00 ! from CG2R51 CG321 CG321 NG301, penalty= 27.1
+CG331  CG311  NG311  HGPAM1     0.1000  3     0.00 ! from CG331 CG321 NG311 HGP1, penalty= 5.5
+CG2O5  CG321  CG321  CG301      0.3900  2     0.00 ! from CG2O5 CG321 CG321 CG321, penalty= 1.8
+NG2R53 CG311  CG321  CG2D1   0.2000  3   0.00 !
+CG2O5  CG311  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 16.5
+CG2O5  CG321  CG321  CG301      0.2100  1   180.00 ! from CG2O5 CG321 CG321 CG321, penalty= 1.8
+CG2O2  CG301  CG321  CG311   0.2000  3   0.00 !
+CG2R51 CG2O2  OG302  CG311      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 10
+CG2D1  CG2D1  CG321  NG2S1   0.2000  4   0.00 !
+OG2D3  CG2O5  CG311  NG311      0.0000  6   180.00 ! from OG2D1 CG2O2 CG321 NG321, penalty= 15.7
+CG3C52 CG2R53 NG2R53 CG321      0.4000  2   180.00 ! from CG3C52 CG2R53 NG2R53 CG3C52, penalty= 31
+CG331  CG321  NG311  CG331   1.5000  2   0.00 !
+CG2R61 CG2O2  OG302  CG311      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 1.5
+CG321  CG321  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG2R61 CG311  NG2S1  CG2O1   0.0760  3 180.00 !
+NG2S1  CG321  CG321  OG301   0.2000  3   0.00 !
+CG2O2  CG311  CG321  CG331      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 0.9
+CG1N1  CG311  CG321  HGA2    0.2000  3   0.00 !
+NG2S1  CG321  CG321  OG302      0.2000  3     0.00 ! from NG2S1 CG311 CG321 OG311, penalty= 19
+CG311  CG321  CG321  CG331      0.0813  3   180.00 ! from CG321 CG321 CG321 CG331, penalty= 0.6
+OG2D1  CG2O2  CG301  CG331   0.0500  6 180.00 !
+CG3C52 CG3C52 NG2R53 CG321      2.3100  3   180.00 ! from CG3C52 CG3C52 NG2R53 CG2R53, penalty= 118
+NG311  CG321  CG321  OG311      0.7000  1   180.00 ! from OG311 CG321 CG324 NG3P3, penalty= 37.9
+OG302  CG2O2  CG2R51 CG2R51     0.8500  2   180.00 ! from OG302 CG2O2 CG2R61 CG2R61, penalty= 93.5
+NG2S2  CG2O1  CG311  NG311      0.6000  1     0.00 ! from NG2S2 CG2O1 CG314 NG3P3, penalty= 37.9
+CG2D1  CG2D1  CG321  NG2S1   1.0000  1 180.00 !
+CG2O5  CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+NG311  CG311  CG321  CG311      0.1600  1   180.00 ! from CG321 CG321 CG321 NG301, penalty= 5.2
+CG1N1  CG311  NG311  CG321      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 121.5
+HGA4   CG2D1  CG321  NG2S1   0.0000  3   0.00 !
+CG321  CG321  NG2R53 CG3C52     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 102
+NG2R53 CG321  CG321  HGA2    0.1950  3   0.00 !
+OG301  CG311  CG321  HGA2       0.1950  3     0.00 ! from OG302 CG311 CG321 HGA2, penalty= 0.5
+CG2O3  CG321  CG321  CG331   0.1125  5   0.00 !
+OG301  CG311  OG311  HGP1       1.0700  3     0.00 ! from OG301 CG301 OG311 HGP1, penalty= 8
+CG2O1  CG311  CG321  CG301      0.2000  3     0.00 ! from CG2O1 CG311 CG321 CG311, penalty= 1.2
+CG2O1  CG321  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 141.5
+CG321  CG321  CG321  NG311   0.3900  2   0.00 !
+OG2D1  CG2O2  CG301  NG2S1   0.0000  1   0.00 !
+CG321  CG301  NG2S1  HGP1    0.0000  1   0.00 !
+NG321  CG321  CG321  OG301      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 33
+CG2O2  CG311  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 13.4
+HGA2   CG321  NG311  CG301      0.0000  3     0.00 ! from HGA2 CG321 NG311 CG321, penalty= 1.8
+CG2R61 CG2R61 CG311  NG2S1   0.1190  2   0.00 !
+OG301  CG311  CG321  CG321   0.1600  1 180.00 !
+CG2O2  CG301  CG331  HGA3       0.2000  3     0.00 ! from CG2O1 CG311 CG331 HGA3, penalty= 10.5
+CG321  CG321  OG301  CG301      0.2900  2     0.00 ! from CG321 CG321 OG301 CG321, penalty= 1.8
+CG2O5  CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+CG321  CG301  NG2S1  CG2O1   1.8000  1   0.00 !
+CG2O2  CG311  CG331  HGA3    0.2000  3   0.00 !
+CG311  CG2O5  CG331  HGA3       0.1000  3     0.00 ! from CG321 CG2O5 CG331 HGA3, penalty= 0.6
+NG311  CG311  CG321  CG301   0.1950  3   0.00 !
+OG302  CG301  CG321  CG311      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 2
+OG311  CG311  NG2S1  HGP1       0.0000  1     0.00 ! from CG321 CG311 NG2S1 HGP1, penalty= 45
+CG2D1  CG321  NG2S1  CG2O1   0.0150  1   0.00 !
+CG331  CG2O5  CG311  CG331      0.0650  3     0.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4
+OG2D1  CG2O1  CG311  OG302      0.5500  2   180.00 ! from OG2D2 CG2O3 CG311 OG301, penalty= 31.5
+CG321  CG311  CG321  CG301   0.2000  3   0.00 !
+NG311  CG301  CG321  CG301   0.8000  3   0.00 !
+OG2D1  CG2O2  CG311  CG331      0.0500  6   180.00 ! from OG2D1 CG2O2 CG311 CG321, penalty= 0.9
+NG311  CG301  CG321  CG321   0.8000  3   0.00 !
+CG1N1  CG321  CG321  HGA2    0.1950  3   0.00 !
+OG2D3  CG2O5  CG311  CG331   0.1800  2 180.00 !
+HGA4   CG2D1  CG321  OG301   0.2000  3   0.00 !
+CG311  CG321  OG301  CG311   0.2900  2   0.00 !
+CG2O1  CG321  NG311  HGPAM1     0.1600  3     0.00 ! from CG2O2 CG321 NG321 HGPAM2, penalty= 12
+CG331  CG2O5  CG311  HGA1       0.1000  3     0.00 ! from CG331 CG2O5 CG321 HGA2, penalty= 4
+OG301  CG311  OG311  HGP1       1.1700  2     0.00 ! from OG301 CG301 OG311 HGP1, penalty= 8
+CG2O2  CG301  NG2S1  HGP1    0.0000  1   0.00 !
+CG321  CG311  CG321  OG301      0.2000  3   180.00 ! from CG321 CG311 CG321 OG302, penalty= 0.5
+OG301  CG311  CG321  CG331   0.3900  2   0.00 !
+CG2O2  CG301  NG311  CG321   2.5000  1 180.00 !
+CG2R51 CG2R51 OG2R50 CG2R51     7.5000  2   180.00 ! FURA, furan @@@@@ Kenno: 8.5 --> 7.5 @@@@@
+CG2R61 CG311  CG321  CG311   0.0400  3   0.00 !
+OG301  CG311  CG321  OG311      0.2000  3     0.00 ! from OG302 CG311 CG321 OG302, penalty= 6
+CG2D1  CG321  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 27.5
+CG3C52 CG3C52 NG2R53 CG311      2.3100  3   180.00 ! from CG3C52 CG3C52 NG2R53 CG2R53, penalty= 118
+OG311  CG311  NG311  CG321   0.5000  3   0.00 !
+CG321  CG311  NG311  HGPAM1     0.3000  3     0.00 ! from CG321 CG321 NG311 HGPAM1, penalty= 4
+CG2D1  CG2D1  CG321  CG301   1.3000  3 180.00 !
+CG2O3  CG321  CG321  CG331      0.1497  3   180.00 ! from CG2O3 CG321 CG321 CG321, penalty= 0.9
+CG2R61 CG2O2  OG302  CG301      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 2.7
+CG2R51 CG2O2  OG302  CG321      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 9.4
+CG331  CG321  NG311  CG301      1.5000  2     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 113
+CG331  CG2O5  CG311  CG321   0.7500  1   0.00 !
+CG2D1  CG2D1  CG321  NG2S1      0.2000  4     0.00 ! from CG2D1 CG2D1 CG321 CG2D1, penalty= 41
+CG2R51 CG2O2  OG302  CG301      0.0500  6   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 11.2
+CG2R51 CG2O2  OG302  CG301      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 11.2
+CG321  CG311  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 9
+CG2O1  CG311  CG321  CG2D1      0.2000  3     0.00 ! from CG2D1 CG321 CG321 CG2O3, penalty= 17.5
+HGA1   CG311  OG301  CG321   0.2840  3   0.00 !
+OG301  CG311  NG2R53 CG3C52     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 143
+CG2O2  CG301  CG321  CG331   0.2000  3   0.00 !
+CG331  CG2O5  CG311  OG301   0.0300  6   0.00 !
+CG2D1  CG321  CG321  CG301   0.1400  1 180.00 !
+CG2D1  CG321  NG311  CG321   0.5000  3   0.00 !
+OG2D1  CG2O2  CG311  OG301      0.0000  2     0.00 ! from OG2D3 CG2O5 CG311 OG311, penalty= 25.5
+OG2D1  CG2O2  OG311  HGP1       2.0500  2   180.00 ! PROT adm jr, 10/17/90, acetic Acid C-Oh rotation barrier
+CG331  CG301  NG311  CG321      0.8200  2     0.00 ! from CG321 CG321 NG301 CG321, penalty= 17.9
+CG331  CG2O5  CG311  OG301   0.7500  1   0.00 !
+NG311  CG321  CG321  NG321   0.2500  1 180.00 !
+CG1N1  CG311  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 121.5
+CG321  CG301  NG2S1  CG2O1      1.8000  1     0.00 ! from CG321 CG311 NG2S1 CG2O1, penalty= 8
+OG301  CG311  NG2R53 CG2R53     0.0000  1     0.00 ! from CG321 CG311 NG2R53 CG2R53, penalty= 45
+NG321  CG321  CG331  HGA3    0.1600  3   0.00 !
+CG2R51 CG2O2  OG302  CG321      1.5000  2   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 9.4
+CG2R61 CG311  CG321  CG331      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 4.9
+CG2R61 CG311  CG321  CG2D1      0.0400  3     0.00 ! from CG2R61 CG311 CG321 CG2O3, penalty= 33
+CG2O2  CG301  CG321  CG331      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 8.9
+CG2O2  CG311  NG311  CG321   2.5000  1 180.00 !
+CG331  CG2O5  CG311  OG301   0.0650  3   0.00 !
+NG311  CG311  CG321  CG331   0.1600  1 180.00 !
+CG2O2  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 145.5
+CG2D1  CG321  NG2S1  CG2O1      0.2980  2     0.00 ! from CG2R61 CG321 NG2S1 CG2O1, penalty= 21
+CG311  CG321  CG321  OG302      0.1950  3     0.00 ! from CG321 CG321 CG321 OG302, penalty= 0.6
+CG2O3  CG321  CG321  CG331      0.0946  4     0.00 ! from CG2O3 CG321 CG321 CG321, penalty= 0.9
+CG2R61 CG311  CG321  CG301      0.0400  3     0.00 ! from CG2R61 CG321 CG321 CG321, penalty= 5.8
+CG331  CG301  CG321  CG2D1   0.2000  3   0.00 !
+CG311  CG321  CG321  NG311      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 33.6
+CG2O1  CG321  CG321  CG331   0.1950  3   0.00 !
+CG331  CG321  NG311  CG311      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 6.5
+CG1N1  CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 53.5
+CG321  CG321  NG311  CG301      1.0200  3     0.00 ! from CG321 CG321 NG301 CG321, penalty= 6.8
+CG321  CG301  CG321  CG331      0.2000  3     0.00 ! from CG321 CG301 CG321 CG321, penalty= 0.9
+CG331  CG2O5  CG311  CG331   0.1800  2 180.00 !
+CG2R61 CG2R61 CG311  OG301      0.0000  2     0.00 ! from CG2R61 CG2R61 CG321 OG302, penalty= 4.5
+CG2D1  CG321  CG321  CG311      0.1400  1   180.00 ! from CG2D1 CG321 CG321 CG321, penalty= 0.6
+CG331  CG2O5  CG321  CG321   0.1800  2 180.00 !
+NG311  CG311  OG311  HGP1       0.3000  3     0.00 ! from CG321 CG311 OG311 HGP1, penalty= 39
+CG331  CG321  NG311  CG311   0.5000  3   0.00 !
+CG301  CG321  CG321  NG2R53     0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 2.8
+OG302  CG311  OG311  HGP1       1.5500  1     0.00 ! from OG301 CG301 OG311 HGP1, penalty= 8.5
+OG301  CG311  CG321  CG301   0.3900  2   0.00 !
+CG2O5  CG311  CG321  CG311      0.2000  3     0.00 ! from CG2O2 CG311 CG321 CG321, penalty= 2.6
+NG311  CG301  CG321  CG301      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 35.7
+CG331  CG321  NG311  CG331      1.4200  1   180.00 ! from CG321 CG321 NG301 CG321, penalty= 6.8
+CG331  CG2O5  CG311  CG321      0.1800  2   180.00 ! from CG331 CG2O5 CG321 CG331, penalty= 4.9
+CG2O1  CG311  CG321  CG301   0.2000  3   0.00 !
+CG2O5  CG311  OG301  CG321      0.2000  3     0.00 ! from CG2O3 CG311 OG301 CG331, penalty= 12.9
+CG321  CG301  OG301  CG321   0.2300  2 180.00 !
+HGA2   CG321  OG301  CG301   0.2840  3   0.00 !
+CG2R61 CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 18
+CG331  CG301  NG311  CG321   2.5000  1 180.00 !
+CG321  CG321  NG321  HGPAM2     0.3000  3     0.00 ! from CG321 CG321 NG311 HGPAM1, penalty= 10.5
+CG331  CG321  CG321  NG2R53     0.2000  3     0.00 ! from CG321 CG321 CG321 NG2S1, penalty= 1.9
+CG2O1  CG311  NG311  CG321      1.4200  1   180.00 ! from CG2R51 CG321 NG301 CG321, penalty= 35.5
+OG311  CG2O2  CG321  CG321      0.0000  6   180.00 ! from OG311 CG2O2 CG321 CG311, penalty= 0.6
+CG331  CG301  OG301  CG321      0.4900  3     0.00 ! from CG331 CG301 OG301 CG331, penalty= 0.9
+CG311  CG321  OG301  CG301      0.2900  2     0.00 ! from CG321 CG321 OG301 CG321, penalty= 2.4
+OG301  CG311  CG321  CG321   0.3900  2   0.00 !
+CG2D1  CG321  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 140.5
+CG2O2  CG311  CG321  CG311   0.2000  3   0.00 !
+NG311  CG311  CG331  HGA3    0.1600  3   0.00 !
+OG2D1  CG2O2  CG301  NG2S1      0.0000  1     0.00 ! from OG2D1 CG2O2 CG311 NG2S1, penalty= 8
+NG311  CG321  CG321  OG301      0.2500  1   180.00 ! from OG301 CG321 CG321 OG301, penalty= 33
+CG331  CG2D1  CG321  CG331   0.1900  3   0.00 !
+OG311  CG311  NG311  CG321   2.5000  1 180.00 !
+OG2D1  CG2O2  CG301  OG302      0.0000  2     0.00 ! from OG2D3 CG2O5 CG311 OG311, penalty= 33.5
+CG2O2  CG301  CG321  CG2D1   0.2000  3   0.00 !
+CG2R61 CG2O2  OG302  CG321      1.2500  1   180.00 ! from CG2R61 CG2O2 OG302 CG331, penalty= 0.9
+CG2O2  CG311  NG311  CG321   1.5000  2   0.00 !
+CG2O2  CG321  CG321  CG301   0.1950  3   0.00 !
+OG311  CG311  NG2S1  CG2O1      1.8000  1     0.00 ! from CG321 CG311 NG2S1 CG2O1, penalty= 45
+CG321  CG301  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 125
+NG2R53 CG311  CG331  HGA3    0.2000  3   0.00 !
+HGA1   CG311  NG311  CG321   0.0000  3 180.00 !
+CG1N1  CG311  NG311  CG321   2.5000  1 180.00 !
+NG2S1  CG311  OG311  HGP1       0.1400  3     0.00 ! from CG2D1 CG321 OG311 HGP1, penalty= 45
+CG331  CG311  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 117
+NG311  CG311  CG321  CG321   0.1950  3   0.00 !
+CG331  CG2O5  CG311  OG302      0.0300  6     0.00 ! from CG321 CG2O5 CG321 CG321, penalty= 49.9
+CG331  CG311  CG321  OG301      0.2000  3     0.00 ! from CG331 CG311 CG321 OG302, penalty= 0.5
+CG331  CG321  NG311  CG321   0.5000  3   0.00 !
+OG301  CG321  CG321  OG311      1.2400  2     0.00 ! from OG301 CG321 CG321 OG301, penalty= 5
+NG2S1  CG321  CG321  NG311   0.2000  3   0.00 !
+NG2S2  CG2O1  CG321  OG301   0.4000  1   0.00 !
+CG331  CG301  NG311  CG321      2.5000  1   180.00 ! from NG311 CG321 NG311 CG2R61, penalty= 125
+NG2R53 CG311  NG311  CG321      0.8200  2     0.00 ! from CG2R51 CG321 NG301 CG321, penalty= 57.5
+CG2O5  CG321  CG321  CG331   0.0900  6 180.00 !
+CG331  CG311  OG301  CG321   0.4900  3   0.00 !
+CG321  CG321  OG301  CG311      0.2900  2     0.00 ! from CG321 CG321 OG301 CG321, penalty= 0.6
+NG311  CG301  CG321  CG321      0.3900  2     0.00 ! from CG321 CG321 CG321 NG301, penalty= 12.6
+NG2S1  CG311  CG321  CG331      0.2000  3     0.00 ! from NG2S1 CG311 CG321 CG321, penalty= 0.9
+CG321  CG311  OG301  CG321   0.4000  1   0.00 !
+OG301  CG301  CG321  CG311      0.8000  3     0.00 ! from OG301 CG301 CG321 CG331, penalty= 1.5
+CG2D1  CG2D1  CG321  OG301   1.9000  1 180.00 !
+CG321  CG2O1  NG2S1  CG301   2.5000  2 180.00 !
+CG311  CG321  CG321  OG301      0.1600  1   180.00 ! from CG321 CG321 CG321 OG301, penalty= 0.6
+OG302  CG2O2  CG311  CG2O2   0.0000  1   0.00 !
+CG1N1  CG311  OG301  CG321   0.4000  1   0.00 !
+CG321  CG321  NG311  CG301   2.5000  1 180.00 !
+CG2D1  CG321  NG311  CG321      0.5000  3     0.00 ! from NG311 CG321 NG311 CG2R61, penalty= 140.5
+OG301  CG301  CG321  CG301   0.8000  3   0.00 !
+CG311  CG321  CG324  HGP5       0.1950  3     0.00! from CG311 CG321 CG324 HGA2, penalty= 11
+NG2S1  CG321  SG311  HGP3       0.2700  3     0.00! from CG321 CG321 SG311 HGP3, penalty= 69
+CG2R61 CG2R61 CG2R61 HGR61      4.2000  2   180.00! PROT JES 8/25/89 benzene
+OG311  CG2O2  CG2R61 CG2R61     1.0250  2   180.00! ZOIC, benzoic acid, jal
+CG301  CG321  CG321  SG311      0.1950  3     0.00! from CG311 CG321 CG321 SG311, penalty= 1.2
+SG311  CG321  NG2S1  CG2O1      1.8000  1     0.00! from CG321 CG321 NG2S1 CG2O1, penalty= 113
+HGR51  CG2R51 CG2R51 HGR51      1.0000  2   180.00! INDO/TRP
+OG311  CG311  CG321  CG324      0.5000  1   180.00! from OG311 CG311 CG321 CG321, penalty= 17
+OG311  CG311  CG321  CG324      0.4000  5     0.00! from OG311 CG311 CG321 CG321, penalty= 17
+HGA2   CG321  CG331  HGA3       0.1600  3     0.00! PROT rotation barrier in Ethane (SF)
+HGR61  CG2R61 CG2R61 HGR61      2.4000  2   180.00! PROT JES 8/25/89 benzene
+CG324  CG321  CG321  CG331      0.1950  3     0.00! from CG321 CG321 CG321 CG324, penalty= 0.9
+NG2S1  CG321  CG321  SG311      0.2000  3     0.00! from NG2S1 CG311 CG321 SG311, penalty= 4
+CG2D1  CG321  CG321  CG324      0.1700  2     0.00! from CG2D1 CG321 CG321 CG321, penalty= 17
+NG311  CG321  SG311  HGP3       0.2700  3     0.00! from CG321 CG321 SG311 HGP3, penalty= 39
+CG2R61 CG2R61 CG2R61 CG2R61     3.1000  2   180.00! PROT JES 8/25/89
+CG2O5  CG311  CG321  CG324      0.1950  3     0.00! from CG2O1 CG321 CG321 CG314, penalty= 7.6
+CG301  CG321  CG324  HGA2       0.1950  3     0.00! from CG301 CG321 CG321 HGA2, penalty= 1
+SG311  CG321  NG311  CG321      1.5000  2     0.00! from NG311 CG321 NG311 CG2R61, penalty= 183.5
+NG2S1  CG321  SG311  HGP3       0.1500  2     0.00! from CG321 CG321 SG311 HGP3, penalty= 69
+CG2R61 CG2O2  OG311  HGP1       0.9750  1   180.00! ZOIC, benzoic acid, jal
+OG2R50 CG2R51 CG2R51 HGR51      4.5000  2   180.00! FURA, furan
+CG2R51 CG2R51 CG2R51 OG2R50     8.5000  2   180.00! FURA, furan
+CG321  CG321  CG324  NG3P0      1.0000  3     0.00! from CG321 CG321 CG324 NG3P1, penalty= 1.2
+OG301  CG321  CG321  SG311      0.8000  3     0.00! from SG311 CG321 CG324 NG3P2, penalty= 40
+OG2D1  CG2O2  OG311  HGP1       2.0500  2   180.00! PROT adm jr, 10/17/90, acetic Acid C-Oh rotation barrier
+NG311  CG321  CG321  NG321      0.2500  1   180.00! from OG301 CG321 CG321 OG301, penalty= 66
+NG311  CG321  CG321  NG321      1.2400  2     0.00! from OG301 CG321 CG321 OG301, penalty= 66
+CG311  CG321  CG324  NG3P3      0.1950  3     0.00! from CG321 CG321 CG324 NG3P3, penalty= 0.6
+CG324  CG321  CG321  SG311      0.1950  3     0.00! from CG314 CG321 CG321 SG311, penalty= 0.6
+SG311  CG321  NG311  CG321      0.5000  3     0.00! from NG311 CG321 NG311 CG2R61, penalty= 183.5
+CG2O2  CG2R61 CG2R61 CG2R61     3.1000  2   180.00! ZOIC, benzoic acid, MBOA, methylbenzoate; default parameter; kevo & jal
+CG2R51 CG2R51 CG2R51 HGR51      1.0000  2   180.00! PYRL, pyrrole
+CG2R61 CG2O2  OG311  HGP1       0.2500  6   180.00! ZOIC, benzoic acid, jal
+CG301  CG321  CG324  HGP5       0.1950  3     0.00! from CG301 CG321 CG321 HGA2, penalty= 12
+CG2O2  CG2R61 CG2R61 HGR61      2.4000  2   180.00! ZOIC, benzoic acid, MBOA, methylbenzoate; default parameter; kevo & jal
+OG2D1  CG2O2  CG2R61 CG2R61     1.0250  2   180.00! ZOIC, benzoic acid, MBOA, methylbenzoate, jal
+SG311  CG321  OG301  CG321      0.2900  2     0.00! from CG321 CG321 OG301 CG321, penalty= 113
+CG301  CG321  CG324  NG3P0      1.0000  3     0.00! from CG311 CG321 CG324 NG3P1, penalty= 2.4
+OG2D1  CG2O2  OG302  CG321      3.8500  2   180.00! LIPID methyl acetate
+CG2O1  CG311  CG321  CG324      0.1950  3     0.00! from CG2O1 CG321 CG321 CG314, penalty= 4.6
+CG2R61 CG311  CG321  CG324      0.0400  3     0.00! from CG2R61 CG321 CG321 CG321, penalty= 21
+OG301  CG321  SG311  HGP3       0.2400  1     0.00! from CG321 CG321 SG311 HGP3, penalty= 45
+CG301  CG321  CG324  NG3P3      0.1950  3     0.00! from CG321 CG321 CG324 NG3P3, penalty= 1.8
+OG311  CG311  CG321  CG324      0.4000  3     0.00! from OG311 CG311 CG321 CG321, penalty= 17
+NG311  CG321  SG311  HGP3       0.2400  1     0.00! from CG321 CG321 SG311 HGP3, penalty= 39
+CG2R61 CG2O2  OG311  HGP1       0.0500  3   180.00! ZOIC, benzoic acid, jal
+CG311  CG321  CG324  NG3P0      1.0000  3     0.00! from CG311 CG321 CG324 NG3P1, penalty= 1.2
+OG311  CG311  CG321  CG324      0.7000  2     0.00! from OG311 CG311 CG321 CG321, penalty= 17
+CG301  CG321  CG321  NG321      0.3900  2     0.00! from CG321 CG321 CG321 OG301, penalty= 34.8
+CG2O3  CG311  CG321  CG324      0.1950  3     0.00! from CG2O3 CG321 CG321 CG314, penalty= 4.6
+CG2O2  CG301  CG321  CG324      0.1950  3     0.00! from CG2O1 CG321 CG321 CG314, penalty= 15.1
+NG311  CG321  CG321  SG311      0.8000  3     0.00! from SG311 CG321 CG324 NG3P2, penalty= 37
+CG2D1  CG321  CG321  CG324      0.1400  1   180.00! from CG2D1 CG321 CG321 CG321, penalty= 17
+CG331  CG311  CG321  CG324      0.2000  3     0.00! from CG331 CG311 CG321 CG314, penalty= 0.6
+OG302  CG321  CG331  HGA3       0.1950  3     0.00! PROT alkane update, adm jr., 3/2/92
+HGA2   CG321  OG302  CG2O2      0.0000  3     0.00! LIPID phosphate, new NA, 4/98, adm jr.
+NG311  CG321  SG311  HGP3       0.1500  2     0.00! from CG321 CG321 SG311 HGP3, penalty= 39
+CG2R61 CG2O2  OG311  HGP1       2.7000  2   180.00! ZOIC, benzoic acid, jal
+CG2D1  CG321  CG321  SG311      0.2000  3     0.00! from CG2O1 CG311 CG321 SG311, penalty= 33
+CG2O2  CG311  CG321  CG324      0.1950  3     0.00! from CG2O1 CG321 CG321 CG314, penalty= 7.1
+CG2R51 CG2R51 CG2R51 CG2R51    15.0000  2   180.00! PYRL, pyrrole
+CG321  CG321  CG324  HGP5       0.1950  3     0.00! from CG321 CG321 CG324 HGA2, penalty= 11
+SG311  CG321  NG311  CG321      2.5000  1   180.00! from NG311 CG321 NG311 CG2R61, penalty= 183.5
+CG2D1  CG321  CG321  CG324      0.0500  3   180.00! from CG2D1 CG321 CG321 CG321, penalty= 17
+CG311  CG321  CG321  NG321      0.3900  2     0.00! from CG321 CG321 CG321 OG301, penalty= 33.6
+SG311  CG321  OG301  CG321      0.4300  3     0.00! from CG321 CG321 OG301 CG321, penalty= 113
+SG311  CG321  NG2S1  HGP1       0.0000  1     0.00! from CG321 CG321 NG2S1 HGP1, penalty= 113
+CG2R51 CG2R51 OG2R50 CG2R51     7.5000  2   180.00! FURA, furan @@@@@ Kenno: 8.5 --> 7.5 @@@@@
+OG301  CG321  SG311  HGP3       0.2700  3     0.00! from CG321 CG321 SG311 HGP3, penalty= 45
+SG311  CG321  NG311  HGPAM1     0.3000  3     0.00! from NG311 CG321 NG311 HGPAM1, penalty= 110
+CG321  CG301  CG321  CG324      0.2000  3     0.00! from CG321 CG311 CG321 CG324, penalty= 8
+OG301  CG321  SG311  HGP3       0.1500  2     0.00! from CG321 CG321 SG311 HGP3, penalty= 45
+SG311  CG321  OG301  CG321      0.5700  1     0.00! from CG321 CG321 OG301 CG321, penalty= 113
+CG331  CG301  CG321  CG324      0.2000  3     0.00! from CG331 CG311 CG321 CG314, penalty= 8.6
+CG331  CG321  OG302  CG2O2      0.0000  3     0.00! LIPID phosphate, new NA, 4/98, adm jr.
+CG1N1  CG311  CG321  CG324      0.2000  3     0.00! from NG2S1 CG311 CG321 CG324, penalty= 34
+CG311  CG321  CG321  NG321      0.1600  1   180.00! from CG321 CG321 CG321 OG301, penalty= 33.6
+CG2O1  CG321  CG321  CG324      0.1950  3     0.00! from CG2O1 CG321 CG321 CG314, penalty= 0.6
+OG2D1  CG2O2  OG302  CG321      0.9650  1   180.00! LIPID methyl acetate
+NG2S1  CG321  SG311  HGP3       0.2400  1     0.00! from CG321 CG321 SG311 HGP3, penalty= 69
+SG311  CG321  NG311  HGPAM1     1.7000  2     0.00! from NG311 CG321 NG311 HGPAM1, penalty= 110
+CG301  CG321  CG321  NG321      0.1600  1   180.00! from CG321 CG321 CG321 OG301, penalty= 34.8
+OG302  CG2O2  CG2R61 CG2R61     0.8500  2   180.00! MBOA, methylbenzoate, jal
+AUL    SG311   X       X        0.0000  2     0.00! from NG311 CG321 NG311 HGPAM1, penalty= 110
+AUS    SG311   X       X        0.0000  2     0.00! from NG311 CG321 NG311 HGPAM1, penalty= 110
+AU     SG311   X       X        0.0000  2     0.00! from NG311 CG321 NG311 HGPAM1, penalty= 110
+AUD    SG311   X       X        0.0000  2     0.00! from NG311 CG321 NG311 HGPAM1, penalty= 110
+IMPROPERS
+CG2O2  CG301  OG2D1  OG302     62.0000  0     0.00 ! from CG2O2 CG311 OG2D1 OG302, penalty= 0.8
+CG2O2  CG2R61 OG2D1  OG302     72.0000  0     0.00 ! MBOA, methyl benzoate; MOLVIB looks good; jal
+CG2O5  CG311  CG331  OG2D3     70.0000  0     0.00 ! from CG2O5 CG321 CG331 OG2D3, penalty= 0.4
+CG2O2  CG2R51 OG2D1  OG302     72.0000  0     0.00 ! from CG2O2 CG2R61 OG2D1 OG302, penalty= 4.5
+CG2O2  CG2R61 OG2D1  OG311     53.0000  0     0.00 ! ZOIC, benzoic acid; MOLVIB 1% low (55 would be spot on); jal
+CG2O2  CG301  OG2D1  OG302  62.0000  0   0.00 !
+CG2O5  CG311  CG331  OG2D3  70.0000  0   0.00 !
+CG2O2  CG2R51 OG2D1  OG311     53.0000  0     0.00 ! from CG2O2 CG2R61 OG2D1 OG311, penalty= 4.5
+CG2O2  CG2R61 OG2D1  OG302     72.0000  0     0.00! MBOA, methyl benzoate; MOLVIB looks good; jal
+CG2O2  CG2R61 OG2D1  OG311     53.0000  0     0.00! ZOIC, benzoic acid; MOLVIB 1% low (55 would be spot on); jal
+END
+RETURN

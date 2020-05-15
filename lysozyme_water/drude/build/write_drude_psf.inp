@@ -1,0 +1,83 @@
+* Generates PSF with Drude FF 
+*
+
+dimens chsize 1000000
+
+! master/protein file
+set toppar $HOME/charmm/toppar_drude/git
+stream @toppar/toppar_drude_master_protein_2019f.str
+
+set nwater 9633 
+set nion   8
+
+open read unit 10 card name ../../c36/build/step1_pdbreader.pdb
+read sequ unit 10 pdb resid
+generate PROA first NTER last CTER setup warn drude dmass 0.4
+
+! patch disulfides
+patch disu PROA 6  PROA 127 setup warn
+patch disu PROA 30 PROA 115 setup warn
+patch disu PROA 64 PROA 80  setup warn
+patch disu PROA 76 PROA 94  setup warn
+autogenerate angles dihedrals drude
+
+read sequ SWM4 @nwater
+generate SOLV first none last none noangle nodihedral setup warn drude dmass 0.4
+
+read sequ CLA @nion 
+generate CLA first none last none noangle nodihedral setup warn drude dmass 0.4
+
+! write the topology
+open write card unit 10 name 1aki.drude.xplor.psf
+write psf card xplor unit 10
+close unit 10
+
+bomlev -1   ! because there will be missing coordinates, which is OK at this point
+open read unit 10 card name 1aki_c36_eq.pdb 
+read coor unit 10 pdb resid 
+
+coor sdrude
+coor shake
+coor print
+bomlev 0
+
+energy
+
+! write un-minimized coords
+open write unit 10 card name 1aki_init_drude.crd
+write coor unit 10 card
+
+open write unit 10 card name 1aki_init_drude.pdb
+write coor unit 10 pdb
+
+! imaging and PBC
+set box 67.2332677618 
+crystal define cubic @box @box @box 90. 90. 90.
+crystal build cutoff 10. noper 0
+image byseg xcen 0. ycen 0. zcen 0. sele segid PROA end
+image byres xcen 0. ycen 0. zcen 0. sele .not. segid PROA end
+
+nbonds atom vatom switch vswitch -
+    cutnb 14.0 ctonnb 10.0 ctofnb 12.0 -
+    ewald pmewald kappa 0.32 fftx 64 ffty 64 fftz 64 order 6
+
+energy
+
+! minimize
+cons harm force 100000000. mass select .not. type D* end
+mini sd   nstep 1000
+cons harm force 0.0 mass select all end
+update
+coor copy comp
+cons harm force 100000000. mass select .not. type D* end
+mini abnr nstep 500 tolgrd 0.00001
+cons harm force 0.0 mass select all end
+
+open write unit 10 card name 1aki_min_drude.pdb
+write coor unit 10 pdb  
+
+open write unit 10 card name 1aki_min_drude.crd
+write coor unit 10 card
+close unit 10
+
+stop

@@ -12,7 +12,7 @@ set nion   8
 
 open read unit 10 card name ../../c36/build/step1_pdbreader.pdb
 read sequ unit 10 pdb resid
-generate PROA first NTER last CTER setup warn drude dmass 0.4
+generate PROA first NTER last CTER setup warn drude dmass 0.4 hype hord 4 khyp 40000 rhyp 0.2
 
 ! patch disulfides
 patch disu PROA 6  PROA 127 setup warn
@@ -22,10 +22,10 @@ patch disu PROA 76 PROA 94  setup warn
 autogenerate angles dihedrals drude
 
 read sequ SWM4 @nwater
-generate SOLV first none last none noangle nodihedral setup warn drude dmass 0.4
+generate SOLV first none last none noangle nodihedral setup warn drude dmass 0.4 hype hord 4 khyp 40000 rhyp 0.2
 
 read sequ CLA @nion 
-generate CLA first none last none noangle nodihedral setup warn drude dmass 0.4
+generate CLA first none last none noangle nodihedral setup warn drude dmass 0.4 hype hord 4 khyp 40000 rhyp 0.2
 
 ! write the topology
 open write card unit 10 name 1aki.drude.xplor.psf

@@ -3,9 +3,9 @@
 
 dimens chsize 1000000
 
-! master/protein file
-set toppar $HOME/charmm/toppar_drude/git
-stream @toppar/toppar_drude_master_protein_2019f.str
+! master/protein file: download from http://mackerell.umaryland.edu/charmm_drude_ff.shtml
+set toppar toppar_drude
+stream @toppar/toppar_drude_master_protein_2019g.str
 
 set nwater 9633 
 set nion   8

@@ -19,7 +19,7 @@ crd = PDBFile(jobname+'.'+str(prev)+'.pdb')
 box=4.8655*nanometer
 psf.setBox(box,box,box)
 
-params = CharmmParameterSet('toppar_drude/toppar_drude_master_protein_2019f.str')
+params = CharmmParameterSet('toppar_drude/toppar_drude_master_protein_2019g.str')
 
 system = psf.createSystem(params, nonbondedMethod=PME, nonbondedCutoff=1.2*nanometer, switchDistance=1.0*nanometer, ewaldErrorTolerance = 0.0001, constraints=HBonds)
 

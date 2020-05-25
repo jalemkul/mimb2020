@@ -1,0 +1,77 @@
+* Generates PSF with Drude FF 
+*
+
+dimens chsize 1000000
+
+! master/protein file: download from http://mackerell.umaryland.edu/charmm_drude_ff.shtml
+set toppar toppar_drude
+stream @toppar/toppar_drude_master_protein_2019g.str
+
+set nres   23 
+set nwater 6068 
+
+read sequ card
+* PROA
+*
+@nres
+gly trp trp leu ala leu ala leu ala leu ala -
+leu ala leu ala leu ala leu ala leu trp trp ala
+generate PROA first ACE last CT2 setup warn drude dmass 0.4 hype hord 4 khyp 100000 rhyp 0.2
+
+read sequ SWM4 @nwater
+generate SOLV first none last none noangle nodihedral setup warn drude dmass 0.4 hype hord 4 khyp 100000 rhyp 0.2
+
+! write the topology
+open write card unit 10 name walp23.drude.xplor.psf
+write psf card xplor unit 10
+close unit 10
+
+bomlev -1   ! because there will be missing coordinates, which is OK at this point
+open read unit 10 card name walp23_c36_eq.pdb 
+read coor unit 10 pdb resid 
+
+coor sdrude
+coor shake
+coor print
+bomlev 0
+
+energy
+
+! write un-minimized coords
+open write unit 10 card name walp23_init_drude.crd
+write coor unit 10 card
+
+open write unit 10 card name walp23_init_drude.pdb
+write coor unit 10 pdb
+
+! imaging and PBC
+set box 56.8306406585 
+crystal define cubic @box @box @box 90. 90. 90.
+crystal build cutoff 10. noper 0
+image byseg xcen 0. ycen 0. zcen 0. sele segid PROA end
+image byres xcen 0. ycen 0. zcen 0. sele segid SOLV end
+
+nbonds atom vatom switch vswitch -
+    cutnb 14.0 ctonnb 10.0 ctofnb 12.0 -
+    ewald pmewald kappa 0.32 fftx 54 ffty 54 fftz 54 order 6
+
+energy
+
+! minimize
+cons harm force 100000000. mass select .not. type D* end
+mini sd   nstep 1000
+cons harm force 0.0 mass select all end
+update
+coor copy comp
+cons harm force 100000000. mass select .not. type D* end
+mini abnr nstep 500 tolgrd 0.00001
+cons harm force 0.0 mass select all end
+
+open write unit 10 card name walp23_min_drude.pdb
+write coor unit 10 pdb  
+
+open write unit 10 card name walp23_min_drude.crd
+write coor unit 10 card
+close unit 10
+
+stop

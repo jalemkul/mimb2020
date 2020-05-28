@@ -1,0 +1,13 @@
+
+============================================
+Analysis of Drude WALP23 in POPC simulation
+============================================
+
+* Run the CHARMM scripts in the following order:
+
+1. Remove PBC effects and recenter the protein: orient.inp
+
+2. Calculate peptide-bond dipole moments: dipole.inp
+
+3. Compute side-chain dipole moments: sc_dipole.inp
+

@@ -1,0 +1,28 @@
+
+======================================
+Analysis of Drude lysozyme simulation
+======================================
+
+* Run the CHARMM scripts in the following order:
+
+1. Remove PBC effects and strip water: orient.inp
+
+2. Calculate side-chain geometries: calc_dihedrals.inp
+
+3. Build dipeptides and compute gas-phase side-chain dipole moments: build_dipeptides.inp
+
+4. Compute side-chain dipole moments from MD trajectory: dipole.inp
+
+5. Calculate partial and total SASA for each residue from the MD trajectory: partial_sasa.inp and total_sasa.inp
+
+
+* Run the Bash scripts to compile the results
+
+1. Calculate dipole moment differences: do_compile_dipoles.sh 
+
+2. Calculate fractional SASA: do_compile_sasa.sh
+
+
+* To reproduce the plot in the book chapter, use the split_data_by_residue_type.pl Perl script: 
+
+perl split_data_by_residue_type.pl resnames.dat dipole_enhancement_vs_residue.dat

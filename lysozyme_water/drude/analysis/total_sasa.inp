@@ -1,0 +1,60 @@
+* calculate solvent accesible surface area 
+* this script is for a residue in the absence of any
+* others, to compute the theoretical maximum of this residue
+*
+
+dimens chsize 1000000
+
+prnlev 5
+
+! Read topology and parameters (aka force field)
+stream toppar_drude/toppar_drude_master_protein_2019g.str
+
+! Read PSF and initial/reference coordinates
+read psf xplor card name 1aki.drude.nowat.xplor.psf
+read coor pdb resid name 1aki.drude.nowat.0.pdb
+
+!copy the coordinates to a comparison set?
+coor copy comp
+
+! open file unit for trajectory
+open read  unit 11 file name full_nowat.dcd
+traj query unit 11 
+
+! jal updated
+define backbone sele segid PROA .and. (type CAY .or. type DCAY .or. type HY* .or. type CY .or. type DCY .or. -
+    type OY .or. type DOY .or. type LPY* .or. type N .or. type DN .or. type HN .or. type CA .or. type DCA .or. type HA# .or. -
+    type C .or. type DC .or. type O .or. type DO .or. type LPO* .or. type NT .or. type DNT .or. type HNT .or. -
+    type CAT .or. type DCAT .or. type HT* .or. type OT* .or. type DOT* .or. type LPT*) show end
+define sidechain sele segid PROA .and. .not. backbone show end
+define real sele .not. (type D* .or. type LP*) show end
+
+!make a loop to loop over the residues
+set res 1
+label resloop
+
+    !open output file for the residues
+    open write unit 10 card name 1aki_totalsasa_@res.dat
+    
+    ! correl command
+    correl maxseries 100 maxtime 100000 maxatoms 100000
+        
+        ! this next selection needs to be just the specific residue of the specific chain we want
+        ! enter each value we want a correlation for
+        enter asa surf rprob 1.4 sele segid PROA .and. resid @res .and. real end
+        
+        ! because we have a traj we want to know the sasa for
+        ! this is to select the total surface area for the complex
+        traj firstu 11 nunit 1 skip ?SKIP stop ?NFILE sele segid PROA .and. resid @res .and. real end
+
+        ! write out the files
+        write asa dumb time unit 10
+
+    end
+
+    rewind unit 11
+   
+    incr res by 1
+if @res .le. 129 goto resloop
+
+STOP

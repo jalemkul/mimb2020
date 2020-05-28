@@ -1,0 +1,337 @@
+* calculate phi and psi for building dipeptides
+* also calculate side-chain dihedrals for building 
+*
+
+stream toppar_drude/toppar_drude_master_protein_2019g.str
+
+read psf xplor card name 1aki.drude.nowat.xplor.psf
+read coor pdb resid name 1aki.drude.nowat.0.pdb
+
+open read unit 13 file name full_nowat.dcd
+traj query unit 13
+
+open write unit 30 card name resnames.dat
+
+set r 2
+label resloop 
+
+    traj firstu 13 nunit 1 begin 0 stop ?NFILE skip ?SKIP
+
+    ! open output file
+    coor stat sele resi @r end
+    set resn ?SELRESN
+    write title unit 30 
+    * @resn
+    *
+
+    ! all non-terminal amino acids have phi and psi
+    open write unit 20 card name phi.@resn.@r.dat
+    open write unit 21 card name psi.@resn.@r.dat
+
+    ! most residues have side-chain dihedrals
+    ! GLY and ALA do not, others may have chi[2345] 
+    if @resn .ne. GLY then
+        if @resn .ne. ALA then
+            ! chi1 for all except GLY and ALA
+            open write unit 22 card name chi1.@resn.@r.dat
+            ! since we cannot do complex booleans, we have to do these one by one... :(
+            if @resn .eq. ARG then
+                open write unit 23 card name chi2.@resn.@r.dat
+                open write unit 24 card name chi3.@resn.@r.dat
+                open write unit 25 card name chi4.@resn.@r.dat
+                open write unit 26 card name chi5.@resn.@r.dat 
+            endif
+            if @resn .eq. LYS then
+                open write unit 23 card name chi2.@resn.@r.dat
+                open write unit 24 card name chi3.@resn.@r.dat
+                open write unit 25 card name chi4.@resn.@r.dat
+            endif
+            if @resn .eq. MET then
+                open write unit 23 card name chi2.@resn.@r.dat
+                open write unit 24 card name chi3.@resn.@r.dat
+            endif
+            if @resn .eq. GLN then
+                open write unit 23 card name chi2.@resn.@r.dat
+                open write unit 24 card name chi3.@resn.@r.dat
+            endif
+            if @resn .eq. GLU then
+                open write unit 23 card name chi2.@resn.@r.dat
+                open write unit 24 card name chi3.@resn.@r.dat
+            endif
+            if @resn .eq. ASN then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. ASP then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. HSD then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. HSE then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. HSP then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. ILE then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. LEU then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. PHE then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. PRO then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. TRP then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. TYR then
+                open write unit 23 card name chi2.@resn.@r.dat
+            endif
+        endif
+    endif
+
+    calc p = @r - 1
+    calc s = @r + 1
+
+    ! atoms for backbone dihedrals
+    set a1 C
+    set a2 N
+    set a3 CA
+    set a4 C
+    set a5 N
+    
+    ! determine atoms for side chain dihedrals
+    ! chi1: N-CA-CB-X
+    set c11 N
+    set c12 CA
+    set c13 CB
+    set c14 CG  ! default, change based on residue
+    if ?SELRESN .eq. CYS set c14 SG
+    if ?SELRESN .eq. ILE set c14 CG1
+    if ?SELRESN .eq. SER set c14 OG
+    if ?SELRESN .eq. THR set c14 OG1
+    if ?SELRESN .eq. VAL set c14 CG1
+
+    ! chi2: CA-CB-X-Y
+    set c21 CA
+    set c22 CB
+    set c23 CG  ! default
+    set c24 CD  ! default
+    if ?SELRESN .eq. ASN set c24 OD1
+    if ?SELRESN .eq. ASP set c24 OD1
+    if ?SELRESN .eq. HSE set c24 ND1
+    if ?SELRESN .eq. HSD set c24 ND1
+    if ?SELRESN .eq. HSP set c24 ND1
+    if ?SELRESN .eq. ILE set c23 CG1
+    if ?SELRESN .eq. LEU set c24 CD1
+    if ?SELRESN .eq. MET set c24 SD
+    if ?SELRESN .eq. PHE set c24 CD1
+    if ?SELRESN .eq. TRP set c24 CD1
+    if ?SELRESN .eq. TYR set c24 CD1
+
+    ! chi3: CB-CG-X-Y
+    set c31 CB
+    set c32 CG
+    set c33 CD  ! default
+    set c34 CE  ! default
+    if ?SELRESN .eq. ARG set c34 NE
+    if ?SELRESN .eq. GLN set c34 OE1
+    if ?SELRESN .eq. GLU set c34 OE1
+    if ?SELRESN .eq. MET set c33 SD
+
+    ! chi4: CG-CD-X-Y
+    set c41 CG
+    set c42 CD
+    set c43 NE  ! Lys
+    set c44 CZ  ! Lys
+    if ?SELRESN .eq. ARG set c43 CE
+    if ?SELRESN .eq. ARG set c44 NZ
+
+    ! chi5: CD-NE-CZ-NH1 (Arg only)
+    set c51 CD
+    set c52 NE
+    set c53 CZ
+    set c54 NH1
+
+    prnlev 1
+    set i 1
+    label trjloop
+        traj read
+
+        ! phi
+        quick @p @a1 @r @a2 @r @a3 @r @a4
+        set phi ?PHI
+        write title unit 20
+        * @phi
+        *
+
+        ! psi
+        quick @r @a2 @r @a3 @r @a4 @s @a5
+        set psi ?PHI
+        write title unit 21
+        * @psi
+        *
+
+        ! side-chain dihedrals
+        if @resn .ne. GLY then
+            if @resn .ne. ALA then
+                ! chi1 for all except GLY and ALA
+                quick 1 @c11 1 @c12 1 @c13 1 @c14
+                write title unit 22
+                * ?PHI
+                *
+                ! since we cannot do complex booleans, we have to do these one by one... :(
+                if @resn .eq. ARG then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                    quick 1 @c31 1 @c32 1 @c33 1 @c34
+                    write title unit 24
+                    * ?PHI
+                    *
+                    quick 1 @c41 1 @c42 1 @c43 1 @c44
+                    write title unit 25
+                    * ?PHI
+                    *
+                    quick 1 @c51 1 @c52 1 @c53 1 @c54
+                    write title unit 26
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. LYS then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                    quick 1 @c31 1 @c32 1 @c33 1 @c34
+                    write title unit 24
+                    * ?PHI
+                    *
+                    quick 1 @c41 1 @c42 1 @c43 1 @c44
+                    write title unit 25
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. MET then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                    quick 1 @c31 1 @c32 1 @c33 1 @c34
+                    write title unit 24
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. GLN then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                    quick 1 @c31 1 @c32 1 @c33 1 @c34
+                    write title unit 24
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. GLU then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                    quick 1 @c31 1 @c32 1 @c33 1 @c34
+                    write title unit 24
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. ASN then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. ASP then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. HSD then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. HSE then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. HSP then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. ILE then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. LEU then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. PHE then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. PRO then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. TRP then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+                if @resn .eq. TYR then
+                    quick 1 @c21 1 @c22 1 @c23 1 @c24
+                    write title unit 23
+                    * ?PHI
+                    *
+                endif
+            endif
+        endif
+
+        incr i by 1
+    if @i .le. ?NFILE goto trjloop
+    prnlev 5
+
+    close unit 20
+    close unit 21
+    close unit 22
+    close unit 23
+    close unit 24
+    close unit 25
+    close unit 26
+    rewind unit 13
+    incr r by 1
+if @r .lt. 129 goto resloop
+
+close unit 13
+close unit 30
+
+stop

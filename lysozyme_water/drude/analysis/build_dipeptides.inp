@@ -1,0 +1,439 @@
+* build ACE/CT3-capped dipeptides in vacuo to compute side-chain dipole moments 
+*
+
+stream toppar_drude/toppar_drude_master_protein_2019g.str
+
+open read unit 30 card name resnames.dat
+
+set nframes 10000
+
+set r 2
+label resloop 
+
+    get resn unit 30
+
+    ! to keep things simple, we will generate a unique segid for each residue
+    set segid @resn@r
+    read sequ @resn 1
+    generate @segid first ACE last CT3 setup warn drude dmass 0.4
+
+    ! backbone vs. sidechain
+    define backbone sele type C .or. type O .or. type LPOA .or. type LPOB .or. -
+                         type DC .or. type DO .or. type CA .or. type HA# .or. type N .or. -
+                         type HN .or. type DCA .or. type DN .or. type HT# .or. -
+                         type CAT .or. type HTC# .or. type NT .or. type HNT .or. -
+                         type DCAT .or. type DNT .or. type OT# .or. type DOT# .or. type LPT# .or. - 
+                         type CAY .or. type DCAY .or. type HY# .or. -
+                         type CY .or. type DCY .or. type OY .or. type DOY .or. type LPY# show end
+    define sidechain sele .not. backbone show end
+
+    ! open phi and psi files
+    open read unit 20 card name phi.@resn.@r.dat
+    open read unit 21 card name psi.@resn.@r.dat
+
+    ! conditionally open side-chain dihedral files
+    if @resn .ne. GLY then
+        if @resn .ne. ALA then
+            ! chi1 for all except GLY and ALA
+            open read unit 22 card name chi1.@resn.@r.dat
+            ! since we cannot do complex booleans, we have to do these one by one... :(
+            if @resn .eq. ARG then
+                open read unit 23 card name chi2.@resn.@r.dat
+                open read unit 24 card name chi3.@resn.@r.dat
+                open read unit 25 card name chi4.@resn.@r.dat
+                open read unit 26 card name chi5.@resn.@r.dat
+            endif
+            if @resn .eq. LYS then
+                open read unit 23 card name chi2.@resn.@r.dat
+                open read unit 24 card name chi3.@resn.@r.dat
+                open read unit 25 card name chi4.@resn.@r.dat
+            endif
+            if @resn .eq. MET then
+                open read unit 23 card name chi2.@resn.@r.dat
+                open read unit 24 card name chi3.@resn.@r.dat
+            endif
+            if @resn .eq. GLN then
+                open read unit 23 card name chi2.@resn.@r.dat
+                open read unit 24 card name chi3.@resn.@r.dat
+            endif
+            if @resn .eq. GLU then
+                open read unit 23 card name chi2.@resn.@r.dat
+                open read unit 24 card name chi3.@resn.@r.dat
+            endif
+            if @resn .eq. ASN then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. ASP then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. HSD then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. HSE then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. HSP then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. ILE then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. LEU then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. PHE then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. PRO then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. TRP then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+            if @resn .eq. TYR then
+                open read unit 23 card name chi2.@resn.@r.dat
+            endif
+        endif
+    endif
+
+    ! determine atoms for side chain dihedrals
+    ! chi1: N-CA-CB-X
+    set c11 N
+    set c12 CA
+    set c13 CB
+    set c14 CG  ! default, change based on residue
+    if @resn .eq. CYS set c14 SG
+    if @resn .eq. ILE set c14 CG1
+    if @resn .eq. SER set c14 OG
+    if @resn .eq. THR set c14 OG1
+    if @resn .eq. VAL set c14 CG1
+
+    ! chi2: CA-CB-X-Y
+    set c21 CA
+    set c22 CB
+    set c23 CG  ! default
+    set c24 CD  ! default
+    if @resn .eq. ASN set c24 OD1
+    if @resn .eq. ASP set c24 OD1
+    if @resn .eq. HSE set c24 ND1
+    if @resn .eq. HSD set c24 ND1
+    if @resn .eq. HSP set c24 ND1
+    if @resn .eq. ILE set c23 CG1
+    if @resn .eq. ILE set c24 CD1
+    if @resn .eq. LEU set c24 CD1
+    if @resn .eq. MET set c24 SD
+    if @resn .eq. PHE set c24 CD1
+    if @resn .eq. TRP set c24 CD1
+    if @resn .eq. TYR set c24 CD1
+
+    ! chi3: CB-CG-X-Y
+    set c31 CB
+    set c32 CG
+    set c33 CD  ! default
+    set c34 CE  ! default
+    if @resn .eq. ARG set c34 NE
+    if @resn .eq. GLN set c34 OE1
+    if @resn .eq. GLU set c34 OE1
+    if @resn .eq. MET set c33 SD
+
+    ! chi4: CG-CD-X-Y
+    set c41 CG
+    set c42 CD
+    set c43 CE  ! Lys
+    set c44 NZ  ! Lys
+    if @resn .eq. ARG set c43 NE
+    if @resn .eq. ARG set c44 CZ
+
+    ! chi5: CD-NE-CZ-NH1 (Arg only)
+    set c51 CD
+    set c52 NE
+    set c53 CZ
+    set c54 NH1
+
+    ! output
+    open write unit 33 card name dipole.@r.vac.sc.dat
+
+    prnlev 1
+    set i 1
+    label frameloop
+        ! all residues have (phi/psi)
+        get phi unit 20
+        get psi unit 21
+
+        ! most residues have side-chain dihedrals
+        if @resn .ne. GLY then
+            if @resn .ne. ALA then
+                ! chi1 for all except GLY and ALA
+                get chi1 unit 22 
+                ! since we cannot do complex booleans, we have to do these one by one... :(
+                if @resn .eq. ARG then
+                    get chi2 unit 23
+                    get chi3 unit 24 
+                    get chi4 unit 25
+                    get chi5 unit 26 
+                endif
+                if @resn .eq. LYS then
+                    get chi2 unit 23
+                    get chi3 unit 24
+                    get chi4 unit 25 
+                endif
+                if @resn .eq. MET then
+                    get chi2 unit 23
+                    get chi3 unit 24
+                endif
+                if @resn .eq. GLN then
+                    get chi2 unit 23
+                    get chi3 unit 24
+                endif
+                if @resn .eq. GLU then
+                    get chi2 unit 23
+                    get chi3 unit 24
+                endif
+                if @resn .eq. ASN then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. ASP then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. HSD then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. HSE then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. HSP then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. ILE then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. LEU then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. PHE then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. PRO then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. TRP then
+                    get chi2 unit 23
+                endif
+                if @resn .eq. TYR then
+                    get chi2 unit 23
+                endif
+            endif
+        endif
+        ! edit IC to generate backbone geometry
+        ic edit
+            ! phi: CY-N-CA-C
+            ! psi: N-CA-C-NT
+            dihe 1 CY 1 N  1 CA 1 C  @phi
+            dihe 1 N  1 CA 1 C  1 NT @psi
+        end
+        ! edit IC for side-chain geometries
+        if @resn .ne. GLY then
+            if @resn .ne. ALA then
+                ! chi1 for all except GLY and ALA
+                ic edit
+                    dihe 1 @c11 1 @c12 1 @c13 1 @c14 @chi1
+                end
+                ! since we cannot do complex booleans, we have to do these one by one... :(
+                if @resn .eq. ARG then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                        dihe 1 @c31 1 @c32 1 @c33 1 @c34 @chi3
+                        dihe 1 @c41 1 @c42 1 @c43 1 @c44 @chi4
+                        dihe 1 @c51 1 @c52 1 @c53 1 @c54 @chi5
+                    end
+                endif
+                if @resn .eq. LYS then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                        dihe 1 @c31 1 @c32 1 @c33 1 @c34 @chi3
+                        dihe 1 @c41 1 @c42 1 @c43 1 @c44 @chi4
+                    end
+                endif
+                if @resn .eq. MET then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                        dihe 1 @c31 1 @c32 1 @c33 1 @c34 @chi3
+                    end
+                endif
+                if @resn .eq. GLN then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                        dihe 1 @c31 1 @c32 1 @c33 1 @c34 @chi3
+                    end
+                endif
+                if @resn .eq. GLU then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                        dihe 1 @c31 1 @c32 1 @c33 1 @c34 @chi3
+                    end
+                endif
+                if @resn .eq. ASN then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. ASP then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. HSD then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. HSE then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. HSP then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. ILE then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. LEU then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. PHE then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. PRO then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. TRP then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+                if @resn .eq. TYR then
+                    ic edit
+                        dihe 1 @c21 1 @c22 1 @c23 1 @c24 @chi2
+                    end
+                endif
+            endif
+        endif
+
+        ! generate coordinates 
+        ic param
+        ic seed 1 CY 1 N 1 CA
+        ic build
+
+        coor sdrude
+        coor shake
+
+        ! restrain geometry
+        ! all residues have (phi/psi)
+        cons dihe 1 CY 1 N  1 CA 1 C  force 100000. min @phi
+        cons dihe 1 N  1 CA 1 C  1 NT force 100000. min @psi
+        if @resn .ne. GLY then
+            if @resn .ne. ALA then
+                ! chi1 for all except GLY and ALA
+                cons dihe 1 @c11 1 @c12 1 @c13 1 @c14 force 100000. min @chi1
+                ! since we cannot do complex booleans, we have to do these one by one... :(
+                if @resn .eq. ARG then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                    cons dihe 1 @c31 1 @c32 1 @c33 1 @c34 force 100000. min @chi3
+                    cons dihe 1 @c41 1 @c42 1 @c43 1 @c44 force 100000. min @chi4
+                    cons dihe 1 @c51 1 @c52 1 @c53 1 @c54 force 100000. min @chi5
+                endif
+                if @resn .eq. LYS then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                    cons dihe 1 @c31 1 @c32 1 @c33 1 @c34 force 100000. min @chi3
+                    cons dihe 1 @c41 1 @c42 1 @c43 1 @c44 force 100000. min @chi4
+                endif
+                if @resn .eq. MET then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                    cons dihe 1 @c31 1 @c32 1 @c33 1 @c34 force 100000. min @chi3
+                endif
+                if @resn .eq. GLN then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                    cons dihe 1 @c31 1 @c32 1 @c33 1 @c34 force 100000. min @chi3
+                endif
+                if @resn .eq. GLU then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                    cons dihe 1 @c31 1 @c32 1 @c33 1 @c34 force 100000. min @chi3
+                endif
+                if @resn .eq. ASN then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. ASP then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. HSD then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. HSE then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. HSP then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. ILE then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. LEU then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. PHE then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. PRO then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. TRP then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+                if @resn .eq. TYR then
+                    cons dihe 1 @c21 1 @c22 1 @c23 1 @c24 force 100000. min @chi2
+                endif
+            endif
+        endif
+
+        if @resn .ne. GLY then
+            ! minimize
+            mini sd   nstep 500
+            mini abnr nstep 1000 tolgrd 0.0001
+
+            coor dipo mass sele sidechain end
+            calc time = @i * 0.01
+            write title unit 33
+            * @time ?RDIP
+            *
+        endif
+
+        ! reinitialize coordinates to rebuild
+        coor init sele all end
+        ! clear any restraints from memory
+        cons cldh
+
+        incr i by 1
+    if @i .le. @nframes goto frameloop
+    prnlev 5
+
+    close unit 33
+
+    dele atom sele all end
+
+    incr r by 1
+if @r .lt. 129 goto resloop
+
+close unit 30
+
+stop

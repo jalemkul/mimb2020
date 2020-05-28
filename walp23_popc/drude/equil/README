@@ -1,0 +1,10 @@
+
+================================
+Equilibration of WALP23 in POPC
+================================
+
+Membrane systems can be very sensitive in the initial stages of equilibration, so provided here is
+an example of a two-stage equilibration, run with a short time step initially, then with a normal
+time step.
+
+Use NAMD to run equil0.in first, then equil.in as normal.
